@@ -12,7 +12,7 @@ describe('jquery.rss', function () {
 
     this.element = $('<div>').appendTo($('body'));
     this.timeout = 10000;
-    this.feedUrl = 'http://xml-rss.de/xml/site-atom.xml';
+    this.feedUrl = 'https://xml-rss.de/xml/site-atom.xml';
     this.fakeGetJSON = function (content) {
       self.originalGetJSON = $.getJSON;
 
@@ -177,7 +177,7 @@ describe('jquery.rss', function () {
 
     it('uses feedrapp.info if ssl is turned off', function (done) {
       this.ajaxStub = this.stub($, 'getJSON', function (apiUrl) {
-        expect(apiUrl).toMatch(/http:\/\/www\.feedrapp\.info/);
+        expect(apiUrl).toMatch(/https:\/\/www\.feedrapp\.info/);
         done();
       });
 
@@ -246,7 +246,7 @@ describe('jquery.rss', function () {
         });
 
         it('removes script tags with capital letters', function () {
-          this.fakeGetJSON('<SCRIPT SRC=http://ha.ckers.org/xss.js>hallo</SCRIPT>');
+          this.fakeGetJSON('<SCRIPT SRC=https://ha.ckers.org/xss.js>hallo</SCRIPT>');
         });
 
         it('strips unsecure image tags with embedded linebreak', function () {
@@ -274,11 +274,11 @@ describe('jquery.rss', function () {
         });
 
         it('strips script/xss tags', function () {
-          this.fakeGetJSON('<SCRIPT/XSS SRC="http://ha.ckers.org/xss.js"></SCRIPT>');
+          this.fakeGetJSON('<SCRIPT/XSS SRC="https://ha.ckers.org/xss.js"></SCRIPT>');
         });
 
         it('strips script/src tags', function () {
-          this.fakeGetJSON('<SCRIPT/SRC="http://ha.ckers.org/xss.js"></SCRIPT>');
+          this.fakeGetJSON('<SCRIPT/SRC="https://ha.ckers.org/xss.js"></SCRIPT>');
         });
 
         it('strips unsecure body tag', function () {
@@ -286,7 +286,7 @@ describe('jquery.rss', function () {
         });
 
         it('strips the unclosed script tag', function () {
-          this.fakeGetJSON('<SCRIPT SRC=http://ha.ckers.org/xss.js?<B>');
+          this.fakeGetJSON('<SCRIPT SRC=https://ha.ckers.org/xss.js?<B>');
         });
 
         it('strips unclosed script tags without protocol in src', function () {
@@ -314,7 +314,7 @@ describe('jquery.rss', function () {
         });
 
         it('strips tags with html quotation', function () {
-          this.fakeGetJSON('<SCRIPT a=">" SRC="http://ha.ckers.org/xss.js"></SCRIPT>');
+          this.fakeGetJSON('<SCRIPT a=">" SRC="https://ha.ckers.org/xss.js"></SCRIPT>');
         });
       });
 
@@ -337,11 +337,11 @@ describe('jquery.rss', function () {
           result: ' SRC="javascript:alert(\'XSS\')"'
         }, {
           name: 'strips half open iframe tag with double open bracket',
-          test: '<iframe src=http://ha.ckers.org/scriptlet.html <',
-          result: ' src=http://ha.ckers.org/scriptlet.html &lt;'
+          test: '<iframe src=https://ha.ckers.org/scriptlet.html <',
+          result: ' src=https://ha.ckers.org/scriptlet.html &lt;'
         }, {
           name: 'strips meta tags with content',
-          test: '<META HTTP-EQUIV="Link" Content="<http://ha.ckers.org/xss.css>; REL=stylesheet">',
+          test: '<META HTTP-EQUIV="Link" Content="<https://ha.ckers.org/xss.css>; REL=stylesheet">',
           result: '; REL=stylesheet"&gt;'
         }];
 
