@@ -1,0 +1,129 @@
+<pre style='color:#000000;background:#ffffff;'><span style='color:#004a43; '>#</span><span style='color:#004a43; '>include </span><span style='color:#0000e6; '>&lt;</span><span style='color:#40015a; '>iostream</span><span style='color:#0000e6; '>></span>
+<span style='color:#004a43; '>#</span><span style='color:#004a43; '>include </span><span style='color:#0000e6; '>&lt;</span><span style='color:#40015a; '>queue</span><span style='color:#0000e6; '>></span>
+<span style='color:#004a43; '>#</span><span style='color:#004a43; '>define</span><span style='color:#004a43; '> int uint64_t</span>
+
+<span style='color:#0000ff; font-weight:bold; '>using</span> <span style='color:#0000ff; font-weight:bold; '>namespace</span> std<span style='color:#0000ff; '>;</span>
+
+<span style='color:#0000ff; font-weight:bold; '>struct</span> client
+<span style='color:#0000ff; '>{</span>
+	<span style='color:#0000ff; font-weight:bold; '>int</span> ind<span style='color:#0000ff; '>,</span> t<span style='color:#0000ff; '>,</span> a<span style='color:#0000ff; '>,</span> b<span style='color:#0000ff; '>;</span>
+	client <span style='color:#0000ff; '>(</span><span style='color:#0000ff; '>)</span> 
+	<span style='color:#0000ff; '>{</span>
+		t <span style='color:#0000ff; '>=</span> <span style='color:#0000ff; '>-</span><span style='color:#800000; '>1</span><span style='color:#0000ff; '>;</span>
+		a <span style='color:#0000ff; '>=</span> <span style='color:#0000ff; '>-</span><span style='color:#800000; '>1</span><span style='color:#0000ff; '>;</span>
+		b <span style='color:#0000ff; '>=</span> <span style='color:#0000ff; '>-</span><span style='color:#800000; '>1</span><span style='color:#0000ff; '>;</span>
+	<span style='color:#0000ff; '>}</span>
+	client <span style='color:#0000ff; '>(</span><span style='color:#0000ff; font-weight:bold; '>int</span> i<span style='color:#0000ff; '>,</span> <span style='color:#0000ff; font-weight:bold; '>int</span> _t<span style='color:#0000ff; '>,</span> <span style='color:#0000ff; font-weight:bold; '>int</span> _a<span style='color:#0000ff; '>,</span> <span style='color:#0000ff; font-weight:bold; '>int</span> _b<span style='color:#0000ff; '>)</span>
+	<span style='color:#0000ff; '>{</span>
+		ind <span style='color:#0000ff; '>=</span> i<span style='color:#0000ff; '>;</span>
+		t <span style='color:#0000ff; '>=</span> _t<span style='color:#0000ff; '>;</span>
+		a <span style='color:#0000ff; '>=</span> _a<span style='color:#0000ff; '>;</span>
+		b <span style='color:#0000ff; '>=</span> _b<span style='color:#0000ff; '>;</span>
+	<span style='color:#0000ff; '>}</span>
+<span style='color:#0000ff; '>}</span><span style='color:#0000ff; '>;</span>
+
+<span style='color:#0000ff; font-weight:bold; '>struct</span> queue_item
+<span style='color:#0000ff; '>{</span>
+	<span style='color:#0000ff; font-weight:bold; '>int</span> endtime<span style='color:#0000ff; '>;</span>
+	client c<span style='color:#0000ff; '>;</span>
+
+	queue_item <span style='color:#0000ff; '>(</span><span style='color:#0000ff; font-weight:bold; '>int</span> e<span style='color:#0000ff; '>,</span> client _c<span style='color:#0000ff; '>)</span>
+	<span style='color:#0000ff; '>{</span>
+		endtime <span style='color:#0000ff; '>=</span> e<span style='color:#0000ff; '>;</span>
+		c <span style='color:#0000ff; '>=</span> _c<span style='color:#0000ff; '>;</span>
+	<span style='color:#0000ff; '>}</span>
+<span style='color:#0000ff; '>}</span><span style='color:#0000ff; '>;</span>
+
+client input <span style='color:#0000ff; '>[</span><span style='color:#800000; '>100000</span><span style='color:#0000ff; '>]</span><span style='color:#0000ff; '>;</span>
+<span style='color:#0000ff; font-weight:bold; '>int</span> ans <span style='color:#0000ff; '>[</span><span style='color:#800000; '>100000</span><span style='color:#0000ff; '>]</span><span style='color:#0000ff; '>;</span>
+
+<span style='color:#0000ff; font-weight:bold; '>queue</span> <span style='color:#0000ff; '>&lt;</span> queue_item <span style='color:#0000ff; '>></span> level1 <span style='color:#0000ff; '>[</span><span style='color:#800000; '>16</span><span style='color:#0000ff; '>]</span><span style='color:#0000ff; '>;</span>
+<span style='color:#0000ff; font-weight:bold; '>queue</span> <span style='color:#0000ff; '>&lt;</span> queue_item <span style='color:#0000ff; '>></span> chef<span style='color:#0000ff; '>;</span>
+
+<span style='color:#0000ff; font-weight:bold; '>int</span> get_min <span style='color:#0000ff; '>(</span><span style='color:#0000ff; font-weight:bold; '>int</span> m<span style='color:#0000ff; '>)</span>
+<span style='color:#0000ff; '>{</span>
+	<span style='color:#0000ff; font-weight:bold; '>int</span> ans <span style='color:#0000ff; '>=</span> <span style='color:#800000; '>0</span><span style='color:#0000ff; '>;</span>
+	<span style='color:#0000ff; font-weight:bold; '>for</span> <span style='color:#0000ff; '>(</span><span style='color:#0000ff; font-weight:bold; '>int</span> i <span style='color:#0000ff; '>=</span> <span style='color:#800000; '>1</span> <span style='color:#0000ff; '>;</span> i <span style='color:#0000ff; '>&lt;</span> m <span style='color:#0000ff; '>;</span> i <span style='color:#0000ff; '>+</span><span style='color:#0000ff; '>+</span><span style='color:#0000ff; '>)</span>
+	<span style='color:#0000ff; '>{</span>
+		<span style='color:#0000ff; font-weight:bold; '>if</span> <span style='color:#0000ff; '>(</span>level1 <span style='color:#0000ff; '>[</span>i<span style='color:#0000ff; '>]</span><span style='color:#0000ff; '>.</span>empty <span style='color:#0000ff; '>(</span><span style='color:#0000ff; '>)</span><span style='color:#0000ff; '>)</span>
+			<span style='color:#0000ff; font-weight:bold; '>continue</span><span style='color:#0000ff; '>;</span>
+		<span style='color:#0000ff; font-weight:bold; '>if</span> <span style='color:#0000ff; '>(</span>level1 <span style='color:#0000ff; '>[</span>ans<span style='color:#0000ff; '>]</span><span style='color:#0000ff; '>.</span>empty <span style='color:#0000ff; '>(</span><span style='color:#0000ff; '>)</span> <span style='color:#0000ff; font-weight:bold; '>or</span> level1 <span style='color:#0000ff; '>[</span>i<span style='color:#0000ff; '>]</span><span style='color:#0000ff; '>.</span>front <span style='color:#0000ff; '>(</span><span style='color:#0000ff; '>)</span><span style='color:#0000ff; '>.</span>endtime <span style='color:#0000ff; '>&lt;</span> level1 <span style='color:#0000ff; '>[</span>ans<span style='color:#0000ff; '>]</span><span style='color:#0000ff; '>.</span>front <span style='color:#0000ff; '>(</span><span style='color:#0000ff; '>)</span><span style='color:#0000ff; '>.</span>endtime<span style='color:#0000ff; '>)</span>
+			ans <span style='color:#0000ff; '>=</span> i<span style='color:#0000ff; '>;</span>
+		<span style='color:#0000ff; font-weight:bold; '>else</span> <span style='color:#0000ff; font-weight:bold; '>if</span> <span style='color:#0000ff; '>(</span>
+				level1 <span style='color:#0000ff; '>[</span>i<span style='color:#0000ff; '>]</span><span style='color:#0000ff; '>.</span>front <span style='color:#0000ff; '>(</span><span style='color:#0000ff; '>)</span><span style='color:#0000ff; '>.</span>endtime <span style='color:#0000ff; '>=</span><span style='color:#0000ff; '>=</span> level1 <span style='color:#0000ff; '>[</span>ans<span style='color:#0000ff; '>]</span><span style='color:#0000ff; '>.</span>front <span style='color:#0000ff; '>(</span><span style='color:#0000ff; '>)</span><span style='color:#0000ff; '>.</span>endtime <span style='color:#0000ff; font-weight:bold; '>and</span>
+				level1 <span style='color:#0000ff; '>[</span>i<span style='color:#0000ff; '>]</span><span style='color:#0000ff; '>.</span>front <span style='color:#0000ff; '>(</span><span style='color:#0000ff; '>)</span><span style='color:#0000ff; '>.</span>c<span style='color:#0000ff; '>.</span>ind <span style='color:#0000ff; '>&lt;</span> level1 <span style='color:#0000ff; '>[</span>ans<span style='color:#0000ff; '>]</span><span style='color:#0000ff; '>.</span>front <span style='color:#0000ff; '>(</span><span style='color:#0000ff; '>)</span><span style='color:#0000ff; '>.</span>c<span style='color:#0000ff; '>.</span>ind
+				<span style='color:#0000ff; '>)</span>
+			ans <span style='color:#0000ff; '>=</span> i<span style='color:#0000ff; '>;</span>
+	<span style='color:#0000ff; '>}</span>
+	<span style='color:#0000ff; font-weight:bold; '>return</span> ans<span style='color:#0000ff; '>;</span>
+<span style='color:#0000ff; '>}</span>
+
+<span style='color:#0000ff; font-weight:bold; '>bool</span> all_empty <span style='color:#0000ff; '>(</span><span style='color:#0000ff; font-weight:bold; '>int</span> m<span style='color:#0000ff; '>)</span>
+<span style='color:#0000ff; '>{</span>
+	<span style='color:#0000ff; font-weight:bold; '>for</span> <span style='color:#0000ff; '>(</span><span style='color:#0000ff; font-weight:bold; '>int</span> i <span style='color:#0000ff; '>=</span> <span style='color:#800000; '>0</span> <span style='color:#0000ff; '>;</span> i <span style='color:#0000ff; '>&lt;</span> m <span style='color:#0000ff; '>;</span> i <span style='color:#0000ff; '>+</span><span style='color:#0000ff; '>+</span><span style='color:#0000ff; '>)</span>
+	<span style='color:#0000ff; '>{</span>
+		<span style='color:#0000ff; font-weight:bold; '>if</span> <span style='color:#0000ff; '>(</span><span style='color:#0000ff; font-weight:bold; '>not</span> level1 <span style='color:#0000ff; '>[</span>i<span style='color:#0000ff; '>]</span><span style='color:#0000ff; '>.</span>empty <span style='color:#0000ff; '>(</span><span style='color:#0000ff; '>)</span><span style='color:#0000ff; '>)</span>
+			<span style='color:#0000ff; font-weight:bold; '>return</span> <span style='color:#0000ff; font-weight:bold; '>false</span><span style='color:#0000ff; '>;</span>
+	<span style='color:#0000ff; '>}</span>
+	<span style='color:#0000ff; font-weight:bold; '>return</span> <span style='color:#0000ff; font-weight:bold; '>true</span><span style='color:#0000ff; '>;</span>
+<span style='color:#0000ff; '>}</span>
+
+int32_t <span style='color:#0000ff; font-weight:bold; '>main</span> <span style='color:#0000ff; '>(</span><span style='color:#0000ff; '>)</span>
+<span style='color:#0000ff; '>{</span>
+	<span style='color:#0000ff; font-weight:bold; '>int</span> n<span style='color:#0000ff; '>,</span> m<span style='color:#0000ff; '>;</span>
+	<span style='color:#0000ff; font-weight:bold; '>cin</span> <span style='color:#0000ff; '>></span><span style='color:#0000ff; '>></span> n <span style='color:#0000ff; '>></span><span style='color:#0000ff; '>></span> m<span style='color:#0000ff; '>;</span>
+	<span style='color:#0000ff; font-weight:bold; '>for</span> <span style='color:#0000ff; '>(</span><span style='color:#0000ff; font-weight:bold; '>int</span> i <span style='color:#0000ff; '>=</span> <span style='color:#800000; '>0</span> <span style='color:#0000ff; '>;</span> i <span style='color:#0000ff; '>&lt;</span> n <span style='color:#0000ff; '>;</span> i <span style='color:#0000ff; '>+</span><span style='color:#0000ff; '>+</span><span style='color:#0000ff; '>)</span>
+	<span style='color:#0000ff; '>{</span>
+		<span style='color:#0000ff; font-weight:bold; '>int</span> t<span style='color:#0000ff; '>,</span> a<span style='color:#0000ff; '>,</span> b<span style='color:#0000ff; '>;</span>
+		<span style='color:#0000ff; font-weight:bold; '>cin</span> <span style='color:#0000ff; '>></span><span style='color:#0000ff; '>></span> t <span style='color:#0000ff; '>></span><span style='color:#0000ff; '>></span> a <span style='color:#0000ff; '>></span><span style='color:#0000ff; '>></span> b<span style='color:#0000ff; '>;</span>
+		input <span style='color:#0000ff; '>[</span>i<span style='color:#0000ff; '>]</span> <span style='color:#0000ff; '>=</span> <span style='color:#0000ff; '>(</span>client <span style='color:#0000ff; '>(</span>i<span style='color:#0000ff; '>,</span> t<span style='color:#0000ff; '>,</span> a<span style='color:#0000ff; '>,</span> b<span style='color:#0000ff; '>)</span><span style='color:#0000ff; '>)</span><span style='color:#0000ff; '>;</span>
+	<span style='color:#0000ff; '>}</span>
+
+	<span style='color:#0000ff; font-weight:bold; '>for</span> <span style='color:#0000ff; '>(</span><span style='color:#0000ff; font-weight:bold; '>int</span> i <span style='color:#0000ff; '>=</span> <span style='color:#800000; '>0</span> <span style='color:#0000ff; '>;</span> i <span style='color:#0000ff; '>&lt;</span> m <span style='color:#0000ff; '>;</span> i <span style='color:#0000ff; '>+</span><span style='color:#0000ff; '>+</span><span style='color:#0000ff; '>)</span>
+		level1 <span style='color:#0000ff; '>[</span>i<span style='color:#0000ff; '>]</span><span style='color:#0000ff; '>.</span>push <span style='color:#0000ff; '>(</span>queue_item <span style='color:#0000ff; '>(</span>input <span style='color:#0000ff; '>[</span>i<span style='color:#0000ff; '>]</span><span style='color:#0000ff; '>.</span>t <span style='color:#0000ff; '>+</span> input <span style='color:#0000ff; '>[</span>i<span style='color:#0000ff; '>]</span><span style='color:#0000ff; '>.</span>a<span style='color:#0000ff; '>,</span> input <span style='color:#0000ff; '>[</span>i<span style='color:#0000ff; '>]</span><span style='color:#0000ff; '>)</span><span style='color:#0000ff; '>)</span><span style='color:#0000ff; '>;</span>
+
+	<span style='color:#0000ff; font-weight:bold; '>for</span> <span style='color:#0000ff; '>(</span><span style='color:#0000ff; font-weight:bold; '>int</span> i <span style='color:#0000ff; '>=</span> m <span style='color:#0000ff; '>;</span> <span style='color:#0000ff; font-weight:bold; '>not</span> all_empty <span style='color:#0000ff; '>(</span>m<span style='color:#0000ff; '>)</span> <span style='color:#0000ff; '>;</span> i <span style='color:#0000ff; '>+</span><span style='color:#0000ff; '>+</span><span style='color:#0000ff; '>)</span>
+	<span style='color:#0000ff; '>{</span>
+		<span style='color:#0000ff; font-weight:bold; '>int</span> min_ind <span style='color:#0000ff; '>=</span> get_min <span style='color:#0000ff; '>(</span>m<span style='color:#0000ff; '>)</span><span style='color:#0000ff; '>;</span>
+		<span style='color:#0000ff; font-weight:bold; '>int</span> <span style='color:#0000ff; font-weight:bold; '>time</span> <span style='color:#0000ff; '>=</span> level1 <span style='color:#0000ff; '>[</span>min_ind<span style='color:#0000ff; '>]</span><span style='color:#0000ff; '>.</span>front <span style='color:#0000ff; '>(</span><span style='color:#0000ff; '>)</span><span style='color:#0000ff; '>.</span>endtime<span style='color:#0000ff; '>;</span>
+		
+		<span style='color:#0000ff; font-weight:bold; '>auto</span> front <span style='color:#0000ff; '>=</span> level1 <span style='color:#0000ff; '>[</span>min_ind<span style='color:#0000ff; '>]</span><span style='color:#0000ff; '>.</span>front <span style='color:#0000ff; '>(</span><span style='color:#0000ff; '>)</span><span style='color:#0000ff; '>;</span>
+		
+		chef<span style='color:#0000ff; '>.</span>push <span style='color:#0000ff; '>(</span>queue_item <span style='color:#0000ff; '>(</span><span style='color:#0000ff; font-weight:bold; '>time</span><span style='color:#0000ff; '>,</span> front<span style='color:#0000ff; '>.</span>c<span style='color:#0000ff; '>)</span><span style='color:#0000ff; '>)</span><span style='color:#0000ff; '>;</span>
+		
+		level1 <span style='color:#0000ff; '>[</span>min_ind<span style='color:#0000ff; '>]</span><span style='color:#0000ff; '>.</span>pop <span style='color:#0000ff; '>(</span><span style='color:#0000ff; '>)</span><span style='color:#0000ff; '>;</span>
+		
+		<span style='color:#0000ff; font-weight:bold; '>if</span> <span style='color:#0000ff; '>(</span>i <span style='color:#0000ff; '>&lt;</span> n<span style='color:#0000ff; '>)</span>
+			level1 <span style='color:#0000ff; '>[</span>min_ind<span style='color:#0000ff; '>]</span><span style='color:#0000ff; '>.</span>push <span style='color:#0000ff; '>(</span>queue_item <span style='color:#0000ff; '>(</span><span style='color:#0000ff; font-weight:bold; '>time</span> <span style='color:#0000ff; '>+</span> input <span style='color:#0000ff; '>[</span>i<span style='color:#0000ff; '>]</span><span style='color:#0000ff; '>.</span>a<span style='color:#0000ff; '>,</span> input <span style='color:#0000ff; '>[</span>i<span style='color:#0000ff; '>]</span><span style='color:#0000ff; '>)</span><span style='color:#0000ff; '>)</span><span style='color:#0000ff; '>;</span>
+		
+<span style='color:#008000; '>////	for (int j = 0 ; j &lt; m ; j ++)</span>
+<span style='color:#008000; '>////	{</span>
+<span style='color:#008000; '>////		auto A = level1 [j];</span>
+<span style='color:#008000; '>////		while (!A.empty())</span>
+<span style='color:#008000; '>////		{</span>
+<span style='color:#008000; '>////			std::cout &lt;&lt; "(" &lt;&lt; A.front ().endtime &lt;&lt; ", " &lt;&lt; A.front ().c.ind &lt;&lt; ") ";</span>
+<span style='color:#008000; '>////			A.pop();</span>
+<span style='color:#008000; '>////		}</span>
+<span style='color:#008000; '>////		cout &lt;&lt; '\n';</span>
+<span style='color:#008000; '>////	}</span>
+<span style='color:#008000; '>////	cout &lt;&lt; "\n-------------------\n\n";</span>
+	<span style='color:#0000ff; '>}</span>
+
+	<span style='color:#0000ff; font-weight:bold; '>int</span> start_time <span style='color:#0000ff; '>=</span> <span style='color:#800000; '>0</span><span style='color:#0000ff; '>;</span>
+
+	start_time <span style='color:#0000ff; '>=</span> ans <span style='color:#0000ff; '>[</span>chef<span style='color:#0000ff; '>.</span>front <span style='color:#0000ff; '>(</span><span style='color:#0000ff; '>)</span><span style='color:#0000ff; '>.</span>c<span style='color:#0000ff; '>.</span>ind<span style='color:#0000ff; '>]</span> <span style='color:#0000ff; '>=</span> chef<span style='color:#0000ff; '>.</span>front <span style='color:#0000ff; '>(</span><span style='color:#0000ff; '>)</span><span style='color:#0000ff; '>.</span>endtime <span style='color:#0000ff; '>+</span> chef<span style='color:#0000ff; '>.</span>front <span style='color:#0000ff; '>(</span><span style='color:#0000ff; '>)</span><span style='color:#0000ff; '>.</span>c<span style='color:#0000ff; '>.</span>b<span style='color:#0000ff; '>;</span>
+	chef<span style='color:#0000ff; '>.</span>pop <span style='color:#0000ff; '>(</span><span style='color:#0000ff; '>)</span><span style='color:#0000ff; '>;</span>
+
+	<span style='color:#0000ff; font-weight:bold; '>while</span> <span style='color:#0000ff; '>(</span><span style='color:#0000ff; font-weight:bold; '>not</span> chef<span style='color:#0000ff; '>.</span>empty <span style='color:#0000ff; '>(</span><span style='color:#0000ff; '>)</span><span style='color:#0000ff; '>)</span>
+	<span style='color:#0000ff; '>{</span>
+		<span style='color:#0000ff; font-weight:bold; '>int</span> curr_start_time <span style='color:#0000ff; '>=</span> chef<span style='color:#0000ff; '>.</span>front <span style='color:#0000ff; '>(</span><span style='color:#0000ff; '>)</span><span style='color:#0000ff; '>.</span>endtime<span style='color:#0000ff; '>;</span>
+		<span style='color:#0000ff; font-weight:bold; '>if</span> <span style='color:#0000ff; '>(</span>start_time <span style='color:#0000ff; '>&lt;</span> curr_start_time<span style='color:#0000ff; '>)</span>
+			start_time <span style='color:#0000ff; '>=</span> curr_start_time<span style='color:#0000ff; '>;</span>
+		start_time <span style='color:#0000ff; '>=</span> ans <span style='color:#0000ff; '>[</span>chef<span style='color:#0000ff; '>.</span>front <span style='color:#0000ff; '>(</span><span style='color:#0000ff; '>)</span><span style='color:#0000ff; '>.</span>c<span style='color:#0000ff; '>.</span>ind<span style='color:#0000ff; '>]</span> <span style='color:#0000ff; '>=</span> start_time <span style='color:#0000ff; '>+</span> chef<span style='color:#0000ff; '>.</span>front <span style='color:#0000ff; '>(</span><span style='color:#0000ff; '>)</span><span style='color:#0000ff; '>.</span>c<span style='color:#0000ff; '>.</span>b<span style='color:#0000ff; '>;</span>
+		chef<span style='color:#0000ff; '>.</span>pop <span style='color:#0000ff; '>(</span><span style='color:#0000ff; '>)</span><span style='color:#0000ff; '>;</span>
+	<span style='color:#0000ff; '>}</span>
+
+	<span style='color:#0000ff; font-weight:bold; '>for</span> <span style='color:#0000ff; '>(</span><span style='color:#0000ff; font-weight:bold; '>int</span> i <span style='color:#0000ff; '>=</span> <span style='color:#800000; '>0</span> <span style='color:#0000ff; '>;</span> i <span style='color:#0000ff; '>&lt;</span> n <span style='color:#0000ff; '>;</span> i <span style='color:#0000ff; '>+</span><span style='color:#0000ff; '>+</span><span style='color:#0000ff; '>)</span>
+		<span style='color:#0000ff; font-weight:bold; '>cout</span> <span style='color:#0000ff; '>&lt;</span><span style='color:#0000ff; '>&lt;</span> ans <span style='color:#0000ff; '>[</span>i<span style='color:#0000ff; '>]</span> <span style='color:#0000ff; '>&lt;</span><span style='color:#0000ff; '>&lt;</span> <span style='color:#0000e6; '>"</span><span style='color:#0000e6; '>\n</span><span style='color:#0000e6; '>"</span><span style='color:#0000ff; '>;</span>
+<span style='color:#0000ff; '>}</span>
+</pre>
