@@ -1,0 +1,287 @@
+<!-- code formatted by http://manoli.net/csharpformat/ -->
+<style type="text/css">
+.csharpcode, .csharpcode pre
+{
+	font-size: small;
+	color: black;
+	font-family: Consolas, "Courier New", Courier, Monospace;
+	background-color: #ffffff;
+	/*white-space: pre;*/
+}
+
+.csharpcode pre { margin: 0em; }
+
+.csharpcode .rem { color: #008000; }
+
+.csharpcode .kwrd { color: #0000ff; }
+
+.csharpcode .str { color: #a31515; }
+
+.csharpcode .op { color: #0000c0; }
+
+.csharpcode .preproc { color: #cc6633; }
+
+.csharpcode .asp { background-color: #ffff00; }
+
+.csharpcode .html { color: #800000; }
+
+.csharpcode .attr { color: #ff0000; }
+
+.csharpcode .alt 
+{
+	background-color: #f4f4f4;
+	width: 100%;
+	margin: 0em;
+}
+
+.csharpcode .lnum { color: #606060; }
+</style>
+<div class="csharpcode">
+<pre class="alt"><span class="lnum">   1:  </span><span class="kwrd">using</span> System;</pre>
+<pre><span class="lnum">   2:  </span>&nbsp;</pre>
+<pre class="alt"><span class="lnum">   3:  </span><span class="kwrd">namespace</span> MultiDimentions</pre>
+<pre><span class="lnum">   4:  </span>{</pre>
+<pre class="alt"><span class="lnum">   5:  </span>    <span class="kwrd">class</span> SequenceInMatrix</pre>
+<pre><span class="lnum">   6:  </span>    {</pre>
+<pre class="alt"><span class="lnum">   7:  </span>        <span class="kwrd">static</span> <span class="kwrd">void</span> Main()</pre>
+<pre><span class="lnum">   8:  </span>        {</pre>
+<pre class="alt"><span class="lnum">   9:  </span>            <span class="kwrd">string</span>[] inputArr = Console.ReadLine().Split(<span class="str">' '</span>);</pre>
+<pre><span class="lnum">  10:  </span>&nbsp;</pre>
+<pre class="alt"><span class="lnum">  11:  </span>            <span class="kwrd">int</span> n = <span class="kwrd">int</span>.Parse (inputArr[0]);</pre>
+<pre><span class="lnum">  12:  </span>            <span class="kwrd">int</span> m = <span class="kwrd">int</span>.Parse (inputArr[1]);</pre>
+<pre class="alt"><span class="lnum">  13:  </span>&nbsp;</pre>
+<pre><span class="lnum">  14:  </span>            <span class="kwrd">int</span>[,] arr = <span class="kwrd">new</span> <span class="kwrd">int</span> [n, m];</pre>
+<pre class="alt"><span class="lnum">  15:  </span>&nbsp;</pre>
+<pre><span class="lnum">  16:  </span>            <span class="kwrd">for</span> (<span class="kwrd">int</span> i = 0; i &lt; n; i++)</pre>
+<pre class="alt"><span class="lnum">  17:  </span>            {</pre>
+<pre><span class="lnum">  18:  </span>                <span class="kwrd">string</span>[] strInput = Console.ReadLine().Split();</pre>
+<pre class="alt"><span class="lnum">  19:  </span>                <span class="kwrd">for</span> (<span class="kwrd">int</span> j = 0; j &lt; m; j++)</pre>
+<pre><span class="lnum">  20:  </span>                {</pre>
+<pre class="alt"><span class="lnum">  21:  </span>                    arr[i, j] = <span class="kwrd">int</span>.Parse(strInput[j]);</pre>
+<pre><span class="lnum">  22:  </span>                }</pre>
+<pre class="alt"><span class="lnum">  23:  </span>&nbsp;</pre>
+<pre><span class="lnum">  24:  </span>            }</pre>
+<pre class="alt"><span class="lnum">  25:  </span>&nbsp;</pre>
+<pre><span class="lnum">  26:  </span>            <span class="kwrd">int</span> horizontalMax = HorizontalMove(arr, n, m);</pre>
+<pre class="alt"><span class="lnum">  27:  </span>            <span class="kwrd">int</span> verticalMax = VerticalMove(arr, n, m);</pre>
+<pre><span class="lnum">  28:  </span>            <span class="kwrd">int</span> diagonalMax = DiagonalMove(arr, n, m);</pre>
+<pre class="alt"><span class="lnum">  29:  </span>&nbsp;</pre>
+<pre><span class="lnum">  30:  </span>            Console.WriteLine(Math.Max(horizontalMax, Math.Max(verticalMax, diagonalMax)));</pre>
+<pre class="alt"><span class="lnum">  31:  </span>        }</pre>
+<pre><span class="lnum">  32:  </span>&nbsp;</pre>
+<pre class="alt"><span class="lnum">  33:  </span>        <span class="kwrd">public</span> <span class="kwrd">static</span> <span class="kwrd">int</span> HorizontalMove(<span class="kwrd">int</span>[,] arr, <span class="kwrd">int</span> n, <span class="kwrd">int</span> m)</pre>
+<pre><span class="lnum">  34:  </span>        {</pre>
+<pre class="alt"><span class="lnum">  35:  </span>            <span class="kwrd">int</span> count = 1;</pre>
+<pre><span class="lnum">  36:  </span>            <span class="kwrd">int</span> result = 0;</pre>
+<pre class="alt"><span class="lnum">  37:  </span>&nbsp;</pre>
+<pre><span class="lnum">  38:  </span>            <span class="kwrd">for</span> (<span class="kwrd">int</span> i = 0; i &lt; n; i++)</pre>
+<pre class="alt"><span class="lnum">  39:  </span>            {</pre>
+<pre><span class="lnum">  40:  </span>                <span class="kwrd">for</span> (<span class="kwrd">int</span> j = 0; j &lt; m - 1; j++)</pre>
+<pre class="alt"><span class="lnum">  41:  </span>                {</pre>
+<pre><span class="lnum">  42:  </span>                    <span class="kwrd">if</span> (arr[i, j + 1] == arr[i, j])</pre>
+<pre class="alt"><span class="lnum">  43:  </span>                    {</pre>
+<pre><span class="lnum">  44:  </span>                        count++;</pre>
+<pre class="alt"><span class="lnum">  45:  </span>                    }</pre>
+<pre><span class="lnum">  46:  </span>                }</pre>
+<pre class="alt"><span class="lnum">  47:  </span>                <span class="kwrd">if</span> (count &gt; result)</pre>
+<pre><span class="lnum">  48:  </span>                {</pre>
+<pre class="alt"><span class="lnum">  49:  </span>                    result = count;</pre>
+<pre><span class="lnum">  50:  </span>                }</pre>
+<pre class="alt"><span class="lnum">  51:  </span>                count = 1;</pre>
+<pre><span class="lnum">  52:  </span>            }</pre>
+<pre class="alt"><span class="lnum">  53:  </span>            <span class="kwrd">return</span> result;</pre>
+<pre><span class="lnum">  54:  </span>        }</pre>
+<pre class="alt"><span class="lnum">  55:  </span>        </pre>
+<pre><span class="lnum">  56:  </span>        <span class="kwrd">public</span> <span class="kwrd">static</span> <span class="kwrd">int</span> VerticalMove(<span class="kwrd">int</span>[,] arr, <span class="kwrd">int</span> n, <span class="kwrd">int</span> m)</pre>
+<pre class="alt"><span class="lnum">  57:  </span>        {</pre>
+<pre><span class="lnum">  58:  </span>            <span class="kwrd">int</span> count = 1;</pre>
+<pre class="alt"><span class="lnum">  59:  </span>            <span class="kwrd">int</span> result = 0;</pre>
+<pre><span class="lnum">  60:  </span>&nbsp;</pre>
+<pre class="alt"><span class="lnum">  61:  </span>            <span class="kwrd">for</span> (<span class="kwrd">int</span> i = 0; i &lt; m; i++)</pre>
+<pre><span class="lnum">  62:  </span>            {</pre>
+<pre class="alt"><span class="lnum">  63:  </span>                <span class="kwrd">for</span> (<span class="kwrd">int</span> j = 0; j &lt; n - 1; j++)</pre>
+<pre><span class="lnum">  64:  </span>                {</pre>
+<pre class="alt"><span class="lnum">  65:  </span>                    <span class="kwrd">if</span> (arr[j + 1, i] == arr[j, i])</pre>
+<pre><span class="lnum">  66:  </span>                    {</pre>
+<pre class="alt"><span class="lnum">  67:  </span>                        count++;</pre>
+<pre><span class="lnum">  68:  </span>                    }</pre>
+<pre class="alt"><span class="lnum">  69:  </span>                }</pre>
+<pre><span class="lnum">  70:  </span>                <span class="kwrd">if</span> (count &gt; result)</pre>
+<pre class="alt"><span class="lnum">  71:  </span>                {</pre>
+<pre><span class="lnum">  72:  </span>                    result = count;</pre>
+<pre class="alt"><span class="lnum">  73:  </span>                }</pre>
+<pre><span class="lnum">  74:  </span>                count = 1;</pre>
+<pre class="alt"><span class="lnum">  75:  </span>            }</pre>
+<pre><span class="lnum">  76:  </span>            <span class="kwrd">return</span> result;</pre>
+<pre class="alt"><span class="lnum">  77:  </span>        }</pre>
+<pre><span class="lnum">  78:  </span>&nbsp;</pre>
+<pre class="alt"><span class="lnum">  79:  </span>        <span class="kwrd">public</span> <span class="kwrd">static</span> <span class="kwrd">int</span> DiagonalMove(<span class="kwrd">int</span>[,] arr, <span class="kwrd">int</span> n, <span class="kwrd">int</span> m)</pre>
+<pre><span class="lnum">  80:  </span>        {</pre>
+<pre class="alt"><span class="lnum">  81:  </span>            <span class="kwrd">int</span> count = 1;</pre>
+<pre><span class="lnum">  82:  </span>            <span class="kwrd">int</span> result = 0;</pre>
+<pre class="alt"><span class="lnum">  83:  </span>&nbsp;</pre>
+<pre><span class="lnum">  84:  </span>            <span class="rem">//BOOTOM LEFT</span></pre>
+<pre class="alt"><span class="lnum">  85:  </span>            <span class="kwrd">int</span> row = n - 2; <span class="rem">//6-2 = 4</span></pre>
+<pre><span class="lnum">  86:  </span>            <span class="kwrd">int</span> col = 0;</pre>
+<pre class="alt"><span class="lnum">  87:  </span>&nbsp;</pre>
+<pre><span class="lnum">  88:  </span>            <span class="kwrd">for</span> (<span class="kwrd">int</span> i = 0; i &lt; n - 1; i++)</pre>
+<pre class="alt"><span class="lnum">  89:  </span>            {</pre>
+<pre><span class="lnum">  90:  </span>                <span class="kwrd">for</span> (<span class="kwrd">int</span> j = 0; j &lt; i + 1 &amp;&amp; j&lt; m-1; j++)</pre>
+<pre class="alt"><span class="lnum">  91:  </span>                {</pre>
+<pre><span class="lnum">  92:  </span>                    <span class="kwrd">if</span> (arr[row + j, col + j] == arr[row + j + 1, col + j + 1])</pre>
+<pre class="alt"><span class="lnum">  93:  </span>                    {</pre>
+<pre><span class="lnum">  94:  </span>                        count++;</pre>
+<pre class="alt"><span class="lnum">  95:  </span>                    }</pre>
+<pre><span class="lnum">  96:  </span>                }</pre>
+<pre class="alt"><span class="lnum">  97:  </span>                <span class="kwrd">if</span> (count &gt; result)</pre>
+<pre><span class="lnum">  98:  </span>                {</pre>
+<pre class="alt"><span class="lnum">  99:  </span>                    result = count;</pre>
+<pre><span class="lnum"> 100:  </span>                }</pre>
+<pre class="alt"><span class="lnum"> 101:  </span>                count = 1;</pre>
+<pre><span class="lnum"> 102:  </span>                row--;</pre>
+<pre class="alt"><span class="lnum"> 103:  </span>            }</pre>
+<pre><span class="lnum"> 104:  </span>            <span class="rem">//TOP RIGHT</span></pre>
+<pre class="alt"><span class="lnum"> 105:  </span>            col = m - 2; <span class="rem">//6-2 =4</span></pre>
+<pre><span class="lnum"> 106:  </span>            row = 0;</pre>
+<pre class="alt"><span class="lnum"> 107:  </span>            <span class="kwrd">for</span> (<span class="kwrd">int</span> i = 0; i &lt; m - 2; i++)</pre>
+<pre><span class="lnum"> 108:  </span>            {</pre>
+<pre class="alt"><span class="lnum"> 109:  </span>                <span class="kwrd">for</span> (<span class="kwrd">int</span> j = 0; j &lt; i + 1 &amp;&amp; j&lt;n-1; j++)</pre>
+<pre><span class="lnum"> 110:  </span>                {</pre>
+<pre class="alt"><span class="lnum"> 111:  </span>                    <span class="kwrd">if</span> (arr[row + j, col + j] == arr[row + j + 1, col + j + 1])</pre>
+<pre><span class="lnum"> 112:  </span>                    {</pre>
+<pre class="alt"><span class="lnum"> 113:  </span>                        count++;</pre>
+<pre><span class="lnum"> 114:  </span>                    }</pre>
+<pre class="alt"><span class="lnum"> 115:  </span>                }</pre>
+<pre><span class="lnum"> 116:  </span>                <span class="kwrd">if</span> (count &gt; result)</pre>
+<pre class="alt"><span class="lnum"> 117:  </span>                {</pre>
+<pre><span class="lnum"> 118:  </span>                    result = count;</pre>
+<pre class="alt"><span class="lnum"> 119:  </span>                }</pre>
+<pre><span class="lnum"> 120:  </span>                count = 1;</pre>
+<pre class="alt"><span class="lnum"> 121:  </span>                col--;</pre>
+<pre><span class="lnum"> 122:  </span>            }</pre>
+<pre class="alt"><span class="lnum"> 123:  </span>&nbsp;</pre>
+<pre><span class="lnum"> 124:  </span>            <span class="rem">//BOTTOM RIGHT</span></pre>
+<pre class="alt"><span class="lnum"> 125:  </span>            row = n - 2;</pre>
+<pre><span class="lnum"> 126:  </span>            col = m - 1;</pre>
+<pre class="alt"><span class="lnum"> 127:  </span>&nbsp;</pre>
+<pre><span class="lnum"> 128:  </span>            <span class="kwrd">for</span> (<span class="kwrd">int</span> i = 0; i &lt; n - 1; i++)</pre>
+<pre class="alt"><span class="lnum"> 129:  </span>            {</pre>
+<pre><span class="lnum"> 130:  </span>                <span class="kwrd">for</span> (<span class="kwrd">int</span> j = 0; j &lt; i + 1 &amp;&amp; j &lt; m - 1; j++)</pre>
+<pre class="alt"><span class="lnum"> 131:  </span>                {</pre>
+<pre><span class="lnum"> 132:  </span>                    <span class="kwrd">if</span> (arr[row + j, col - j] == arr[row + j + 1, col - j - 1])</pre>
+<pre class="alt"><span class="lnum"> 133:  </span>                    {</pre>
+<pre><span class="lnum"> 134:  </span>                        count++;</pre>
+<pre class="alt"><span class="lnum"> 135:  </span>                    }</pre>
+<pre><span class="lnum"> 136:  </span>                }</pre>
+<pre class="alt"><span class="lnum"> 137:  </span>                <span class="kwrd">if</span> (count &gt; result)</pre>
+<pre><span class="lnum"> 138:  </span>                {</pre>
+<pre class="alt"><span class="lnum"> 139:  </span>                    result = count;</pre>
+<pre><span class="lnum"> 140:  </span>                }</pre>
+<pre class="alt"><span class="lnum"> 141:  </span>                count = 1;</pre>
+<pre><span class="lnum"> 142:  </span>                row--;</pre>
+<pre class="alt"><span class="lnum"> 143:  </span>            }</pre>
+<pre><span class="lnum"> 144:  </span>            <span class="rem">//TOP LEFT</span></pre>
+<pre class="alt"><span class="lnum"> 145:  </span>            col = 1;</pre>
+<pre><span class="lnum"> 146:  </span>            row = 0;</pre>
+<pre class="alt"><span class="lnum"> 147:  </span>            <span class="kwrd">for</span> (<span class="kwrd">int</span> i = 0; i &lt; m - 2; i++)</pre>
+<pre><span class="lnum"> 148:  </span>            {</pre>
+<pre class="alt"><span class="lnum"> 149:  </span>                <span class="kwrd">for</span> (<span class="kwrd">int</span> j = 0; j &lt; i + 1 &amp;&amp; j &lt; n - 1; j++)</pre>
+<pre><span class="lnum"> 150:  </span>                {</pre>
+<pre class="alt"><span class="lnum"> 151:  </span>                    <span class="kwrd">if</span> (arr[row + j, col - j] == arr[row + j + 1, col - j - 1])</pre>
+<pre><span class="lnum"> 152:  </span>                    {</pre>
+<pre class="alt"><span class="lnum"> 153:  </span>                        count++;</pre>
+<pre><span class="lnum"> 154:  </span>                    }</pre>
+<pre class="alt"><span class="lnum"> 155:  </span>                }</pre>
+<pre><span class="lnum"> 156:  </span>                <span class="kwrd">if</span> (count &gt; result)</pre>
+<pre class="alt"><span class="lnum"> 157:  </span>                {</pre>
+<pre><span class="lnum"> 158:  </span>                    result = count;</pre>
+<pre class="alt"><span class="lnum"> 159:  </span>                }</pre>
+<pre><span class="lnum"> 160:  </span>                count = 1;</pre>
+<pre class="alt"><span class="lnum"> 161:  </span>                col++;</pre>
+<pre><span class="lnum"> 162:  </span>            }</pre>
+<pre class="alt"><span class="lnum"> 163:  </span>            <span class="kwrd">return</span> result;</pre>
+<pre><span class="lnum"> 164:  </span>        }</pre>
+<pre class="alt"><span class="lnum"> 165:  </span>    }</pre>
+<pre><span class="lnum"> 166:  </span>}</pre>
+<pre class="alt"><span class="lnum"> 167:  </span>&nbsp;</pre>
+<pre><span class="lnum"> 168:  </span>&nbsp;</pre>
+<pre class="alt"><span class="lnum"> 169:  </span>&nbsp;</pre>
+<pre><span class="lnum"> 170:  </span>&nbsp;</pre>
+<pre class="alt"><span class="lnum"> 171:  </span>&nbsp;</pre>
+<pre><span class="lnum"> 172:  </span>&nbsp;</pre>
+<pre class="alt"><span class="lnum"> 173:  </span>&nbsp;</pre>
+<pre><span class="lnum"> 174:  </span>&nbsp;</pre>
+<pre class="alt"><span class="lnum"> 175:  </span>&nbsp;</pre>
+<pre><span class="lnum"> 176:  </span>&nbsp;</pre>
+<pre class="alt"><span class="lnum"> 177:  </span>&nbsp;</pre>
+<pre><span class="lnum"> 178:  </span>&nbsp;</pre>
+<pre class="alt"><span class="lnum"> 179:  </span>&nbsp;</pre>
+<pre><span class="lnum"> 180:  </span>&nbsp;</pre>
+<pre class="alt"><span class="lnum"> 181:  </span>&nbsp;</pre>
+<pre><span class="lnum"> 182:  </span>&nbsp;</pre>
+<pre class="alt"><span class="lnum"> 183:  </span>&nbsp;</pre>
+<pre><span class="lnum"> 184:  </span>&nbsp;</pre>
+<pre class="alt"><span class="lnum"> 185:  </span><span class="kwrd">using</span> System;</pre>
+<pre><span class="lnum"> 186:  </span>&nbsp;</pre>
+<pre class="alt"><span class="lnum"> 187:  </span><span class="kwrd">class</span> Depth_First_Search</pre>
+<pre><span class="lnum"> 188:  </span>{</pre>
+<pre class="alt"><span class="lnum"> 189:  </span>    <span class="kwrd">public</span> <span class="kwrd">static</span> <span class="kwrd">void</span> Main(<span class="kwrd">string</span>[] args)</pre>
+<pre><span class="lnum"> 190:  </span>    {</pre>
+<pre class="alt"><span class="lnum"> 191:  </span>        <span class="kwrd">var</span> line = Console.ReadLine ().Split (<span class="str">' '</span>);</pre>
+<pre><span class="lnum"> 192:  </span>        <span class="kwrd">int</span> n = <span class="kwrd">int</span>.Parse (line [0]);</pre>
+<pre class="alt"><span class="lnum"> 193:  </span>        <span class="kwrd">int</span> m = <span class="kwrd">int</span>.Parse (line [1]);</pre>
+<pre><span class="lnum"> 194:  </span>&nbsp;</pre>
+<pre class="alt"><span class="lnum"> 195:  </span>        <span class="kwrd">int</span>[,] array = <span class="kwrd">new</span> <span class="kwrd">int</span> [n, m];</pre>
+<pre><span class="lnum"> 196:  </span>&nbsp;</pre>
+<pre class="alt"><span class="lnum"> 197:  </span>        <span class="kwrd">for</span> (<span class="kwrd">int</span> i = 0; i &lt; n; i++)</pre>
+<pre><span class="lnum"> 198:  </span>        {</pre>
+<pre class="alt"><span class="lnum"> 199:  </span>            line = Console.ReadLine ().Split (<span class="str">' '</span>);</pre>
+<pre><span class="lnum"> 200:  </span>            <span class="kwrd">for</span> (<span class="kwrd">int</span> j = 0; j &lt; m; j++)</pre>
+<pre class="alt"><span class="lnum"> 201:  </span>            {</pre>
+<pre><span class="lnum"> 202:  </span>                array [i, j] = <span class="kwrd">int</span>.Parse (line [j]);</pre>
+<pre class="alt"><span class="lnum"> 203:  </span>            }</pre>
+<pre><span class="lnum"> 204:  </span>        }</pre>
+<pre class="alt"><span class="lnum"> 205:  </span>        <span class="kwrd">bool</span>[,] calculated = <span class="kwrd">new</span> <span class="kwrd">bool</span>[array.GetLength(0), array.GetLength(1)];</pre>
+<pre><span class="lnum"> 206:  </span>        <span class="kwrd">int</span> bestCount = 0;</pre>
+<pre class="alt"><span class="lnum"> 207:  </span>        <span class="kwrd">for</span> (<span class="kwrd">int</span> row = 0; row &lt; array.GetLength(0); row++)</pre>
+<pre><span class="lnum"> 208:  </span>        {</pre>
+<pre class="alt"><span class="lnum"> 209:  </span>            <span class="kwrd">for</span> (<span class="kwrd">int</span> col = 0; col &lt; array.GetLength(1); col++)</pre>
+<pre><span class="lnum"> 210:  </span>            {</pre>
+<pre class="alt"><span class="lnum"> 211:  </span>                <span class="kwrd">if</span> (!calculated[row, col])</pre>
+<pre><span class="lnum"> 212:  </span>                {</pre>
+<pre class="alt"><span class="lnum"> 213:  </span>                    <span class="kwrd">int</span> count = DepthFirstSearch(array, row, col, calculated);</pre>
+<pre><span class="lnum"> 214:  </span>                    <span class="kwrd">if</span> (bestCount &lt; count)</pre>
+<pre class="alt"><span class="lnum"> 215:  </span>                    {</pre>
+<pre><span class="lnum"> 216:  </span>                        bestCount = count;</pre>
+<pre class="alt"><span class="lnum"> 217:  </span>                    }</pre>
+<pre><span class="lnum"> 218:  </span>                }</pre>
+<pre class="alt"><span class="lnum"> 219:  </span>&nbsp;</pre>
+<pre><span class="lnum"> 220:  </span>            }</pre>
+<pre class="alt"><span class="lnum"> 221:  </span>        }</pre>
+<pre><span class="lnum"> 222:  </span>        Console.WriteLine(<span class="str">"{0}"</span>, bestCount);</pre>
+<pre class="alt"><span class="lnum"> 223:  </span>    }</pre>
+<pre><span class="lnum"> 224:  </span>&nbsp;</pre>
+<pre class="alt"><span class="lnum"> 225:  </span>    <span class="kwrd">static</span> <span class="kwrd">int</span> DepthFirstSearch(<span class="kwrd">int</span>[,] array, <span class="kwrd">int</span> row, <span class="kwrd">int</span> col, <span class="kwrd">bool</span>[,] calc)</pre>
+<pre><span class="lnum"> 226:  </span>    {</pre>
+<pre class="alt"><span class="lnum"> 227:  </span>        <span class="kwrd">int</span> result = 1;</pre>
+<pre><span class="lnum"> 228:  </span>        calc[row, col] = <span class="kwrd">true</span>;</pre>
+<pre class="alt"><span class="lnum"> 229:  </span>        <span class="kwrd">if</span> ((row - 1 &gt;= 0) &amp;&amp; (array[row - 1, col] == array[row, col]) &amp;&amp; !calc[row - 1, col])</pre>
+<pre><span class="lnum"> 230:  </span>        {</pre>
+<pre class="alt"><span class="lnum"> 231:  </span>            result += DepthFirstSearch(array, row - 1, col, calc);</pre>
+<pre><span class="lnum"> 232:  </span>        }</pre>
+<pre class="alt"><span class="lnum"> 233:  </span>        <span class="kwrd">if</span> ((row + 1 &lt; array.GetLength(0)) &amp;&amp; (array[row + 1, col] == array[row, col]) &amp;&amp; !calc[row + 1, col])</pre>
+<pre><span class="lnum"> 234:  </span>        {</pre>
+<pre class="alt"><span class="lnum"> 235:  </span>            result += DepthFirstSearch(array, row + 1, col, calc);</pre>
+<pre><span class="lnum"> 236:  </span>        }</pre>
+<pre class="alt"><span class="lnum"> 237:  </span>        <span class="kwrd">if</span> ((col - 1 &gt;= 0) &amp;&amp; (array[row, col - 1] == array[row, col]) &amp;&amp; !calc[row, col - 1])</pre>
+<pre><span class="lnum"> 238:  </span>        {</pre>
+<pre class="alt"><span class="lnum"> 239:  </span>            result += DepthFirstSearch(array, row, col - 1, calc);</pre>
+<pre><span class="lnum"> 240:  </span>        }</pre>
+<pre class="alt"><span class="lnum"> 241:  </span>        <span class="kwrd">if</span> ((col + 1 &lt; array.GetLength(1)) &amp;&amp; (array[row, col + 1] == array[row, col]) &amp;&amp; !calc[row, col + 1])</pre>
+<pre><span class="lnum"> 242:  </span>        {</pre>
+<pre class="alt"><span class="lnum"> 243:  </span>            result += DepthFirstSearch(array, row, col + 1, calc);</pre>
+<pre><span class="lnum"> 244:  </span>        }</pre>
+<pre class="alt"><span class="lnum"> 245:  </span>        <span class="kwrd">return</span> result;</pre>
+<pre><span class="lnum"> 246:  </span>    }</pre>
+<pre class="alt"><span class="lnum"> 247:  </span>}</pre>
+</div>
