@@ -1,0 +1,36 @@
+ul.prizes
+{
+	list-style-type: none;
+}
+.schoolyear
+{
+	border-radius: 25px;
+	border: 5px solid orange;
+	padding: 20px; 
+}
+
+ul.prizes>li
+{
+	border-radius: 25px;
+	border: 5px solid orange;
+	padding: 20px; 
+	margin: 20px auto;
+}
+/*
+ul.prizes>li:nth-of-type(even)
+{
+	color: white;
+	background-color: black;
+}
+
+ul.prizes>li:nth-of-type(odd)
+{
+	background-color: white;
+	color: black;
+}
+*/
+ul.prizes>li>label
+{
+	font-size: 125%;
+	font-style: bold;
+}
