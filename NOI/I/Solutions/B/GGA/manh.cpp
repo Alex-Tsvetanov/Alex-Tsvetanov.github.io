@@ -1,0 +1,100 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main()
+{
+    int a[4],b[4];
+    int i=0;
+    for(i=0;i<4;i++)
+    {
+        cin>>a[i];
+    }
+    for(i=0;i<4;i++)
+    {
+        cin>>b[i];
+    }
+    int x=0;
+    if(a[0]==a[2]&&b[0]==b[2])
+    {
+        if(max(b[1],b[3])<=max(a[1],a[3])&&max(b[1],b[3])>=min(a[1],a[3]))
+        {
+            x=fabs(a[0]-b[0]);
+        }
+        if(min(b[1],b[3])<=max(a[1],a[3])&&min(b[1],b[3])>=min(a[1],a[3]))
+        {
+            x=fabs(a[0]-b[0]);
+        }
+        if(max(a[1],a[3])<min(b[1],b[3]))
+        {
+            x=fabs(a[0]-b[0])+fabs(max(a[1],a[3])-min(b[1],b[3]));
+        }
+        if(min(a[1],a[3])>max(b[1],b[3]))
+        {
+            x=fabs(a[0]-b[0])+fabs(min(a[1],a[3])-max(b[1],b[3]));
+        }
+    }
+    if(a[1]==a[3]&&b[1]==b[3])
+    {
+        if(max(b[0],b[2])<=max(a[0],a[2])&&max(b[0],b[2])>=min(a[0],a[2]))
+        {
+            x=fabs(a[1]-b[1]);
+        }
+        if(min(b[0],b[2])<=max(a[0],a[2])&&min(b[0],b[2])>=min(a[0],a[2]))
+        {
+            x=fabs(a[1]-b[1]);
+        }
+        if(max(a[0],a[2])<min(b[0],b[2]))
+        {
+            x=fabs(a[1]-b[1])+fabs(max(a[0],a[2])-min(b[0],b[2]));
+        }
+        if(min(a[0],a[2])>max(b[0],b[2]))
+        {
+            x=fabs(a[1]-b[1])+fabs(min(a[0],a[2])-max(b[0],b[2]));
+        }
+    }
+    if(a[0]==a[2]&&b[1]==b[3])
+    {
+        for(i=0;i<4;i++)
+        {
+            swap(a[i],b[i]);
+        }
+    }
+    if(a[1]==a[3]&&b[0]==b[2])
+    {
+        if(b[0]<=max(a[0],a[2])&&b[0]>=min(a[0],a[2]))
+        {
+            if(min(b[1],b[3])>=a[1])
+            {
+                x=min(b[1],b[3])-a[1];
+            }
+            if(max(b[1],b[3])<=a[1])
+            {
+                x=a[1]-max(b[1],b[3]);
+            }
+        }
+        if(b[0]<=min(a[0],a[2]))
+        {
+            if(min(b[1],b[3])>=a[1])
+            {
+                x=min(b[1],b[3])-a[1]+min(a[0],a[2])-b[0];
+            }
+            if(max(b[1],b[3])<=a[1])
+            {
+                x=a[1]-max(b[1],b[3])-b[0]+min(a[0],a[2]);
+            }
+        }
+        if(b[0]>=max(a[0],a[2]))
+        {
+            if(min(b[1],b[3])>=a[1])
+            {
+                x=min(b[1],b[3])-a[1]-max(a[0],a[2])+b[0];
+            }
+            if(max(b[1],b[3])<=a[1])
+            {
+                x=a[1]-max(b[1],b[3])+b[0]-max(a[0],a[2]);
+            }
+        }
+
+    }
+    cout<<x;
+}

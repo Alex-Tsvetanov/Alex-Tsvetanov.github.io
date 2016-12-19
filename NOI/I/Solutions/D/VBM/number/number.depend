@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1481890493 source:d:\vbm\number\main.cpp
+	<iostream>
+	<math.h>
+
