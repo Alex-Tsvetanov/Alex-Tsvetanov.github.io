@@ -9,11 +9,11 @@ do
 
 		for k in `seq -w 1 20` ; 
 		do
-			timeout 2s ./$j.exe < $j/tests/$j.$k.in > output;
+			timeout 2s ./$j.exe < ../$j/tests/$j.$k.in > output;
 			signal=$?;
 			if [[ $signal -eq 0 ]] ;
 			then
-				if [[ "`diff -w output $j/tests/$j.$k.sol`" = "" ]] ; 
+				if [[ "`diff -w output ../$j/tests/$j.$k.sol`" = "" ]] ; 
 				then 
 					echo -n "+5 " ; 
 					points=$(($points+5));
@@ -44,11 +44,11 @@ do
 
 		for k in `seq -w 1 20` ; 
 		do
-			timeout 0.6s ./$j.exe < $j/tests/$j.$k.in > output;
+			timeout 0.6s ./$j.exe < ../$j/tests/$j.$k.in > output;
 			signal=$?;
 			if [[ $signal -eq 0 ]] ;
 			then
-				if [[ "`diff -w output $j/tests/$j.$k.sol`" = "" ]] ; 
+				if [[ "`diff -w output ../$j/tests/$j.$k.sol`" = "" ]] ; 
 				then 
 					echo -n "+5 " ; 
 					points=$(($points+5));
@@ -80,11 +80,11 @@ do
 
 		for k in `seq -w 1 50` ; 
 		do
-			timeout 0.2s ./$j.exe < $j/tests/$j.$k.in > output;
+			timeout 0.2s ./$j.exe < ../$j/tests/$j.$k.in > output;
 			signal=$?;
 			if [[ $signal -eq 0 ]] ;
 			then
-				if [[ "`diff -w output $j/tests/$j.$k.sol`" = "" ]] ; 
+				if [[ "`diff -w output ../$j/tests/$j.$k.sol`" = "" ]] ; 
 				then 
 					echo -n "+2 " ; 
 					points=$(($points+2));
