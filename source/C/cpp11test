@@ -5,7 +5,7 @@ do
 	points=0;
 	for j in subsums;
 	do
-		g++ $i/$j.cpp -o $j.exe -O2 -s -static -lm -x c++ ;
+		g++ -std=c++11 $i/$j.cpp -o $j.exe -O2 -s -static -lm -x c++ ;
 
 		for k in `seq -w 1 20` ; 
 		do
@@ -40,7 +40,7 @@ do
 
 	for j in color;
 	do
-		g++ $i/$j.cpp -o $j.exe -O2 -s -static -lm -x c++ ;
+		g++ -std=c++11 $i/$j.cpp -o $j.exe -O2 -s -static -lm -x c++ ;
 
 		for k in `seq -w 1 20` ; 
 		do
@@ -76,7 +76,7 @@ do
 
 	for j in traffic;
 	do
-		g++ $i/$j.cpp -o $j.exe -O2 -s -static -lm -x c++ ;
+		g++ -std=c++11 $i/$j.cpp -o $j.exe -O2 -s -static -lm -x c++ ;
 
 		for k in `seq -w 1 50` ; 
 		do
