@@ -1,0 +1,170 @@
+traffic.cpp:4:18: error: ‘int time [640][640]’ redeclared as different kind of symbol
+ int time[640][640];
+                  ^
+In file included from /usr/include/pthread.h:24:0,
+                 from /usr/include/c++/6.3.1/x86_64-pc-linux-gnu/bits/gthr-default.h:35,
+                 from /usr/include/c++/6.3.1/x86_64-pc-linux-gnu/bits/gthr.h:148,
+                 from /usr/include/c++/6.3.1/ext/atomicity.h:35,
+                 from /usr/include/c++/6.3.1/bits/ios_base.h:39,
+                 from /usr/include/c++/6.3.1/ios:42,
+                 from /usr/include/c++/6.3.1/ostream:38,
+                 from /usr/include/c++/6.3.1/iostream:39,
+                 from traffic.cpp:1:
+/usr/include/time.h:192:15: note: previous declaration ‘time_t time(time_t*)’
+ extern time_t time (time_t *__timer) __THROW;
+               ^~~~
+traffic.cpp: In function ‘int main()’:
+traffic.cpp:30:23: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+                 time[x][y]=-1;
+                       ^
+traffic.cpp:30:26: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+                 time[x][y]=-1;
+                          ^
+traffic.cpp:30:29: error: assignment of read-only location ‘*(time + (((sizetype)x) + ((sizetype)y)))’
+                 time[x][y]=-1;
+                             ^
+traffic.cpp:30:29: error: cannot convert ‘int’ to ‘time_t(time_t*) throw () {aka long int(long int*) throw ()}’ in assignment
+traffic.cpp:34:23: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+                 time[x][y]=-1;
+                       ^
+traffic.cpp:34:26: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+                 time[x][y]=-1;
+                          ^
+traffic.cpp:34:29: error: assignment of read-only location ‘*(time + (((sizetype)x) + ((sizetype)y)))’
+                 time[x][y]=-1;
+                             ^
+traffic.cpp:34:29: error: cannot convert ‘int’ to ‘time_t(time_t*) throw () {aka long int(long int*) throw ()}’ in assignment
+traffic.cpp:38:23: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+                 time[x][y]=a+1-'A';
+                       ^
+traffic.cpp:38:26: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+                 time[x][y]=a+1-'A';
+                          ^
+traffic.cpp:38:32: error: assignment of read-only location ‘*(time + (((sizetype)x) + ((sizetype)y)))’
+                 time[x][y]=a+1-'A';
+                                ^~~
+traffic.cpp:38:32: error: cannot convert ‘int’ to ‘time_t(time_t*) throw () {aka long int(long int*) throw ()}’ in assignment
+traffic.cpp:52:28: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+                 if(time[x+1][y]!=-1 and visited[x+1][y]==0){
+                            ^
+traffic.cpp:52:28: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+traffic.cpp:52:31: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+                 if(time[x+1][y]!=-1 and visited[x+1][y]==0){
+                               ^
+traffic.cpp:52:35: error: ISO C++ forbids comparison between pointer and integer [-fpermissive]
+                 if(time[x+1][y]!=-1 and visited[x+1][y]==0){
+                                   ^
+traffic.cpp:53:52: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+                     doseg.push({x+1,y,road+time[x+1][y]});
+                                                    ^
+traffic.cpp:53:52: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+traffic.cpp:53:55: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+                     doseg.push({x+1,y,road+time[x+1][y]});
+                                                       ^
+traffic.cpp:53:55: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+traffic.cpp:53:57: error: no matching function for call to ‘std::priority_queue<vertex>::push(<brace-enclosed initializer list>)’
+                     doseg.push({x+1,y,road+time[x+1][y]});
+                                                         ^
+In file included from /usr/include/c++/6.3.1/queue:64:0,
+                 from traffic.cpp:2:
+/usr/include/c++/6.3.1/bits/stl_queue.h:558:7: note: candidate: void std::priority_queue<_Tp, _Sequence, _Compare>::push(const value_type&) [with _Tp = vertex; _Sequence = std::vector<vertex, std::allocator<vertex> >; _Compare = std::less<vertex>; std::priority_queue<_Tp, _Sequence, _Compare>::value_type = vertex]
+       push(const value_type& __x)
+       ^~~~
+/usr/include/c++/6.3.1/bits/stl_queue.h:558:7: note:   no known conversion for argument 1 from ‘<brace-enclosed initializer list>’ to ‘const value_type& {aka const vertex&}’
+/usr/include/c++/6.3.1/bits/stl_queue.h:566:7: note: candidate: void std::priority_queue<_Tp, _Sequence, _Compare>::push(std::priority_queue<_Tp, _Sequence, _Compare>::value_type&&) [with _Tp = vertex; _Sequence = std::vector<vertex, std::allocator<vertex> >; _Compare = std::less<vertex>; std::priority_queue<_Tp, _Sequence, _Compare>::value_type = vertex]
+       push(value_type&& __x)
+       ^~~~
+/usr/include/c++/6.3.1/bits/stl_queue.h:566:7: note:   no known conversion for argument 1 from ‘<brace-enclosed initializer list>’ to ‘std::priority_queue<vertex>::value_type&& {aka vertex&&}’
+traffic.cpp:55:28: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+                 if(time[x-1][y]!=-1 and visited[x-1][y]==0){
+                            ^
+traffic.cpp:55:28: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+traffic.cpp:55:31: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+                 if(time[x-1][y]!=-1 and visited[x-1][y]==0){
+                               ^
+traffic.cpp:55:35: error: ISO C++ forbids comparison between pointer and integer [-fpermissive]
+                 if(time[x-1][y]!=-1 and visited[x-1][y]==0){
+                                   ^
+traffic.cpp:56:52: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+                     doseg.push({x-1,y,road+time[x-1][y]});
+                                                    ^
+traffic.cpp:56:52: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+traffic.cpp:56:55: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+                     doseg.push({x-1,y,road+time[x-1][y]});
+                                                       ^
+traffic.cpp:56:55: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+traffic.cpp:56:57: error: no matching function for call to ‘std::priority_queue<vertex>::push(<brace-enclosed initializer list>)’
+                     doseg.push({x-1,y,road+time[x-1][y]});
+                                                         ^
+In file included from /usr/include/c++/6.3.1/queue:64:0,
+                 from traffic.cpp:2:
+/usr/include/c++/6.3.1/bits/stl_queue.h:558:7: note: candidate: void std::priority_queue<_Tp, _Sequence, _Compare>::push(const value_type&) [with _Tp = vertex; _Sequence = std::vector<vertex, std::allocator<vertex> >; _Compare = std::less<vertex>; std::priority_queue<_Tp, _Sequence, _Compare>::value_type = vertex]
+       push(const value_type& __x)
+       ^~~~
+/usr/include/c++/6.3.1/bits/stl_queue.h:558:7: note:   no known conversion for argument 1 from ‘<brace-enclosed initializer list>’ to ‘const value_type& {aka const vertex&}’
+/usr/include/c++/6.3.1/bits/stl_queue.h:566:7: note: candidate: void std::priority_queue<_Tp, _Sequence, _Compare>::push(std::priority_queue<_Tp, _Sequence, _Compare>::value_type&&) [with _Tp = vertex; _Sequence = std::vector<vertex, std::allocator<vertex> >; _Compare = std::less<vertex>; std::priority_queue<_Tp, _Sequence, _Compare>::value_type = vertex]
+       push(value_type&& __x)
+       ^~~~
+/usr/include/c++/6.3.1/bits/stl_queue.h:566:7: note:   no known conversion for argument 1 from ‘<brace-enclosed initializer list>’ to ‘std::priority_queue<vertex>::value_type&& {aka vertex&&}’
+traffic.cpp:58:26: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+                 if(time[x][y+1]!=-1 and visited[x][y+1]==0){
+                          ^
+traffic.cpp:58:31: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+                 if(time[x][y+1]!=-1 and visited[x][y+1]==0){
+                               ^
+traffic.cpp:58:31: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+traffic.cpp:58:35: error: ISO C++ forbids comparison between pointer and integer [-fpermissive]
+                 if(time[x][y+1]!=-1 and visited[x][y+1]==0){
+                                   ^
+traffic.cpp:59:50: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+                     doseg.push({x,y+1,road+time[x][y+1]});
+                                                  ^
+traffic.cpp:59:55: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+                     doseg.push({x,y+1,road+time[x][y+1]});
+                                                       ^
+traffic.cpp:59:55: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+traffic.cpp:59:55: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+traffic.cpp:59:57: error: no matching function for call to ‘std::priority_queue<vertex>::push(<brace-enclosed initializer list>)’
+                     doseg.push({x,y+1,road+time[x][y+1]});
+                                                         ^
+In file included from /usr/include/c++/6.3.1/queue:64:0,
+                 from traffic.cpp:2:
+/usr/include/c++/6.3.1/bits/stl_queue.h:558:7: note: candidate: void std::priority_queue<_Tp, _Sequence, _Compare>::push(const value_type&) [with _Tp = vertex; _Sequence = std::vector<vertex, std::allocator<vertex> >; _Compare = std::less<vertex>; std::priority_queue<_Tp, _Sequence, _Compare>::value_type = vertex]
+       push(const value_type& __x)
+       ^~~~
+/usr/include/c++/6.3.1/bits/stl_queue.h:558:7: note:   no known conversion for argument 1 from ‘<brace-enclosed initializer list>’ to ‘const value_type& {aka const vertex&}’
+/usr/include/c++/6.3.1/bits/stl_queue.h:566:7: note: candidate: void std::priority_queue<_Tp, _Sequence, _Compare>::push(std::priority_queue<_Tp, _Sequence, _Compare>::value_type&&) [with _Tp = vertex; _Sequence = std::vector<vertex, std::allocator<vertex> >; _Compare = std::less<vertex>; std::priority_queue<_Tp, _Sequence, _Compare>::value_type = vertex]
+       push(value_type&& __x)
+       ^~~~
+/usr/include/c++/6.3.1/bits/stl_queue.h:566:7: note:   no known conversion for argument 1 from ‘<brace-enclosed initializer list>’ to ‘std::priority_queue<vertex>::value_type&& {aka vertex&&}’
+traffic.cpp:61:26: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+                 if(time[x][y-1]!=-1 and visited[x][y-1]==0){
+                          ^
+traffic.cpp:61:31: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+                 if(time[x][y-1]!=-1 and visited[x][y-1]==0){
+                               ^
+traffic.cpp:61:31: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+traffic.cpp:61:35: error: ISO C++ forbids comparison between pointer and integer [-fpermissive]
+                 if(time[x][y-1]!=-1 and visited[x][y-1]==0){
+                                   ^
+traffic.cpp:62:50: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+                     doseg.push({x,y-1,road+time[x][y-1]});
+                                                  ^
+traffic.cpp:62:55: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+                     doseg.push({x,y-1,road+time[x][y-1]});
+                                                       ^
+traffic.cpp:62:55: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+traffic.cpp:62:55: warning: pointer to a function used in arithmetic [-Wpointer-arith]
+traffic.cpp:62:57: error: no matching function for call to ‘std::priority_queue<vertex>::push(<brace-enclosed initializer list>)’
+                     doseg.push({x,y-1,road+time[x][y-1]});
+                                                         ^
+In file included from /usr/include/c++/6.3.1/queue:64:0,
+                 from traffic.cpp:2:
+/usr/include/c++/6.3.1/bits/stl_queue.h:558:7: note: candidate: void std::priority_queue<_Tp, _Sequence, _Compare>::push(const value_type&) [with _Tp = vertex; _Sequence = std::vector<vertex, std::allocator<vertex> >; _Compare = std::less<vertex>; std::priority_queue<_Tp, _Sequence, _Compare>::value_type = vertex]
+       push(const value_type& __x)
+       ^~~~
+/usr/include/c++/6.3.1/bits/stl_queue.h:558:7: note:   no known conversion for argument 1 from ‘<brace-enclosed initializer list>’ to ‘const value_type& {aka const vertex&}’
+/usr/include/c++/6.3.1/bits/stl_queue.h:566:7: note: candidate: void std::priority_queue<_Tp, _Sequence, _Compare>::push(std::priority_queue<_Tp, _Sequence, _Compare>::value_type&&) [with _Tp = vertex; _Sequence = std::vector<vertex, std::allocator<vertex> >; _Compare = std::less<vertex>; std::priority_queue<_Tp, _Sequence, _Compare>::value_type = vertex]
+       push(value_type&& __x)
+       ^~~~
+/usr/include/c++/6.3.1/bits/stl_queue.h:566:7: note:   no known conversion for argument 1 from ‘<brace-enclosed initializer list>’ to ‘std::priority_queue<vertex>::value_type&& {aka vertex&&}’
