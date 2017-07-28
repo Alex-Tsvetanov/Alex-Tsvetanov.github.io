@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
-<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+
 <head>
     <title>Alex Tsvetanov's HomePage</title>
     <!-- Meta -->
@@ -9,77 +12,343 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Alex Tsvetanov :: HomePage">
-    <meta name="author" content="Alex Tsvetanov">    
-    <link rel="shortcut icon" href="favicon.ico">  
+    <meta name="author" content="Alex Tsvetanov">
+    <link rel="shortcut icon" href="favicon.ico">
     <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <!-- Global CSS -->
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
     <!-- Plugins CSS -->
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-	<link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
     <!-- github calendar css -->
-    <link rel="stylesheet" href="assets/plugins/github-calendar/dist/github-calendar.css"
-/>
+    <link rel="stylesheet" href="assets/plugins/github-calendar/dist/github-calendar.css" />
     <!-- github acitivity css -->
     <link rel="stylesheet" href="assets/plugins/github-activity/src/github-activity.css">
-	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
-    <!-- Theme CSS -->  
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
+    <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
-    
+
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	<script>
-	  (adsbygoogle = window.adsbygoogle || []).push({
-		google_ad_client: "ca-pub-8087449549292267",
-		enable_page_level_ads: true
-	  });
-	</script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-8087449549292267",
+            enable_page_level_ads: true
+        });
+    </script>
 
-	<script>
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-		ga('create', 'UA-86984822-1', 'auto');
-		ga('send', 'pageview');
-
-	</script>
+        ga('create', 'UA-86984822-1', 'auto');
+        ga('send', 'pageview');
+    </script>
     <link id="contests-style" rel="stylesheet" href="assets/css/contests.css">
-</head> 
+    <style>
+        img {
+            vertical-align: middle;
+        }
+        .img-responsive {
+            display: block;
+            height: auto;
+            max-width: 100%;
+        }
+        .img-rounded {
+            border-radius: 3px;
+        }
+        .img-thumbnail {
+            background-color: #fff;
+            border: 1px solid #ededf0;
+            border-radius: 3px;
+            display: inline-block;
+            height: auto;
+            line-height: 1.428571429;
+            max-width: 100%;
+            moz-transition: all .2s ease-in-out;
+            o-transition: all .2s ease-in-out;
+            padding: 2px;
+            transition: all .2s ease-in-out;
+            webkit-transition: all .2s ease-in-out;
+        }
+        .img-circle {
+            border-radius: 50%;
+        }
+        .timeline-centered {
+            position: relative;
+            margin-bottom: 30px;
+        }
+        .timeline-centered:before,
+        .timeline-centered:after {
+            content: " ";
+            display: table;
+        }
+        .timeline-centered:after {
+            clear: both;
+        }
+        .timeline-centered:before,
+        .timeline-centered:after {
+            content: " ";
+            display: table;
+        }
+        .timeline-centered:after {
+            clear: both;
+        }
+        .timeline-centered:before {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 4px;
+            background: #f5f5f6;
+            /*left: 50%;*/
+            
+            top: 20px;
+            bottom: 20px;
+            margin-left: 30px;
+        }
+        .timeline-centered .timeline-entry {
+            position: relative;
+            /*width: 50%; float: right;*/
+            
+            margin-top: 5px;
+            margin-left: 30px;
+            margin-bottom: 10px;
+            clear: both;
+        }
+        .timeline-centered .timeline-entry:before,
+        .timeline-centered .timeline-entry:after {
+            content: " ";
+            display: table;
+        }
+        .timeline-centered .timeline-entry:after {
+            clear: both;
+        }
+        .timeline-centered .timeline-entry:before,
+        .timeline-centered .timeline-entry:after {
+            content: " ";
+            display: table;
+        }
+        .timeline-centered .timeline-entry:after {
+            clear: both;
+        }
+        .timeline-centered .timeline-entry.begin {
+            margin-bottom: 0;
+        }
+        .timeline-centered .timeline-entry.left-aligned {
+            float: left;
+        }
+        .timeline-centered .timeline-entry.left-aligned .timeline-entry-inner {
+            margin-left: 0;
+            margin-right: -18px;
+        }
+        .timeline-centered .timeline-entry.left-aligned .timeline-entry-inner .timeline-time {
+            left: auto;
+            right: -100px;
+            text-align: left;
+        }
+        .timeline-centered .timeline-entry.left-aligned .timeline-entry-inner .timeline-icon {
+            float: right;
+        }
+        .timeline-centered .timeline-entry.left-aligned .timeline-entry-inner .timeline-label {
+            margin-left: 0;
+            margin-right: 70px;
+        }
+        .timeline-centered .timeline-entry.left-aligned .timeline-entry-inner .timeline-label:after {
+            left: auto;
+            right: 0;
+            margin-left: 0;
+            margin-right: -9px;
+            -moz-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }
+        .timeline-centered .timeline-entry .timeline-entry-inner {
+            position: relative;
+            margin-left: -20px;
+            margin-bottom: 20px;
+        }
+        .timeline-centered .timeline-entry .timeline-entry-inner:before,
+        .timeline-centered .timeline-entry .timeline-entry-inner:after {
+            content: " ";
+            display: table;
+        }
+        .timeline-centered .timeline-entry .timeline-entry-inner:after {
+            clear: both;
+        }
+        .timeline-centered .timeline-entry .timeline-entry-inner:before,
+        .timeline-centered .timeline-entry .timeline-entry-inner:after {
+            content: " ";
+            display: table;
+        }
+        .timeline-centered .timeline-entry .timeline-entry-inner:after {
+            clear: both;
+        }
+        .timeline-centered .timeline-entry .timeline-entry-inner .timeline-time {
+            position: absolute;
+            left: -100px;
+            text-align: right;
+            padding: 10px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        .timeline-centered .timeline-entry .timeline-entry-inner .timeline-time > span {
+            display: block;
+        }
+        .timeline-centered .timeline-entry .timeline-entry-inner .timeline-time > span:first-child {
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .timeline-centered .timeline-entry .timeline-entry-inner .timeline-time > span:last-child {
+            font-size: 12px;
+        }
+        .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon {
+            background: #fff;
+            color: #737881;
+            display: block;
+            width: 40px;
+            height: 40px;
+            -webkit-background-clip: padding-box;
+            -moz-background-clip: padding;
+            background-clip: padding-box;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            border-radius: 20px;
+            text-align: center;
+            -moz-box-shadow: 0 0 0 5px #f5f5f6;
+            -webkit-box-shadow: 0 0 0 5px #f5f5f6;
+            box-shadow: 0 0 0 5px #f5f5f6;
+            line-height: 40px;
+            font-size: 15px;
+            float: left;
+        }
+        .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.bg-primary {
+            background-color: #303641;
+            color: #fff;
+        }
+        .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.bg-secondary {
+            background-color: #ee4749;
+            color: #fff;
+        }
+        .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.bg-success {
+            background-color: #00a651;
+            color: #fff;
+        }
+        .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.bg-info {
+            background-color: #21a9e1;
+            color: #fff;
+        }
+        .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.bg-warning {
+            background-color: #fad839;
+            color: #fff;
+        }
+        .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.bg-danger {
+            background-color: #cc2424;
+            color: #fff;
+        }
+        .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label {
+            position: relative;
+            background: #f5f5f6;
+            padding: 1em;
+            margin-left: 60px;
+            -webkit-background-clip: padding-box;
+            -moz-background-clip: padding;
+            background-clip: padding-box;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+        }
+        .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label:after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 9px 9px 9px 0;
+            border-color: transparent #f5f5f6 transparent transparent;
+            left: 0;
+            top: 10px;
+            margin-left: -9px;
+        }
+        .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label h2,
+        .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label p {
+            color: #737881;
+            font-family: "Noto Sans", sans-serif;
+            font-size: 12px;
+            margin: 0;
+            line-height: 1.428571429;
+        }
+        .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label p + p {
+            margin-top: 15px;
+        }
+        .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label h2 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label h2 a {
+            color: #303641;
+        }
+        .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label h2 span {
+            -webkit-opacity: .6;
+            -moz-opacity: .6;
+            opacity: .6;
+            -ms-filter: alpha(opacity=60);
+            filter: alpha(opacity=60);
+        }
+    </style>
+</head>
 
 <body>
-    <!-- ******HEADER****** --> 
+    <!-- ******HEADER****** -->
     <header class="header">
-        <div class="container">                       
+        <div class="container">
             <img class="profile-image img-responsive pull-left" src="assets/images/profile.png" alt="Alex Tsvetanov" />
             <div class="profile-content pull-left">
                 <h1 class="name">Alex Tsvetanov</h1>
-                <h2 class="desc">Full Stack Developer</h2>   
+                <h2 class="desc">Full Stack Developer</h2>
                 <ul class="social list-inline">
-                    <li><a href="https://www.facebook.com/alex.tsvetanov.2002"><i class="fa fa-facebook"></i></a></li>                   
-<!--
+                    <li><a href="https://www.facebook.com/alex.tsvetanov.2002"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <!--
 					<li><a href="#"><i class="fa fa-twitter"></i></a></li>                   
 					<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
 -->
-                    <li><a href="https://linkedin.com/in/alex-tsvetanov-020b49a7"><i class="fa fa-linkedin"></i></a></li>
-                    <li><a href="tox:F886A0944468E394ADF83A8F067D252F417F10964EB0880C5A76793CDEE6135815AE352F12EB"><i class="fa fa-comments"></i></a></li>
-                    <li class="last-item"><a href="https://github.com/Alex-Tsvetanov"><i class="fa fa-github-alt"></i></a></li>                  
-<!--
+                    <li><a href="https://linkedin.com/in/alex-tsvetanov-020b49a7"><i class="fa fa-linkedin"></i></a>
+                    </li>
+                    <li><a href="tox:F886A0944468E394ADF83A8F067D252F417F10964EB0880C5A76793CDEE6135815AE352F12EB"><i class="fa fa-comments"></i></a>
+                    </li>
+                    <li class="last-item"><a href="https://github.com/Alex-Tsvetanov"><i class="fa fa-github-alt"></i></a>
+                    </li>
+                    <!--
 					<li class="last-item"><a href="#"><i class="fa fa-hacker-news"></i></a></li>
 -->
-                </ul> 
-            </div><!--//profile-->
-            <a class="btn btn-cta-primary pull-right" href="https://tsalex.tk" target="_blank"><i class="fa fa-paper-plane"></i> Contact Me</a>              
-        </div><!--//container-->
-    </header><!--//header-->
-    
+                </ul>
+            </div>
+            <!--//profile-->
+            <a class="btn btn-cta-primary pull-right" href="https://tsalex.tk" target="_blank"><i class="fa fa-paper-plane"></i> Contact Me</a>
+        </div>
+        <!--//container-->
+    </header>
+    <!--//header-->
+
     <div class="container sections-wrapper">
         <div class="row">
             <div class="primary col-md-8 col-sm-12 col-xs-12">
@@ -87,73 +356,85 @@
                     <div class="section-inner">
                         <h2 class="heading">About Me</h2>
                         <div class="content">
-							<p>
-							I am 14 years old and am a student in 8<sup>-th</sup> grade at the Sofia Mathematics High School. I deal with racing programming in C++ from 3<sup>-rd</sup> grade. I went through all levels of Telerik Kids Academy, I graduated Telerik Algo Academy. I prizes in national and international competitions in Informatics and Mathematics. Lately bother with application programming and in particular with web development. I have knowledge except C++ and languages like C#, JavaScript, LaTeX and PHP. With C++ I write mostly algorithms and back-end.
-							</p>
-							<p>Favorite OS: <i class="fa fa-linux"></i>Arch Linux</p>
-                        </div><!--//content-->
-                    </div><!--//section-inner-->                 
-                </section><!--//section-->
-    
-               <section class="latest section">
+                            <p>
+                                I am 14 years old and am a student in 8<sup>-th</sup> grade at the Sofia Mathematics High School. I deal with racing programming in C++ from 3<sup>-rd</sup> grade. I went through all levels of Telerik Kids Academy, I graduated Telerik Algo Academy. I prizes in national and international competitions in Informatics and Mathematics. Lately bother with application programming and in particular with web development. I have knowledge except C++ and languages like C#, JavaScript, LaTeX and PHP. With C++ I write mostly algorithms and back-end.
+                            </p>
+                            <p>Favorite OS: <i class="fa fa-linux"></i>Arch Linux</p>
+                        </div>
+                        <!--//content-->
+                    </div>
+                    <!--//section-inner-->
+                </section>
+                <!--//section-->
+
+                <section class="latest section">
                     <div class="section-inner">
                         <h2 class="heading">Latest Projects</h2>
-                        <div class="content">    
+                        <div class="content">
                             <div class="item featured text-center">
                                 <h3 class="title"><a href="https://infocourse.techedu.cf" target="_blank">Academy :: Tech Education ++</a></h3>
                                 <p class="summary"><span class="label label-theme">Open Source</span> Advanced Learning Managment System</p>
                                 <div class="featured-image">
                                     <a href="https://infocourse.techedu.cf" target="_blank">
-                                    <img class="img-responsive project-image" src="assets/images/projects/academy.png" alt="project name" />
+                                        <img class="img-responsive project-image" src="assets/images/projects/academy.png" alt="project name" />
                                     </a>
                                     <div class="ribbon">
                                         <div class="text">New</div>
-                                        </div>
                                     </div>
-                                    
-                                <div class="desc text-left">                                    
-									<p>	In fact there are a lot of built-in learning management systems. They have some hard-wired cons. For example: Video lessons continue about 3-4 hours, which is too long; Most systems have no practical exercises or assignments. However, programming can be learned best with practice; other systems have only  theoretical tests, which is not enough for good skill developing.
-									</p>
-									<p>
-									The core aim of our project is to create online learning management system that combines best practices in organizing training so that it will be interesting, useful and much easier for the students. The most important part of our project is to fertilize future programmers, showing them that it is not as difficult as it sounds. This will happen through brief and extensive online practical competitions taken their levels, with certificates and prizes for the best ones.
-									</p>
-									<p>
-									Our project is focused mainly on beginners and more advanced programmers. The competitions will include theoretical part, but will mostly be oriented practically.
-									</p>
-									<p>
-									Testing system is "The Judgata", which is an individual project already integrated into this one.
-									</p>
-									<p>
-									This project is created by Alex Tsvetanov and Dimo Chanev. It is also facilitated by Delyan Pirinski, Krasimir Paskalev, Krasen Ferdinandov and Vasil Tinchev.
-									</p>
-                                </div><!--//desc-->         
-                                <a class="btn btn-cta-secondary" href="https://github.com/TechEducationPlusPlus" target="_blank"><i class="fa fa-thumbs-o-up"></i> Follow us </a>                 
-                            </div><!--//item-->
+                                </div>
+
+                                <div class="desc text-left">
+                                    <p> In fact there are a lot of built-in learning management systems. They have some hard-wired cons. For example: Video lessons continue about 3-4 hours, which is too long; Most systems have no practical exercises or assignments. However, programming can be learned best with practice; other systems have only theoretical tests, which is not enough for good skill developing.
+                                    </p>
+                                    <p>
+                                        The core aim of our project is to create online learning management system that combines best practices in organizing training so that it will be interesting, useful and much easier for the students. The most important part of our project is to fertilize future programmers, showing them that it is not as difficult as it sounds. This will happen through brief and extensive online practical competitions taken their levels, with certificates and prizes for the best ones.
+                                    </p>
+                                    <p>
+                                        Our project is focused mainly on beginners and more advanced programmers. The competitions will include theoretical part, but will mostly be oriented practically.
+                                    </p>
+                                    <p>
+                                        Testing system is "The Judgata", which is an individual project already integrated into this one.
+                                    </p>
+                                    <p>
+                                        This project is created by Alex Tsvetanov and Dimo Chanev. It is also facilitated by Delyan Pirinski, Krasimir Paskalev, Krasen Ferdinandov and Vasil Tinchev.
+                                    </p>
+                                </div>
+                                <!--//desc-->
+                                <a class="btn btn-cta-secondary" href="https://github.com/TechEducationPlusPlus" target="_blank"><i class="fa fa-thumbs-o-up"></i> Follow us </a>
+                            </div>
+                            <!--//item-->
                             <div class="item featured text-center">
                                 <h3 class="title"><a href="https://atj.openjudge.tk" target="_blank">AT Judge</a></h3>
                                 <p class="summary"><span class="label label-theme">Open Source</span> Advanced Judge System</p>
                                 <div class="featured-image">
                                     <a href="https://atj.openjudge.tk" target="_blank">
-                                    <img class="img-responsive project-image" src="assets/images/projects/at-judge.png" alt="project name" />
+                                        <img class="img-responsive project-image" src="assets/images/projects/at-judge.png" alt="project name" />
                                     </a>
                                     <div class="ribbon">
                                         <div class="text">New</div>
-                                        </div>
                                     </div>
-                                    
-                                <div class="desc text-left">                                    
-                                </div><!--//desc-->         
-                                <a class="btn btn-cta-secondary" href="https://github.com/Alex-Tsvetanov/AT-Judge" target="_blank"><i class="fa fa-thumbs-o-up"></i> Follow me </a>                 
-                            </div><!--//item-->
+                                </div>
+
+                                <div class="desc text-left">
+                                </div>
+                                <!--//desc-->
+                                <a class="btn btn-cta-secondary" href="https://github.com/Alex-Tsvetanov/AT-Judge" target="_blank"><i class="fa fa-thumbs-o-up"></i> Follow me </a>
+                            </div>
+                            <!--//item-->
                             <hr class="divider" />
                             <div class="item row">
                                 <div class="desc col-md-8 col-sm-8 col-xs-12">
-                                </div><!--//desc-->                          
-                            </div><!--//item-->
-                        </div><!--//content-->  
-                    </div><!--//section-inner-->                 
-                </section><!--//section-->
-                
+                                </div>
+                                <!--//desc-->
+                            </div>
+                            <!--//item-->
+                        </div>
+                        <!--//content-->
+                    </div>
+                    <!--//section-inner-->
+                </section>
+                <!--//section-->
+
                 <section class="projects section">
                     <div class="section-inner">
                         <h2 class="heading">Other Projects</h2>
@@ -161,26 +442,34 @@
                             <div class="item" id="mec">
                                 <h3 class="title"><a href="https://expression-dev.github.io/">Math Expressions Calculation</a> <span class="label label-theme">Open Source</span></h3>
                                 <p class="summary">
-								There are a lot of tools for calculations and data processing (like wolframalpha.com and MS Excel) but they cannot allow you create custom new operations (like functions, brackets, etc.). That is why our program is better than them. <br>
-								This project aims at making an application, which calculates and simplifies expressions with custom data types. This application is different than the other tools, with an option to run-time add custom operations, variables, arrays, pairs of brackets and functions. It can be used for scientific and learning purposes.<br><br>
-								Teammates: <a href="https://github.com/Ro6afF">Dimo Chanev</a>
-								</p>
-                                <p><a class="more-link" href="https://github.com/expression-dev/" target="_blank"><i class="fa fa-external-link"></i> View on GitHub</a></p>
-                            </div><!--//item-->
+                                    There are a lot of tools for calculations and data processing (like wolframalpha.com and MS Excel) but they cannot allow you create custom new operations (like functions, brackets, etc.). That is why our program is better than them.
+                                    <br> This project aims at making an application, which calculates and simplifies expressions with custom data types. This application is different than the other tools, with an option to run-time add custom operations, variables, arrays, pairs of brackets and functions. It can be used for scientific and learning purposes.
+                                    <br>
+                                    <br> Teammates: <a href="https://github.com/Ro6afF">Dimo Chanev</a>
+                                </p>
+                                <p><a class="more-link" href="https://github.com/expression-dev/" target="_blank"><i class="fa fa-external-link"></i> View on GitHub</a>
+                                </p>
+                            </div>
+                            <!--//item-->
                             <div class="item" id="catalan">
                                 <h3 class="title"><a href="#catalan">Project "Catalan Numbers"</a></h3>
                                 <p class="summary">
-								This is a project for MITE (Moscow, Russia) - a international competition, for Catalan Numbers.<br><br>
-								Teammates: Margarita Stefanova, Joana Kicheva
-								</p>
-                            </div><!--//item-->
-                            
+                                    This is a project for MITE (Moscow, Russia) - a international competition, for Catalan Numbers.
+                                    <br>
+                                    <br> Teammates: Margarita Stefanova, Joana Kicheva
+                                </p>
+                            </div>
+                            <!--//item-->
+
                             <a class="btn btn-cta-secondary" href="https://github.com/Alex-Tsvetanov">More on GitHub <i class="fa fa-chevron-right"></i></a>
-                            
-                        </div><!--//content-->  
-                    </div><!--//section-inner-->                 
-                </section><!--//section-->
-                
+
+                        </div>
+                        <!--//content-->
+                    </div>
+                    <!--//section-inner-->
+                </section>
+                <!--//section-->
+
                 <section class="experience section">
                     <div class="section-inner">
                         <h2 class="heading">Work Experience</h2>
@@ -189,235 +478,598 @@
                                 <h3 class="title">Trainer - <span class="place"><a>Telerik Kids Academy</a></span> <span class="year">(2013 - 2013)</span></h3>
                                 <p>I taught some lectures in Telerik Kids Academy</p>
                             </div>
-						</div>
+                            <div class="item">
+                                <h3 class="title">Part-time trainer - <span class="place"><a>SoftUni</a></span> <span class="year">(2017 - present)</span></h3>
+                                <p>Python Basics, Python Fundamentals, Algorithm courses</p>
+                            </div>
+                        </div>
                     </div>
                 </section>
                 <section class="prizes section">
                     <div class="section-inner">
-<iframe frameborder='0' src='https://quiz.fbapp.io/embed/1790960?api=3.5.1' width='100%'></iframe><script src="https://code-rubik-cdn.s3.amazonaws.com/iframeresizer/3.5.1/host.js"></script><script type='text/javascript'>iFrameResize({ enablePublicMethods: true, minHeight: 230 })</script>
                         <h2 class="heading">Prizes</h2>
                         <div class="content">
-							<div class="item schoolyear" id="2016-2017">
-								<h3 class="title">2016-2017</h3>
-								<p class="summary">
-								<ul class="prizes">
-									<li class="silver">
-										<label class="silver">Second place - Silver medal</label>
-										<p>XVIII Sofia National Mathematics Tournament of Mathematics</p>
-										<img width="50%" src="assets/images/competitions/2016-2017/MATH/SMT.PNG">
-									</li>
-									<li class="bronze">
-										<label class="bronze">Bronze Medal</label>
-										<p>VII International Tournament in Informatics, 24-27 November 2016, Shumen, Bulgaria</p>
-										<p>Junior Group (students born after the 31<sup>-st</sup> December 2000 - 15 years old, but I was 14 years old)</p>
-										<img src="assets/images/competitions/2016-2017/esennen/sofian team.JPG">
-									</li>
-								</ul>
-								</p>
-							</div><!--//item-->
-							<div class="item schoolyear" id="2015-2016">
-								<h3 class="title">2015-2016</h3>
-								<p class="summary">
-								<ul class="prizes">
-									<li class="bronze">
-										<label class="bronze">Third place</label>
-										<p>Team Competition (Team Kontestatsia - Ivan Ganev, Plamen Dinev, Viktoria Hristova and I)</p>
-										<p>Race Control of The National Camp Informatics School (5<sup>-th</sup> - 11<sup>-th</sup> September)</p>
-									</li>
-									<li class="gold">
-										<label class="gold">First place</label>
-										<p>Individual Competition</p>
-										<p>Race Control of The National Camp Informatics School (5<sup>-th</sup> - 11<sup>-th</sup> September)</p>
-									</li>
-									<li class="bronze">
-										<label class="bronze">Third place - Bronze medal</label>
-										<p>XV National Autumn Tournament in Informatics</p>
-										<p>Group C (8<sup>-th</sup> grade) - in the higher age group</p>
-									</li>
-									<li class="gold">
-										<label class="gold">First place</label>
-										<p>XXII National Easter Mathematical Competition</p>
-									</li>
-									<li class="bronze">
-										<label class="bronze">Third place - Bronze medal</label>
-										<p>XVII Sofia National Mathematics Tournament of Mathematics</p>
-									</li>
-									<li class="bronze">
-										<label class="bronze">Third place</label>
-										<p>XXIV National Tournament in Mathematics "Chernorizets Hrabar"</p>
-										<p>31<sup>-st</sup> October</p>
-									</li>
-								</ul>
-								</p>
-							</div><!--//item-->
-							<div class="item schoolyear" id="2013-2014">
-								<h3 class="title">2013-2014</h3>
-								<p class="summary">
-								<ul class="prizes">
-									<li class="gold">
-										<label class="gold">Gold Medal</label>
-										<p>VI National Tournament in Informatics, 23-25 November 2016, Shumen, Bulgaria</p>
-										<p>Group E (4-5<sup>-th</sup> grade)</p>
-									</li>
-								</ul>
-								</p>
-							</div><!--//item-->
-						</div><!--//content-->  
-					</div><!--//section-inner-->                 
-				</section><!--//section-->
-                
-                <section class="section">
-                    <div class="section-inner">
-						<iframe frameborder='0' src='https://quiz.fbapp.io/embed/1790960?api=3.5.1' width='100%'></iframe><script src="https://code-rubik-cdn.s3.amazonaws.com/iframeresizer/3.5.1/host.js"></script><script type='text/javascript'>iFrameResize({ enablePublicMethods: true, minHeight: 230 })</script>
-					</div>
-				</section>
-		<!--
-                <section class="github section">
-                    <div class="section-inner">
-                        <h2 class="heading">My GitHub</h2>
-                        <div id="github-graph" class="github-graph">
-                        </div>               
-                        <div id="ghfeed" class="ghfeed">
-                        </div>
-                    </div>
-                </section>
-				-->
 
-            </div><!--//primary-->
+                            <h3>2017</h3>
+                            <div class="timeline-centered">
+                                <article class="timeline-entry">
+                                    <div class="timeline-entry-inner">
+                                        <div class="timeline-icon">
+                                            <i class="entypo-feather"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <h2><a href="#">Certificate</a> <span>Completed Programming Training in 2016-2017 (Telerik Kids Academy - Sofia)</span></h2>
+                                            <p><i class="glyphicon glyphicon-calendar"></i> 2017</p>
+                                            <p><i class="glyphicon glyphicon-map-marker"></i> Sofia</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-entry-inner">
+                                        <div class="timeline-icon">
+                                            <i class="entypo-feather"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <h2><a href="#">Gold medal</a> <span>the National Spring Informatics Tournament - Group C (8<sup>th</sup> grade)</span></h2>
+                                            <p><i class="glyphicon glyphicon-calendar"></i> 09-11 June 2017</p>
+                                            <p><i class="glyphicon glyphicon-map-marker"></i> Shumen</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-entry-inner">
+                                        <div class="timeline-icon">
+                                            <i class="entypo-feather"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <h2><a href="#">Special prize from MusalaSoft</a> <span>Project "TechEdu++" at the Seventeenth Student Section - 09-12 April 2017, Borovets</span></h2>
+                                            <p><i class="glyphicon glyphicon-calendar"></i> 09-12 April 2017</p>
+                                            <p><i class="glyphicon glyphicon-map-marker"></i> Borovets</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-entry-inner">
+                                        <div class="timeline-icon">
+                                            <i class="entypo-feather"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <h2><a href="#">Diploma for excellent presentation</a> <span>Project "TechEdu++" at the Seventeenth Student Section - 09-12 April 2017, Borovets</span></h2>
+                                            <p><i class="glyphicon glyphicon-calendar"></i> 09-12 April 2017</p>
+                                            <p><i class="glyphicon glyphicon-map-marker"></i> Borovets</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-entry-inner">
+                                        <div class="timeline-icon">
+                                            <i class="entypo-feather"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <h2><a href="#">Third place</a> <span>"Softuniada 2017", category "Algorithmic programming", junior age (up to 16 years)</span></h2>
+                                            <p><i class="glyphicon glyphicon-calendar"></i> January 08, 2017</p>
+                                            <p><i class="glyphicon glyphicon-map-marker"></i> Sofia</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-entry-inner">
+                                        <div class="timeline-icon">
+                                            <i class="entypo-feather"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <h2><a href="#">Second place</a> <span>Project "TechEdu++", "Softuniada 2017", category "Web application", junior age (up to 16 years)</span></h2>
+                                            <p><i class="glyphicon glyphicon-calendar"></i> January 08, 2017</p>
+                                            <p><i class="glyphicon glyphicon-map-marker"></i> Sofia</p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <h3>2016</h3>
+                            <div class="timeline-centered">
+                                <article class="timeline-entry">
+                                    <div class="timeline-entry-inner">
+                                        <div class="timeline-icon">
+                                            <i class="entypo-feather"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <h2><a href="#">Silver medal</a> <span>the Sofia Mathematical Tournament, category 8th grade</span></h2>
+                                            <p><i class="glyphicon glyphicon-calendar"></i> November 19, 2016</p>
+                                            <p><i class="glyphicon glyphicon-map-marker"></i> Sofia</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-entry-inner">
+                                        <div class="timeline-icon">
+                                            <i class="entypo-feather"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <h2><a href="#">Certificate</a> <span>graduate Telerik Kids Academy - Sofia, track Advanced algorithmic programming</span></h2>
+                                            <p><i class="glyphicon glyphicon-calendar"></i> November 2016</p>
+                                            <p><i class="glyphicon glyphicon-map-marker"></i> Sofia</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-entry-inner">
+                                        <div class="timeline-icon">
+                                            <i class="entypo-feather"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <h2><a href="#">Bronze medal</a> <span>the John Atanasov International Informatics Tournament (junior age)</span></h2>
+                                            <p><i class="glyphicon glyphicon-calendar"></i> 25-27 November 2016</p>
+                                            <p><i class="glyphicon glyphicon-map-marker"></i> Shumen</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-entry-inner">
+                                        <div class="timeline-icon">
+                                            <i class="entypo-feather"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <h2><a href="#">First place</a> <span>the control competition of the National Campus of Informatics (8th grade)</span></h2>
+                                            <p><i class="glyphicon glyphicon-calendar"></i> 05-11 September 2016</p>
+                                            <p><i class="glyphicon glyphicon-map-marker"></i> Vidin</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-entry-inner">
+                                        <div class="timeline-icon">
+                                            <i class="entypo-feather"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <h2><a href="#">Certificate</a> <span>successful completion of the Summer Research School of Mathematics and Informatics</span></h2>
+                                            <p><i class="glyphicon glyphicon-calendar"></i> 31 July - 20 August 2016</p>
+                                            <p><i class="glyphicon glyphicon-map-marker"></i> Blagoevgrad</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-entry-inner">
+                                        <div class="timeline-icon">
+                                            <i class="entypo-feather"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <h2><a href="#">Excellent 6.00</a> <span>the National Seventh-grade Outplacement</span></h2>
+                                            <p><i class="glyphicon glyphicon-calendar"></i> June 2016</p>
+                                            <p><i class="glyphicon glyphicon-map-marker"></i> Sofia</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-entry-inner">
+                                        <div class="timeline-icon">
+                                            <i class="entypo-feather"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <h2><a href="#">Third place</a> <span>the National Spring Informatics Tournament - Group C (8th grade)</span></h2>
+                                            <p><i class="glyphicon glyphicon-calendar"></i> 10-12 June 2016</p>
+                                            <p><i class="glyphicon glyphicon-map-marker"></i> Plovdiv</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-entry-inner">
+                                        <div class="timeline-icon">
+                                            <i class="entypo-feather"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <h2><a href="#">Certificate</a> <span>Completed Programming Training in 2015-2016 at Telerik Algo Academy</span></h2>
+                                            <p><i class="glyphicon glyphicon-calendar"></i> 2016</p>
+                                            <p><i class="glyphicon glyphicon-map-marker"></i> sofia</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-entry-inner">
+                                        <div class="timeline-icon">
+                                            <i class="entypo-feather"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <h2><a href="#">Third place</a> <span>the International Rouund of the MITE International Competition, "Mathematics as a Science", Project "Catalan numbers"</span></h2>
+                                            <p><i class="glyphicon glyphicon-calendar"></i> 2016</p>
+                                            <p><i class="glyphicon glyphicon-map-marker"></i> Moscow, Russia</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-entry-inner">
+                                        <div class="timeline-icon">
+                                            <i class="entypo-feather"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <h2><a href="#">Grand Prize</a> <span>the National Round of the MITE International Competition, "Mathematics as a Science", Project "Catalan numbers"</span></h2>
+                                            <p><i class="glyphicon glyphicon-calendar"></i> January 5, 2016</p>
+                                            <p><i class="glyphicon glyphicon-map-marker"></i> Sofia</p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <h3>2015</h3>
+                            <div class="timeline-centered">
+                                <article class="timeline-entry">
+                                    <div class="timeline-entry-inner">
+                                        <div class="timeline-icon">
+                                            <i class="entypo-feather"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <h2><a href="#">Bronze medal</a> <span>the John Atanasov National Informatics Tournament (Group C - 7th and 8th grade)</span></h2>
+                                            <p><i class="glyphicon glyphicon-calendar"></i> 28-29 November 2015</p>
+                                            <p><i class="glyphicon glyphicon-map-marker"></i> Shumen</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-entry-inner">
+                                        <div class="timeline-icon">
+                                            <i class="entypo-feather"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <h2><a href="#">Finalist in</a> <span>the Talents of the Future</span></h2>
+                                            <p><i class="glyphicon glyphicon-calendar"></i>15 November 2015</p>
+                                            <p><i class="glyphicon glyphicon-map-marker"></i> Sofia</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-entry-inner">
+                                        <div class="timeline-icon">
+                                            <i class="entypo-feather"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <h2><a href="#">Bronze medal</a> <span>the Sofia Mathematical Tournament (7th grade)</span></h2>
+                                            <p><i class="glyphicon glyphicon-calendar"></i> 07 November 2015</p>
+                                            <p><i class="glyphicon glyphicon-map-marker"></i> Sofia</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-entry-inner">
+                                        <div class="timeline-icon">
+                                            <i class="entypo-feather"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <h2><a href="#">Bronze medal</a> <span>the Mathematics Tournament "Chernorizets Hrabar"</span></h2>
+                                            <p><i class="glyphicon glyphicon-calendar"></i> 2015</p>
+                                            <p><i class="glyphicon glyphicon-map-marker"></i> Sofia</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-entry-inner">
+                                        <div class="timeline-icon">
+                                            <i class="entypo-feather"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <h2><a href="#">Winner</a> <span>the control camp of the National Campus of Informatics (7th grade)</span></h2>
+                                            <p><i class="glyphicon glyphicon-calendar"></i> 05-11 September 2015</p>
+                                            <p><i class="glyphicon glyphicon-map-marker"></i> Haskovo</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-entry-inner">
+                                        <div class="timeline-icon">
+                                            <i class="entypo-feather"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <h2><a href="#">Third place</a> <span>the team competition of the National Campus of Informatics</span></h2>
+                                            <p><i class="glyphicon glyphicon-calendar"></i> 05-11 September 2015</p>
+                                            <p><i class="glyphicon glyphicon-map-marker"></i> Haskovo</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-entry-inner">
+                                        <div class="timeline-icon">
+                                            <i class="entypo-feather"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <h2><a href="#">Certificate</a> <span>Completed Programming Training in 2014-2015 at Telerik Algo Academy</span></h2>
+                                            <p><i class="glyphicon glyphicon-calendar"></i> 2015</p>
+                                            <p><i class="glyphicon glyphicon-map-marker"></i> Sofia</p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <h3>2014</h3>
+                            <div class="timeline-centered">
+                                <article class="timeline-entry">
+                                    <div class="timeline-entry-inner">
+                                        <div class="timeline-icon">
+                                            <i class="entypo-feather"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <h2><a href="#">Third place</a> <span>the control competition of the National Campus of Informatics (7th grade)</span></h2>
+                                            <p><i class="glyphicon glyphicon-calendar"></i> 05-11 September 2014, Kardzhali</p>
+                                            <p><i class="glyphicon glyphicon-map-marker"></i> Sofia</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-entry-inner">
+                                        <div class="timeline-icon">
+                                            <i class="entypo-feather"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <h2><a href="#">Silver medal</a> <span>the Asia International Mathematical Oplympiad Open Contest 2014 Final</span></h2>
+                                            <p><i class="glyphicon glyphicon-calendar"></i> 2014</p>
+                                            <p><i class="glyphicon glyphicon-map-marker"></i> Sofia</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-entry-inner">
+                                        <div class="timeline-icon">
+                                            <i class="entypo-feather"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <h2><a href="#">Bronze medal</a> <span>International Mathematics Assessments for Schools 2014 (Upper Primary Division)</span></h2>
+                                            <p><i class="glyphicon glyphicon-calendar"></i> 2014</p>
+                                            <p><i class="glyphicon glyphicon-map-marker"></i> Sofia</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-entry-inner">
+                                        <div class="timeline-icon">
+                                            <i class="entypo-feather"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <h2><a href="#">Gold badge</a> <span>Singapore and Asian Schools Math Olympiads 2014</span></h2>
+                                            <p><i class="glyphicon glyphicon-calendar"></i> 2014</p>
+                                            <p><i class="glyphicon glyphicon-map-marker"></i> Sofia</p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <h3>2013</h3>
+                            <div class="timeline-centered">
+                                <article class="timeline-entry">
+                                    <div class="timeline-entry-inner">
+                                        <div class="timeline-icon">
+                                            <i class="entypo-feather"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <h2><a href="#">Bronze medal</a> <span>the Sofia Mathematical Tournament (5th grade)</span></h2>
+                                            <p><i class="glyphicon glyphicon-calendar"></i> 07 November 2013</p>
+                                            <p><i class="glyphicon glyphicon-map-marker"></i> Sofia</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-entry-inner">
+                                        <div class="timeline-icon">
+                                            <i class="entypo-feather"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <h2><a href="#">Third place</a> <span>the control competition of the National Campus of Informatics (7th grade)</span></h2>
+                                            <p><i class="glyphicon glyphicon-calendar"></i> 05-11 September 2014, Kardzhali</p>
+                                            <p><i class="glyphicon glyphicon-map-marker"></i> Sofia</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-entry-inner">
+                                        <div class="timeline-icon">
+                                            <i class="entypo-feather"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <h2><a href="#">Silver medal</a> <span>the Asia International Mathematical Oplympiad Open Contest 2014 Final</span></h2>
+                                            <p><i class="glyphicon glyphicon-calendar"></i> 2014</p>
+                                            <p><i class="glyphicon glyphicon-map-marker"></i> Sofia</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-entry-inner">
+                                        <div class="timeline-icon">
+                                            <i class="entypo-feather"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <h2><a href="#">Bronze medal</a> <span>International Mathematics Assessments for Schools 2014 (Upper Primary Division)</span></h2>
+                                            <p><i class="glyphicon glyphicon-calendar"></i> 2014</p>
+                                            <p><i class="glyphicon glyphicon-map-marker"></i> Sofia</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-entry-inner">
+                                        <div class="timeline-icon">
+                                            <i class="entypo-feather"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <h2><a href="#">Gold badge</a> <span>Singapore and Asian Schools Math Olympiads 2014</span></h2>
+                                            <p><i class="glyphicon glyphicon-calendar"></i> 2014</p>
+                                            <p><i class="glyphicon glyphicon-map-marker"></i> Sofia</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-entry-inner">
+                                        <div class="timeline-icon">
+                                            <i class="entypo-feather"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <h2><a href="#">First place</a> <span>the control camp of the National Campus of Informatics (5th grade)</span></h2>
+                                            <p><i class="glyphicon glyphicon-calendar"></i> 05-11 September 2013</p>
+                                            <p><i class="glyphicon glyphicon-map-marker"></i> Haskovo</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-entry-inner">
+                                        <div class="timeline-icon">
+                                            <i class="entypo-feather"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <h2><a href="#">Third place</a> <span>the team competition of the National Campus of Informatics</span></h2>
+                                            <p><i class="glyphicon glyphicon-calendar"></i> 05-11 September 2013</p>
+                                            <p><i class="glyphicon glyphicon-map-marker"></i> Haskovo</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-entry-inner">
+                                        <div class="timeline-icon">
+                                            <i class="entypo-feather"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <h2><a href="#">Certificate</a> <span>successful completion of Module 7 of program of Telerik Kids Academy</span></h2>
+                                            <p><i class="glyphicon glyphicon-calendar"></i> 2013</p>
+                                            <p><i class="glyphicon glyphicon-map-marker"></i> Sofia</p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                            <h3>2012</h3>
+                            <div class="timeline-centered">
+                                <article class="timeline-entry">
+                                    <div class="timeline-entry-inner">
+                                        <div class="timeline-icon">
+                                            <i class="entypo-feather"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <h2><a href="#">Honorary diploma</a> <span>indispensable help during lectures at the Telerik Kids Sofia</span></h2>
+                                            <p><i class="glyphicon glyphicon-calendar"></i> September 2012</p>
+                                            <p><i class="glyphicon glyphicon-map-marker"></i> Sofia</p>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-entry-inner">
+                                        <div class="timeline-icon">
+                                            <i class="entypo-feather"></i>
+                                        </div>
+                                        <div class="timeline-label">
+                                            <h2><a href="#">Gold medal</a> <span>the John Atanasov National Informatics Tournament (group E - 4 and 5 grade)</span></h2>
+                                            <p><i class="glyphicon glyphicon-calendar"></i> 24-25 November 2012</p>
+                                            <p><i class="glyphicon glyphicon-map-marker"></i> Shumen</p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <!--//content-->
+                    </div>
+                    <!--//section-inner-->
+                </section>
+                <!--//section-->
+
+            </div>
+            <!--//primary-->
             <div class="secondary col-md-4 col-sm-12 col-xs-12">
-                 <aside class="info aside section">
+                <aside class="info aside section">
                     <div class="section-inner">
                         <h2 class="heading sr-only">Basic Information</h2>
                         <div class="content">
                             <ul class="list-unstyled">
                                 <li><i class="fa fa-map-marker"></i><span class="sr-only">Location:</span>Sofia, Bulgaria</li>
-                                <li><i class="fa fa-envelope-o"></i><span class="sr-only">Email:</span><a href="mailto:alex_tsvetanov_2002@abv.bg">alex_tsvetanov_2002@abv.bg</a></li>
-                                <li><i class="fa fa-link"></i><span class="sr-only">Website:</span><a href="https://tsalex.tk">https://tsalex.tk</a></li>
+                                <li><i class="fa fa-envelope-o"></i><span class="sr-only">Email:</span><a href="mailto:alex_tsvetanov_2002@abv.bg">alex_tsvetanov_2002@abv.bg</a>
+                                </li>
+                                <li><i class="fa fa-link"></i><span class="sr-only">Website:</span><a href="https://tsalex.tk">https://tsalex.tk</a>
+                                </li>
                             </ul>
-                        </div><!--//content-->  
-                    </div><!--//section-inner-->                 
-                </aside><!--//aside-->
-                
+                        </div>
+                        <!--//content-->
+                    </div>
+                    <!--//section-inner-->
+                </aside>
+                <!--//aside-->
+
                 <aside class="skills aside section">
                     <div class="section-inner">
                         <h2 class="heading">Skills</h2>
                         <div class="content">
                             <p class="intro">
-							✔ Team working<br>
-							✔ Creative<br>
-							✔ Excellent communication skills with teammates<br>
-							✔ Ability to meet deadlines<br>
-							</p>
-                            
+                                ✔ Team working
+                                <br> ✔ Creative
+                                <br> ✔ Excellent communication skills with teammates
+                                <br> ✔ Ability to meet deadlines
+                                <br>
+                            </p>
+
                             <div class="skillset">
-                               
+
                                 <div class="item">
                                     <h3 class="level-title">C++<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="You can use the tooltip to add more info...">Expert</span></h3>
                                     <div class="level-bar">
                                         <div class="level-bar-inner" data-level="98%">
-                                        </div>                                      
-                                    </div><!--//level-bar-->                                 
-                                </div><!--//item-->
-                                
+                                        </div>
+                                    </div>
+                                    <!--//level-bar-->
+                                </div>
+                                <!--//item-->
+
                                 <div class="item">
                                     <h3 class="level-title">FastCGI &amp; C++<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="You can use the tooltip to add more info...">Expert</span></h3>
                                     <div class="level-bar">
                                         <div class="level-bar-inner" data-level="95%">
-                                        </div>                                      
-                                    </div><!--//level-bar-->                                 
-                                </div><!--//item-->
-                                
+                                        </div>
+                                    </div>
+                                    <!--//level-bar-->
+                                </div>
+                                <!--//item-->
+
                                 <div class="item">
-				    <h3 class="level-title">TypeScript/JavaScript &amp;<br> jQuery<span class="level-label">Senior</span></h3>
+                                    <h3 class="level-title">TypeScript/JavaScript &amp;<br> jQuery<span class="level-label">Senior</span></h3>
                                     <div class="level-bar">
                                         <div class="level-bar-inner" data-level="90%">
-                                        </div>                                      
-                                    </div><!--//level-bar-->                                 
-                                </div><!--//item-->
-                                
+                                        </div>
+                                    </div>
+                                    <!--//level-bar-->
+                                </div>
+                                <!--//item-->
+
                                 <div class="item">
-				    <h3 class="level-title">Python<span class="level-label">Senior</span></h3>
+                                    <h3 class="level-title">Python<span class="level-label">Senior</span></h3>
                                     <div class="level-bar">
                                         <div class="level-bar-inner" data-level="90%">
-                                        </div>                                      
-                                    </div><!--//level-bar-->                                 
-                                </div><!--//item-->
+                                        </div>
+                                    </div>
+                                    <!--//level-bar-->
+                                </div>
+                                <!--//item-->
                                 <div class="item">
-				    <h3 class="level-title">Bootstrap, HTML5 &amp;<br> CSS3<span class="level-label">Senior</span></h3>
+                                    <h3 class="level-title">Bootstrap, HTML5 &amp;<br> CSS3<span class="level-label">Senior</span></h3>
                                     <div class="level-bar">
                                         <div class="level-bar-inner" data-level="90%">
-                                        </div>                                      
-                                    </div><!--//level-bar-->                                 
-                                </div><!--//item-->
-                                
+                                        </div>
+                                    </div>
+                                    <!--//level-bar-->
+                                </div>
+                                <!--//item-->
+
                                 <div class="item">
                                     <h3 class="level-title">C#<span class="level-label">Advanced</span></h3>
                                     <div class="level-bar">
                                         <div class="level-bar-inner" data-level="85%">
-                                        </div>                                      
-                                    </div><!--//level-bar-->                                 
-                                </div><!--//item-->
-                                
+                                        </div>
+                                    </div>
+                                    <!--//level-bar-->
+                                </div>
+                                <!--//item-->
+
                                 <div class="item">
                                     <h3 class="level-title">Nginx<span class="level-label">Advanced</span></h3>
                                     <div class="level-bar">
                                         <div class="level-bar-inner" data-level="84%">
-                                        </div>                                      
-                                    </div><!--//level-bar-->                                 
-                                </div><!--//item-->
-                                
+                                        </div>
+                                    </div>
+                                    <!--//level-bar-->
+                                </div>
+                                <!--//item-->
+
                                 <div class="item">
                                     <h3 class="level-title">MySQL<span class="level-label">Experienced</span></h3>
                                     <div class="level-bar">
                                         <div class="level-bar-inner" data-level="80%">
-                                        </div>                                      
-                                    </div><!--//level-bar-->                                 
-                                </div><!--//item-->
-                                
-                                <p><a class="more-link" href="https://github.com/Alex-Tsvetanov"><i class="fa fa-external-link"></i> More on GitHub</a></p> 
-                            </div>              
-                        </div><!--//content-->  
-                    </div><!--//section-inner-->                 
-                </aside><!--//section-->
-                
+                                        </div>
+                                    </div>
+                                    <!--//level-bar-->
+                                </div>
+                                <!--//item-->
+
+                                <p><a class="more-link" href="https://github.com/Alex-Tsvetanov"><i class="fa fa-external-link"></i> More on GitHub</a>
+                                </p>
+                            </div>
+                        </div>
+                        <!--//content-->
+                    </div>
+                    <!--//section-inner-->
+                </aside>
+                <!--//section-->
+
                 <aside class="testimonials aside section">
                     <div class="section-inner">
                         <h2 class="heading">Testimonials</h2>
                         <div class="content">
                             <div class="item">
-                                <blockquote class="quote">                                  
-									<p>
-									<i class="fa fa-quote-left"></i><br>
-									Alex is an excellent software engineer and he is passionate about what he does. You can totally count on him to deliver your projects!
-									<br><i class="fa fa-quote-right"></i>
-									</p>
-                                </blockquote>                
-                                <p class="source"><span class="name">Iavor Nikoforoff</span><br /><span class="title">Trainer at Telerik Academy</span></p>
-                            </div><!--//item-->
-                            
-                            <p><a class="more-link" href="https://github.com/Alex-Tsvetanov"><i class="fa fa-external-link"></i> More on GitHub</a></p> 
-                            
-                        </div><!--//content-->
-                    </div><!--//section-inner-->
-                </aside><!--//section-->
-                
+                                <blockquote class="quote">
+                                    <p>
+                                        <i class="fa fa-quote-left"></i>
+                                        <br> Alex is an excellent software engineer and he is passionate about what he does. You can totally count on him to deliver your projects!
+                                        <br><i class="fa fa-quote-right"></i>
+                                    </p>
+                                </blockquote>
+                                <p class="source"><span class="name">Iavor Nikoforoff</span>
+                                    <br /><span class="title">Trainer at Telerik Academy</span>
+                                </p>
+                            </div>
+                            <!--//item-->
+
+                            <p><a class="more-link" href="https://github.com/Alex-Tsvetanov"><i class="fa fa-external-link"></i> More on GitHub</a>
+                            </p>
+
+                        </div>
+                        <!--//content-->
+                    </div>
+                    <!--//section-inner-->
+                </aside>
+                <!--//section-->
+
                 <aside class="education aside section">
                     <div class="section-inner">
                         <h2 class="heading">Education</h2>
                         <div class="content">
-<!--                        <div class="item">                      
+                            <!--                        <div class="item">                      
                                 <h3 class="title"><i class="fa fa-graduation-cap"></i> MSc Psychology and Computer Science</h3>
                                 <h4 class="university">University College London <span class="year">(2011-2012)</span></h4>
 							</div>-->
                             <div class="item">
-								<h3 class="title"><i class="fa fa-graduation-cap"></i> Mathematics &amp; Informatics<br/>
+                                <h3 class="title"><i class="fa fa-graduation-cap"></i> Mathematics &amp; Informatics<br/>
 								<i style="visibility: hidden;" class="fa fa-graduation-cap"></i>(Foreign Language: English)</h3>
                                 <h4 class="university">Sofia High School of Matematics <span class="year">(2013-)</span></h4>
-                            </div><!--//item-->
-                        </div><!--//content-->
-                    </div><!--//section-inner-->
-                </aside><!--//section-->
-                            
+                            </div>
+                            <!--//item-->
+                        </div>
+                        <!--//content-->
+                    </div>
+                    <!--//section-inner-->
+                </aside>
+                <!--//section-->
+
                 <aside class="languages aside section">
                     <div class="section-inner">
                         <h2 class="heading">Languages</h2>
@@ -426,16 +1078,21 @@
                                 <li class="item">
                                     <span class="title"><strong>English:</strong></span>
                                     <span class="level"><br class="visible-xs"/><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-half"></i></i> </span>
-                                </li><!--//item-->
+                                </li>
+                                <!--//item-->
                                 <li class="item">
                                     <span class="title"><strong>Bulgarian:</strong></span>
                                     <span class="level"><br class="visible-sm visible-xs"/><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></span>
-                                </li><!--//item-->
+                                </li>
+                                <!--//item-->
                             </ul>
-                        </div><!--//content-->
-                    </div><!--//section-inner-->
-                </aside><!--//section-->
-               <!-- 
+                        </div>
+                        <!--//content-->
+                    </div>
+                    <!--//section-inner-->
+                </aside>
+                <!--//section-->
+                <!-- 
                 <aside class="blog aside section">
                     <div class="section-inner">
                         <h2 class="heading">Latest Blog Posts</h2>
@@ -452,32 +1109,48 @@
                         <h2 class="heading">Favourite coding bands</h2>
                         <div class="content">
                             <ul class="list-unstyled">
-                                <li><i class="fa fa-headphones"></i> <a href="https://en.wikipedia.org/wiki/Megaherz">Megaherz</a></li>
-                                <li><i class="fa fa-headphones"></i> <a href="https://en.wikipedia.org/wiki/Through_Fire">Through fire</a></li>
-                                <li><i class="fa fa-headphones"></i> <a href="https://en.wikipedia.org/wiki/Sabaton_(band)">Sabaton</a></li>
-                                <li><i class="fa fa-headphones"></i> <a href="https://en.wikipedia.org/wiki/Korpiklaani">Korpiklaani</a></li>
-                                <li><i class="fa fa-headphones"></i> <a href="https://en.wikipedia.org/wiki/Amon_Amarth">Amon Amarth</a></li>
-                                <li><i class="fa fa-headphones"></i> <a href="https://en.wikipedia.org/wiki/Nightwish">Nightwish</a></li>
-                                <li><i class="fa fa-headphones"></i> <a href="https://en.wikipedia.org/wiki/Disturbed_(band)">Disturbed</a></li>
-                                <li><i class="fa fa-headphones"></i> <a href="https://en.wikipedia.org/wiki/Linkin_Park">Linkin Park</a></li>
-                                <li><i class="fa fa-headphones"></i> <a href="https://bg.wikipedia.org/wiki/Торнадо_(група)">Tornado</a></li>
+                                <li><i class="fa fa-headphones"></i> <a href="https://en.wikipedia.org/wiki/Megaherz">Megaherz</a>
+                                </li>
+                                <li><i class="fa fa-headphones"></i> <a href="https://en.wikipedia.org/wiki/Through_Fire">Through fire</a>
+                                </li>
+                                <li><i class="fa fa-headphones"></i> <a href="https://en.wikipedia.org/wiki/Sabaton_(band)">Sabaton</a>
+                                </li>
+                                <li><i class="fa fa-headphones"></i> <a href="https://en.wikipedia.org/wiki/Korpiklaani">Korpiklaani</a>
+                                </li>
+                                <li><i class="fa fa-headphones"></i> <a href="https://en.wikipedia.org/wiki/Amon_Amarth">Amon Amarth</a>
+                                </li>
+                                <li><i class="fa fa-headphones"></i> <a href="https://en.wikipedia.org/wiki/Nightwish">Nightwish</a>
+                                </li>
+                                <li><i class="fa fa-headphones"></i> <a href="https://en.wikipedia.org/wiki/Disturbed_(band)">Disturbed</a>
+                                </li>
+                                <li><i class="fa fa-headphones"></i> <a href="https://en.wikipedia.org/wiki/Linkin_Park">Linkin Park</a>
+                                </li>
+                                <li><i class="fa fa-headphones"></i> <a href="https://bg.wikipedia.org/wiki/Торнадо_(група)">Tornado</a>
+                                </li>
                             </ul>
-                        </div><!--//content-->
-                    </div><!--//section-inner-->
-                </aside><!--//section-->
-                
+                        </div>
+                        <!--//content-->
+                    </div>
+                    <!--//section-inner-->
+                </aside>
+                <!--//section-->
+
                 <aside class="list conferences aside section">
                     <div class="section-inner">
                         <h2 class="heading">Conferences</h2>
                         <div class="content">
                             <ul class="list-unstyled">
-								<li><i class="fa fa-calendar"></i> <a href="http://beit.today" target="_blank">Be IT  (Sofia)</a></li>
+                                <li><i class="fa fa-calendar"></i> <a href="http://beit.today" target="_blank">Be IT  (Sofia)</a>
+                                </li>
                             </ul>
-                        </div><!--//content-->
-                    </div><!--//section-inner-->
-                </aside><!--//section-->
-                
-				<!--
+                        </div>
+                        <!--//content-->
+                    </div>
+                    <!--//section-inner-->
+                </aside>
+                <!--//section-->
+
+                <!--
                 <aside class="credits aside section">
                     <div class="section-inner">
                         <h2 class="heading"></h2>
@@ -486,21 +1159,26 @@
                     </div>
                 </aside>
 				-->
-              
-            </div><!--//secondary-->    
-        </div><!--//row-->
-    </div><!--//masonry-->
-    
-    <!-- ******FOOTER****** --> 
+
+            </div>
+            <!--//secondary-->
+        </div>
+        <!--//row-->
+    </div>
+    <!--//masonry-->
+
+    <!-- ******FOOTER****** -->
     <footer class="footer">
         <div class="container text-center">
-			Copyright <i class="fa fa-copyright"></i> Alex Tsvetanov 2016-2017
-        </div><!--//container-->
-    </footer><!--//footer-->
- 
-    <!-- Javascript -->          
-	<script src="https://code.jquery.com/jquery-1.11.3.min.js" integrity="sha256-7LkWEzqTdpEfELxcZZlS6wAx5Ff13zZ83lYO2/ujj7g=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="assets/plugins/jquery-rss/dist/jquery.rss.min.js"></script> 
+            Copyright <i class="fa fa-copyright"></i> Alex Tsvetanov 2016-2017
+        </div>
+        <!--//container-->
+    </footer>
+    <!--//footer-->
+
+    <!-- Javascript -->
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js" integrity="sha256-7LkWEzqTdpEfELxcZZlS6wAx5Ff13zZ83lYO2/ujj7g=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-rss/dist/jquery.rss.min.js"></script>
     <!-- github calendar plugin -->
     <script type="text/javascript" src="assets/js/min/es6-promise.min.js"></script>
     <script type="text/javascript" src="assets/js/min/fetch.min.js"></script>
@@ -511,7 +1189,7 @@
     <script type="text/javascript" src="assets/plugins/github-activity/src/github-activity.js"></script>
 	-->
     <!-- custom js -->
-    <script type="text/javascript" src="assets/js/main.js"></script> 
+    <script type="text/javascript" src="assets/js/main.js"></script>
 </body>
-</html> 
 
+</html>
