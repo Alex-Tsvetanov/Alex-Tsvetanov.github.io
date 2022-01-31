@@ -1,1195 +1,845 @@
 <!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
-<!--[if !IE]><!-->
 <html lang="en">
-<!--<![endif]-->
 
 <head>
-    <title>Alex Tsvetanov's HomePage</title>
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Alex Tsvetanov :: HomePage">
-    <meta name="author" content="Alex Tsvetanov">
-    <link rel="shortcut icon" href="favicon.ico">
-    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    <!-- Global CSS -->
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
-    <!-- Plugins CSS -->
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
-    <!-- github calendar css -->
-    <link rel="stylesheet" href="assets/plugins/github-calendar/dist/github-calendar.css" />
-    <!-- github acitivity css -->
-    <link rel="stylesheet" href="assets/plugins/github-activity/src/github-activity.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
-    <!-- Theme CSS -->
-    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+  <title>Alex Tsvetanov</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({
-            google_ad_client: "ca-pub-8087449549292267",
-            enable_page_level_ads: true
-        });
-    </script>
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-    <script>
-        (function(i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function() {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-        ga('create', 'UA-86984822-1', 'auto');
-        ga('send', 'pageview');
-    </script>
-    <link id="contests-style" rel="stylesheet" href="assets/css/contests.css">
-    <style>
-        img {
-            vertical-align: middle;
-        }
-        .img-responsive {
-            display: block;
-            height: auto;
-            max-width: 100%;
-        }
-        .img-rounded {
-            border-radius: 3px;
-        }
-        .img-thumbnail {
-            background-color: #fff;
-            border: 1px solid #ededf0;
-            border-radius: 3px;
-            display: inline-block;
-            height: auto;
-            line-height: 1.428571429;
-            max-width: 100%;
-            moz-transition: all .2s ease-in-out;
-            o-transition: all .2s ease-in-out;
-            padding: 2px;
-            transition: all .2s ease-in-out;
-            webkit-transition: all .2s ease-in-out;
-        }
-        .img-circle {
-            border-radius: 50%;
-        }
-        .timeline-centered {
-            position: relative;
-            margin-bottom: 30px;
-        }
-        .timeline-centered:before,
-        .timeline-centered:after {
-            content: " ";
-            display: table;
-        }
-        .timeline-centered:after {
-            clear: both;
-        }
-        .timeline-centered:before,
-        .timeline-centered:after {
-            content: " ";
-            display: table;
-        }
-        .timeline-centered:after {
-            clear: both;
-        }
-        .timeline-centered:before {
-            content: '';
-            position: absolute;
-            display: block;
-            width: 4px;
-            background: #f5f5f6;
-            /*left: 50%;*/
-            
-            top: 20px;
-            bottom: 20px;
-            margin-left: 30px;
-        }
-        .timeline-centered .timeline-entry {
-            position: relative;
-            /*width: 50%; float: right;*/
-            
-            margin-top: 5px;
-            margin-left: 30px;
-            margin-bottom: 10px;
-            clear: both;
-        }
-        .timeline-centered .timeline-entry:before,
-        .timeline-centered .timeline-entry:after {
-            content: " ";
-            display: table;
-        }
-        .timeline-centered .timeline-entry:after {
-            clear: both;
-        }
-        .timeline-centered .timeline-entry:before,
-        .timeline-centered .timeline-entry:after {
-            content: " ";
-            display: table;
-        }
-        .timeline-centered .timeline-entry:after {
-            clear: both;
-        }
-        .timeline-centered .timeline-entry.begin {
-            margin-bottom: 0;
-        }
-        .timeline-centered .timeline-entry.left-aligned {
-            float: left;
-        }
-        .timeline-centered .timeline-entry.left-aligned .timeline-entry-inner {
-            margin-left: 0;
-            margin-right: -18px;
-        }
-        .timeline-centered .timeline-entry.left-aligned .timeline-entry-inner .timeline-time {
-            left: auto;
-            right: -100px;
-            text-align: left;
-        }
-        .timeline-centered .timeline-entry.left-aligned .timeline-entry-inner .timeline-icon {
-            float: right;
-        }
-        .timeline-centered .timeline-entry.left-aligned .timeline-entry-inner .timeline-label {
-            margin-left: 0;
-            margin-right: 70px;
-        }
-        .timeline-centered .timeline-entry.left-aligned .timeline-entry-inner .timeline-label:after {
-            left: auto;
-            right: 0;
-            margin-left: 0;
-            margin-right: -9px;
-            -moz-transform: rotate(180deg);
-            -o-transform: rotate(180deg);
-            -webkit-transform: rotate(180deg);
-            -ms-transform: rotate(180deg);
-            transform: rotate(180deg);
-        }
-        .timeline-centered .timeline-entry .timeline-entry-inner {
-            position: relative;
-            margin-left: -20px;
-            margin-bottom: 20px;
-        }
-        .timeline-centered .timeline-entry .timeline-entry-inner:before,
-        .timeline-centered .timeline-entry .timeline-entry-inner:after {
-            content: " ";
-            display: table;
-        }
-        .timeline-centered .timeline-entry .timeline-entry-inner:after {
-            clear: both;
-        }
-        .timeline-centered .timeline-entry .timeline-entry-inner:before,
-        .timeline-centered .timeline-entry .timeline-entry-inner:after {
-            content: " ";
-            display: table;
-        }
-        .timeline-centered .timeline-entry .timeline-entry-inner:after {
-            clear: both;
-        }
-        .timeline-centered .timeline-entry .timeline-entry-inner .timeline-time {
-            position: absolute;
-            left: -100px;
-            text-align: right;
-            padding: 10px;
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-        }
-        .timeline-centered .timeline-entry .timeline-entry-inner .timeline-time > span {
-            display: block;
-        }
-        .timeline-centered .timeline-entry .timeline-entry-inner .timeline-time > span:first-child {
-            font-size: 15px;
-            font-weight: bold;
-        }
-        .timeline-centered .timeline-entry .timeline-entry-inner .timeline-time > span:last-child {
-            font-size: 12px;
-        }
-        .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon {
-            background: #fff;
-            color: #737881;
-            display: block;
-            width: 40px;
-            height: 40px;
-            -webkit-background-clip: padding-box;
-            -moz-background-clip: padding;
-            background-clip: padding-box;
-            -webkit-border-radius: 20px;
-            -moz-border-radius: 20px;
-            border-radius: 20px;
-            text-align: center;
-            -moz-box-shadow: 0 0 0 5px #f5f5f6;
-            -webkit-box-shadow: 0 0 0 5px #f5f5f6;
-            box-shadow: 0 0 0 5px #f5f5f6;
-            line-height: 40px;
-            font-size: 15px;
-            float: left;
-        }
-        .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.bg-primary {
-            background-color: #303641;
-            color: #fff;
-        }
-        .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.bg-secondary {
-            background-color: #ee4749;
-            color: #fff;
-        }
-        .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.bg-success {
-            background-color: #00a651;
-            color: #fff;
-        }
-        .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.bg-info {
-            background-color: #21a9e1;
-            color: #fff;
-        }
-        .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.bg-warning {
-            background-color: #fad839;
-            color: #fff;
-        }
-        .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.bg-danger {
-            background-color: #cc2424;
-            color: #fff;
-        }
-        .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label {
-            position: relative;
-            background: #f5f5f6;
-            padding: 1em;
-            margin-left: 60px;
-            -webkit-background-clip: padding-box;
-            -moz-background-clip: padding;
-            background-clip: padding-box;
-            -webkit-border-radius: 3px;
-            -moz-border-radius: 3px;
-            border-radius: 3px;
-        }
-        .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label:after {
-            content: '';
-            display: block;
-            position: absolute;
-            width: 0;
-            height: 0;
-            border-style: solid;
-            border-width: 9px 9px 9px 0;
-            border-color: transparent #f5f5f6 transparent transparent;
-            left: 0;
-            top: 10px;
-            margin-left: -9px;
-        }
-        .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label h2,
-        .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label p {
-            color: #737881;
-            font-family: "Noto Sans", sans-serif;
-            font-size: 12px;
-            margin: 0;
-            line-height: 1.428571429;
-        }
-        .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label p + p {
-            margin-top: 15px;
-        }
-        .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label h2 {
-            font-size: 16px;
-            margin-bottom: 10px;
-        }
-        .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label h2 a {
-            color: #303641;
-        }
-        .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label h2 span {
-            -webkit-opacity: .6;
-            -moz-opacity: .6;
-            opacity: .6;
-            -ms-filter: alpha(opacity=60);
-            filter: alpha(opacity=60);
-        }
-    </style>
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
 </head>
 
 <body>
-    <!-- ******HEADER****** -->
-    <header class="header">
-        <div class="container">
-            <img class="profile-image img-responsive pull-left" src="assets/images/profile.png" alt="Alex Tsvetanov" />
-            <div class="profile-content pull-left">
-                <h1 class="name">Alex Tsvetanov</h1>
-                <h2 class="desc">Full Stack Developer</h2>
-                <ul class="social list-inline">
-                    <li><a href="https://www.facebook.com/alex.tsvetanov.2002"><i class="fa fa-facebook"></i></a>
-                    </li>
-                    <!--
-					<li><a href="#"><i class="fa fa-twitter"></i></a></li>                   
-					<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
--->
-                    <li><a href="https://linkedin.com/in/alex-tsvetanov-020b49a7"><i class="fa fa-linkedin"></i></a>
-                    </li>
-                    <li><a href="tox:F886A0944468E394ADF83A8F067D252F417F10964EB0880C5A76793CDEE6135815AE352F12EB"><i class="fa fa-comments"></i></a>
-                    </li>
-                    <li class="last-item"><a href="https://github.com/Alex-Tsvetanov"><i class="fa fa-github-alt"></i></a>
-                    </li>
-                    <!--
-					<li class="last-item"><a href="#"><i class="fa fa-hacker-news"></i></a></li>
--->
-                </ul>
-            </div>
-            <!--//profile-->
-            <a class="btn btn-cta-primary pull-right" href="https://tsalex.tk" target="_blank"><i class="fa fa-paper-plane"></i> Contact Me</a>
-        </div>
-        <!--//container-->
-    </header>
-    <!--//header-->
 
-    <div class="container sections-wrapper">
-        <div class="row">
-            <div class="primary col-md-8 col-sm-12 col-xs-12">
-                <section class="about section">
-                    <div class="section-inner">
-                        <h2 class="heading">About Me</h2>
-                        <div class="content">
-                            <p>
-                                I am 16 years old and I am a student in 10-th grade at the Sofia High School of Mathematics. I deal with programming in C++ since 3-rd grade. I went through all levels of Telerik Kids Academy and I graduated Telerik Algo Academy. I won a lot of prizes in national and international competitions in Informatics and Mathematics. Lately I have been dealing  with application programming and in particular with web development. I have knowledge except C++ and languages like C#, JavaScript, Python, Java, LaTeX and PHP. With C++ I mostly write algorithms. 
-			    </p>
-                            <p>Favorite OS: <i class="fa fa-linux"></i>Arch Linux</p>
-                        </div>
-                        <!--//content-->
-                    </div>
-                    <!--//section-inner-->
-                </section>
-                <!--//section-->
+  <!-- ======= Mobile nav toggle button ======= -->
+  <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex flex-column justify-content-center">
 
-                <section class="latest section">
-                    <div class="section-inner">
-                        <h2 class="heading">Latest Projects</h2>
-                        <div class="content">
-                            <div class="item featured text-center">
-                                <h3 class="title"><a href="https://infocourse.techedu.cf" target="_blank">TechEdu++</a></h3>
-                                <p class="summary"><span class="label label-theme">Open Source</span> Advanced Learning Managment System</p>
-                                <div class="featured-image">
-                                    <a href="https://infocourse.techedu.cf" target="_blank">
-                                        <img class="img-responsive project-image" src="assets/images/projects/academy.png" alt="project name" />
-                                    </a>
-                                    <div class="ribbon">
-                                        <div class="text">New</div>
-                                    </div>
-                                </div>
+    <nav id="navbar" class="navbar nav-menu">
+      <ul>
+        <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+        <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+        <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+      </ul>
+    </nav><!-- .nav-menu -->
 
-                                <div class="desc text-left">
-                                    <p> In fact there are a lot of built-in learning management systems. They have some hard-wired cons. For example: Video lessons continue about 3-4 hours, which is too long; Most systems have no practical exercises or assignments. However, programming can be learned best with practice; other systems have only theoretical tests, which is not enough for good skill developing.
-                                    </p>
-                                    <p>
-                                        The core aim of our project is to create online learning management system that combines best practices in organizing training so that it will be interesting, useful and much easier for the students. The most important part of our project is to fertilize future programmers, showing them that it is not as difficult as it sounds. This will happen through brief and extensive online practical competitions taken their levels, with certificates and prizes for the best ones.
-                                    </p>
-                                    <p>
-                                        Our project is focused mainly on beginners and more advanced programmers. The competitions will include theoretical part, but will mostly be oriented practically.
-                                    </p>
-                                    <p>
-                                        Testing system is "AT Judge", which is an individual project already integrated into this one.
-                                    </p>
-                                    <p>
-                                        This project is created by Alex Tsvetanov. It is also facilitated by Delta.bg, VR Express, Consent.io, iGreet and Emiliyan Kadiyski.
-                                    </p>
-                                </div>
-                                <!--//desc-->
-                                <a class="btn btn-cta-secondary" href="https://github.com/TechEducationPlusPlus" target="_blank"><i class="fa fa-thumbs-o-up"></i> Follow us </a>
-                            </div>
-                            <!--//item-->
-                            <div class="item featured text-center">
-                                <h3 class="title"><a href="https://atj.openjudge.tk" target="_blank">AT Judge</a></h3>
-                                <p class="summary"><span class="label label-theme">Open Source</span> Advanced Judge System</p>
-                                <div class="featured-image">
-                                    <a href="https://atj.openjudge.tk" target="_blank">
-                                        <img class="img-responsive project-image" src="assets/images/projects/at-judge.png" alt="project name" />
-                                    </a>
-                                    <div class="ribbon">
-                                        <div class="text">New</div>
-                                    </div>
-                                </div>
+  </header><!-- End Header -->
 
-                                <div class="desc text-left">
-                                </div>
-                                <!--//desc-->
-                                <a class="btn btn-cta-secondary" href="https://github.com/Alex-Tsvetanov/AT-Judge" target="_blank"><i class="fa fa-thumbs-o-up"></i> Follow me </a>
-                            </div>
-                            <!--//item-->
-                            <hr class="divider" />
-                            <div class="item row">
-                                <div class="desc col-md-8 col-sm-8 col-xs-12">
-                                </div>
-                                <!--//desc-->
-                            </div>
-                            <!--//item-->
-                        </div>
-                        <!--//content-->
-                    </div>
-                    <!--//section-inner-->
-                </section>
-                <!--//section-->
-
-                <section class="projects section">
-                    <div class="section-inner">
-                        <h2 class="heading">Other Projects</h2>
-                        <div class="content">
-                            <div class="item" id="mec">
-                                <h3 class="title"><a href="https://expression-dev.github.io/">Math Expressions Calculation</a> <span class="label label-theme">Open Source</span></h3>
-                                <p class="summary">
-                                    There are a lot of tools for calculations and data processing (like wolframalpha.com and MS Excel) but they cannot allow you create custom new operations (like functions, brackets, etc.). That is why our program is better than them.
-                                    <br> This project aims at making an application, which calculates and simplifies expressions with custom data types. This application is different than the other tools, with an option to run-time add custom operations, variables, arrays, pairs of brackets and functions. It can be used for scientific and learning purposes.
-                                    <br>
-                                    <br> Teammates: <a href="https://github.com/Ro6afF">Dimo Chanev</a>
-                                </p>
-                                <p><a class="more-link" href="https://github.com/expression-dev/" target="_blank"><i class="fa fa-external-link"></i> View on GitHub</a>
-                                </p>
-                            </div>
-                            <!--//item-->
-                            <div class="item" id="catalan">
-                                <h3 class="title"><a href="#catalan">Project "Catalan Numbers"</a></h3>
-                                <p class="summary">
-                                    This is a project for MITE (Moscow, Russia) - a international competition, for Catalan Numbers.
-                                    <br>
-                                    <br> Teammates: Margarita Stefanova, Joana Kicheva
-                                </p>
-                            </div>
-                            <!--//item-->
-
-                            <a class="btn btn-cta-secondary" href="https://github.com/Alex-Tsvetanov">More on GitHub <i class="fa fa-chevron-right"></i></a>
-
-                        </div>
-                        <!--//content-->
-                    </div>
-                    <!--//section-inner-->
-                </section>
-                <!--//section-->
-
-                <section class="experience section">
-                    <div class="section-inner">
-                        <h2 class="heading">Work Experience</h2>
-                        <div class="content">
-                            <div class="item">
-                                <h3 class="title">Trainer - <span class="place"><a>Telerik Kids Academy</a></span> <span class="year">(2013 - 2013)</span></h3>
-                                <p>I taught some lectures in Telerik Kids Academy</p>
-                            </div>
-                            <div class="item">
-                                <h3 class="title">Part-time trainer - <span class="place"><a>SoftUni</a></span> <span class="year">(2017 - present)</span></h3>
-                                <p>Python Basics, Python Fundamentals, Algorithm courses</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="prizes section">
-                    <div class="section-inner">
-                        <h2 class="heading">Prizes</h2>
-                        <div class="content">
-
-                            <h3>2017</h3>
-                            <div class="timeline-centered">
-                                <article class="timeline-entry">
-                                    <div class="timeline-entry-inner">
-                                        <div class="timeline-icon">
-                                            <i class="entypo-feather"></i>
-                                        </div>
-                                        <div class="timeline-label">
-                                            <h2><a href="#">Certificate</a> <span>Completed Programming Training in 2016-2017 (Telerik Kids Academy - Sofia)</span></h2>
-                                            <p><i class="glyphicon glyphicon-calendar"></i> 2017</p>
-                                            <p><i class="glyphicon glyphicon-map-marker"></i> Sofia</p>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-entry-inner">
-                                        <div class="timeline-icon">
-                                            <i class="entypo-feather"></i>
-                                        </div>
-                                        <div class="timeline-label">
-                                            <h2><a href="#">Gold medal</a> <span>the National Spring Informatics Tournament - Group C (8<sup>th</sup> grade)</span></h2>
-                                            <p><i class="glyphicon glyphicon-calendar"></i> 09-11 June 2017</p>
-                                            <p><i class="glyphicon glyphicon-map-marker"></i> Shumen</p>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-entry-inner">
-                                        <div class="timeline-icon">
-                                            <i class="entypo-feather"></i>
-                                        </div>
-                                        <div class="timeline-label">
-                                            <h2><a href="#">Special prize from MusalaSoft</a> <span>Project "TechEdu++" at the Seventeenth Student Section</span></h2>
-                                            <p><i class="glyphicon glyphicon-calendar"></i> 09-12 April 2017</p>
-                                            <p><i class="glyphicon glyphicon-map-marker"></i> Borovets</p>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-entry-inner">
-                                        <div class="timeline-icon">
-                                            <i class="entypo-feather"></i>
-                                        </div>
-                                        <div class="timeline-label">
-                                            <h2><a href="#">Diploma for excellent presentation</a> <span>Project "TechEdu++" at the Seventeenth Student Section</span></h2>
-                                            <p><i class="glyphicon glyphicon-calendar"></i> 09-12 April 2017</p>
-                                            <p><i class="glyphicon glyphicon-map-marker"></i> Borovets</p>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-entry-inner">
-                                        <div class="timeline-icon">
-                                            <i class="entypo-feather"></i>
-                                        </div>
-                                        <div class="timeline-label">
-                                            <h2><a href="#">Third place</a> <span>"Softuniada 2017", category "Algorithmic programming", junior age (up to 16 years)</span></h2>
-                                            <p><i class="glyphicon glyphicon-calendar"></i> January 08, 2017</p>
-                                            <p><i class="glyphicon glyphicon-map-marker"></i> Sofia</p>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-entry-inner">
-                                        <div class="timeline-icon">
-                                            <i class="entypo-feather"></i>
-                                        </div>
-                                        <div class="timeline-label">
-                                            <h2><a href="#">Second place</a> <span>Project "TechEdu++", "Softuniada 2017", category "Web application", junior age (up to 16 years)</span></h2>
-                                            <p><i class="glyphicon glyphicon-calendar"></i> January 08, 2017</p>
-                                            <p><i class="glyphicon glyphicon-map-marker"></i> Sofia</p>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                            <h3>2016</h3>
-                            <div class="timeline-centered">
-                                <article class="timeline-entry">
-                                    <div class="timeline-entry-inner">
-                                        <div class="timeline-icon">
-                                            <i class="entypo-feather"></i>
-                                        </div>
-                                        <div class="timeline-label">
-                                            <h2><a href="#">Silver medal</a> <span>the Sofia Mathematical Tournament, category 8th grade</span></h2>
-                                            <p><i class="glyphicon glyphicon-calendar"></i> November 19, 2016</p>
-                                            <p><i class="glyphicon glyphicon-map-marker"></i> Sofia</p>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-entry-inner">
-                                        <div class="timeline-icon">
-                                            <i class="entypo-feather"></i>
-                                        </div>
-                                        <div class="timeline-label">
-                                            <h2><a href="#">Certificate</a> <span>graduate Telerik Kids Academy - Sofia, track Advanced algorithmic programming</span></h2>
-                                            <p><i class="glyphicon glyphicon-calendar"></i> November 2016</p>
-                                            <p><i class="glyphicon glyphicon-map-marker"></i> Sofia</p>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-entry-inner">
-                                        <div class="timeline-icon">
-                                            <i class="entypo-feather"></i>
-                                        </div>
-                                        <div class="timeline-label">
-                                            <h2><a href="#">Bronze medal</a> <span>the John Atanasov International Informatics Tournament (junior age)</span></h2>
-                                            <p><i class="glyphicon glyphicon-calendar"></i> 25-27 November 2016</p>
-                                            <p><i class="glyphicon glyphicon-map-marker"></i> Shumen</p>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-entry-inner">
-                                        <div class="timeline-icon">
-                                            <i class="entypo-feather"></i>
-                                        </div>
-                                        <div class="timeline-label">
-                                            <h2><a href="#">First place</a> <span>the control competition of the National Campus of Informatics (8th grade)</span></h2>
-                                            <p><i class="glyphicon glyphicon-calendar"></i> 05-11 September 2016</p>
-                                            <p><i class="glyphicon glyphicon-map-marker"></i> Vidin</p>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-entry-inner">
-                                        <div class="timeline-icon">
-                                            <i class="entypo-feather"></i>
-                                        </div>
-                                        <div class="timeline-label">
-                                            <h2><a href="#">Certificate</a> <span>successful completion of the Summer Research School of Mathematics and Informatics</span></h2>
-                                            <p><i class="glyphicon glyphicon-calendar"></i> 31 July - 20 August 2016</p>
-                                            <p><i class="glyphicon glyphicon-map-marker"></i> Blagoevgrad</p>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-entry-inner">
-                                        <div class="timeline-icon">
-                                            <i class="entypo-feather"></i>
-                                        </div>
-                                        <div class="timeline-label">
-                                            <h2><a href="#">Excellent 6.00</a> <span>the National Seventh-grade Outplacement</span></h2>
-                                            <p><i class="glyphicon glyphicon-calendar"></i> June 2016</p>
-                                            <p><i class="glyphicon glyphicon-map-marker"></i> Sofia</p>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-entry-inner">
-                                        <div class="timeline-icon">
-                                            <i class="entypo-feather"></i>
-                                        </div>
-                                        <div class="timeline-label">
-                                            <h2><a href="#">Third place</a> <span>the National Spring Informatics Tournament - Group C (8th grade)</span></h2>
-                                            <p><i class="glyphicon glyphicon-calendar"></i> 10-12 June 2016</p>
-                                            <p><i class="glyphicon glyphicon-map-marker"></i> Plovdiv</p>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-entry-inner">
-                                        <div class="timeline-icon">
-                                            <i class="entypo-feather"></i>
-                                        </div>
-                                        <div class="timeline-label">
-                                            <h2><a href="#">Certificate</a> <span>Completed Programming Training in 2015-2016 at Telerik Algo Academy</span></h2>
-                                            <p><i class="glyphicon glyphicon-calendar"></i> 2016</p>
-                                            <p><i class="glyphicon glyphicon-map-marker"></i> Sofia</p>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-entry-inner">
-                                        <div class="timeline-icon">
-                                            <i class="entypo-feather"></i>
-                                        </div>
-                                        <div class="timeline-label">
-                                            <h2><a href="#">Third place</a> <span>the International Rouund of the MITE International Competition, "Mathematics as a Science", Project "Catalan numbers"</span></h2>
-                                            <p><i class="glyphicon glyphicon-calendar"></i> 2016</p>
-                                            <p><i class="glyphicon glyphicon-map-marker"></i> Moscow, Russia</p>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-entry-inner">
-                                        <div class="timeline-icon">
-                                            <i class="entypo-feather"></i>
-                                        </div>
-                                        <div class="timeline-label">
-                                            <h2><a href="#">Grand Prize</a> <span>the National Round of the MITE International Competition, "Mathematics as a Science", Project "Catalan numbers"</span></h2>
-                                            <p><i class="glyphicon glyphicon-calendar"></i> January 5, 2016</p>
-                                            <p><i class="glyphicon glyphicon-map-marker"></i> Sofia</p>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                            <h3>2015</h3>
-                            <div class="timeline-centered">
-                                <article class="timeline-entry">
-                                    <div class="timeline-entry-inner">
-                                        <div class="timeline-icon">
-                                            <i class="entypo-feather"></i>
-                                        </div>
-                                        <div class="timeline-label">
-                                            <h2><a href="#">Bronze medal</a> <span>the John Atanasov National Informatics Tournament (Group C - 7th and 8th grade)</span></h2>
-                                            <p><i class="glyphicon glyphicon-calendar"></i> 28-29 November 2015</p>
-                                            <p><i class="glyphicon glyphicon-map-marker"></i> Shumen</p>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-entry-inner">
-                                        <div class="timeline-icon">
-                                            <i class="entypo-feather"></i>
-                                        </div>
-                                        <div class="timeline-label">
-                                            <h2><a href="#">Finalist in</a> <span>the Talents of the Future</span></h2>
-                                            <p><i class="glyphicon glyphicon-calendar"></i>15 November 2015</p>
-                                            <p><i class="glyphicon glyphicon-map-marker"></i> Sofia</p>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-entry-inner">
-                                        <div class="timeline-icon">
-                                            <i class="entypo-feather"></i>
-                                        </div>
-                                        <div class="timeline-label">
-                                            <h2><a href="#">Bronze medal</a> <span>the Sofia Mathematical Tournament (7th grade)</span></h2>
-                                            <p><i class="glyphicon glyphicon-calendar"></i> 07 November 2015</p>
-                                            <p><i class="glyphicon glyphicon-map-marker"></i> Sofia</p>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-entry-inner">
-                                        <div class="timeline-icon">
-                                            <i class="entypo-feather"></i>
-                                        </div>
-                                        <div class="timeline-label">
-                                            <h2><a href="#">Bronze medal</a> <span>the Mathematics Tournament "Chernorizets Hrabar"</span></h2>
-                                            <p><i class="glyphicon glyphicon-calendar"></i> 2015</p>
-                                            <p><i class="glyphicon glyphicon-map-marker"></i> Sofia</p>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-entry-inner">
-                                        <div class="timeline-icon">
-                                            <i class="entypo-feather"></i>
-                                        </div>
-                                        <div class="timeline-label">
-                                            <h2><a href="#">Winner</a> <span>the control camp of the National Campus of Informatics (7th grade)</span></h2>
-                                            <p><i class="glyphicon glyphicon-calendar"></i> 05-11 September 2015</p>
-                                            <p><i class="glyphicon glyphicon-map-marker"></i> Haskovo</p>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-entry-inner">
-                                        <div class="timeline-icon">
-                                            <i class="entypo-feather"></i>
-                                        </div>
-                                        <div class="timeline-label">
-                                            <h2><a href="#">Third place</a> <span>the team competition of the National Campus of Informatics</span></h2>
-                                            <p><i class="glyphicon glyphicon-calendar"></i> 05-11 September 2015</p>
-                                            <p><i class="glyphicon glyphicon-map-marker"></i> Haskovo</p>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-entry-inner">
-                                        <div class="timeline-icon">
-                                            <i class="entypo-feather"></i>
-                                        </div>
-                                        <div class="timeline-label">
-                                            <h2><a href="#">Certificate</a> <span>Completed Programming Training in 2014-2015 at Telerik Algo Academy</span></h2>
-                                            <p><i class="glyphicon glyphicon-calendar"></i> 2015</p>
-                                            <p><i class="glyphicon glyphicon-map-marker"></i> Sofia</p>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                            <h3>2014</h3>
-                            <div class="timeline-centered">
-                                <article class="timeline-entry">
-                                    <div class="timeline-entry-inner">
-                                        <div class="timeline-icon">
-                                            <i class="entypo-feather"></i>
-                                        </div>
-                                        <div class="timeline-label">
-                                            <h2><a href="#">Third place</a> <span>the control competition of the National Campus of Informatics (7th grade)</span></h2>
-                                            <p><i class="glyphicon glyphicon-calendar"></i> 05-11 September 2014, Kardzhali</p>
-                                            <p><i class="glyphicon glyphicon-map-marker"></i> Sofia</p>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-entry-inner">
-                                        <div class="timeline-icon">
-                                            <i class="entypo-feather"></i>
-                                        </div>
-                                        <div class="timeline-label">
-                                            <h2><a href="#">Silver medal</a> <span>the Asia International Mathematical Oplympiad Open Contest 2014 Final</span></h2>
-                                            <p><i class="glyphicon glyphicon-calendar"></i> 2014</p>
-                                            <p><i class="glyphicon glyphicon-map-marker"></i> Sofia</p>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-entry-inner">
-                                        <div class="timeline-icon">
-                                            <i class="entypo-feather"></i>
-                                        </div>
-                                        <div class="timeline-label">
-                                            <h2><a href="#">Bronze medal</a> <span>International Mathematics Assessments for Schools 2014 (Upper Primary Division)</span></h2>
-                                            <p><i class="glyphicon glyphicon-calendar"></i> 2014</p>
-                                            <p><i class="glyphicon glyphicon-map-marker"></i> Sofia</p>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-entry-inner">
-                                        <div class="timeline-icon">
-                                            <i class="entypo-feather"></i>
-                                        </div>
-                                        <div class="timeline-label">
-                                            <h2><a href="#">Gold badge</a> <span>Singapore and Asian Schools Math Olympiads 2014</span></h2>
-                                            <p><i class="glyphicon glyphicon-calendar"></i> 2014</p>
-                                            <p><i class="glyphicon glyphicon-map-marker"></i> Sofia</p>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                            <h3>2013</h3>
-                            <div class="timeline-centered">
-                                <article class="timeline-entry">
-                                    <div class="timeline-entry-inner">
-                                        <div class="timeline-icon">
-                                            <i class="entypo-feather"></i>
-                                        </div>
-                                        <div class="timeline-label">
-                                            <h2><a href="#">Bronze medal</a> <span>the Sofia Mathematical Tournament (5th grade)</span></h2>
-                                            <p><i class="glyphicon glyphicon-calendar"></i> 07 November 2013</p>
-                                            <p><i class="glyphicon glyphicon-map-marker"></i> Sofia</p>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-entry-inner">
-                                        <div class="timeline-icon">
-                                            <i class="entypo-feather"></i>
-                                        </div>
-                                        <div class="timeline-label">
-                                            <h2><a href="#">Third place</a> <span>the control competition of the National Campus of Informatics (7th grade)</span></h2>
-                                            <p><i class="glyphicon glyphicon-calendar"></i> 05-11 September 2014, Kardzhali</p>
-                                            <p><i class="glyphicon glyphicon-map-marker"></i> Sofia</p>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-entry-inner">
-                                        <div class="timeline-icon">
-                                            <i class="entypo-feather"></i>
-                                        </div>
-                                        <div class="timeline-label">
-                                            <h2><a href="#">Silver medal</a> <span>the Asia International Mathematical Oplympiad Open Contest 2014 Final</span></h2>
-                                            <p><i class="glyphicon glyphicon-calendar"></i> 2014</p>
-                                            <p><i class="glyphicon glyphicon-map-marker"></i> Sofia</p>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-entry-inner">
-                                        <div class="timeline-icon">
-                                            <i class="entypo-feather"></i>
-                                        </div>
-                                        <div class="timeline-label">
-                                            <h2><a href="#">Bronze medal</a> <span>International Mathematics Assessments for Schools 2014 (Upper Primary Division)</span></h2>
-                                            <p><i class="glyphicon glyphicon-calendar"></i> 2014</p>
-                                            <p><i class="glyphicon glyphicon-map-marker"></i> Sofia</p>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-entry-inner">
-                                        <div class="timeline-icon">
-                                            <i class="entypo-feather"></i>
-                                        </div>
-                                        <div class="timeline-label">
-                                            <h2><a href="#">Gold badge</a> <span>Singapore and Asian Schools Math Olympiads 2014</span></h2>
-                                            <p><i class="glyphicon glyphicon-calendar"></i> 2014</p>
-                                            <p><i class="glyphicon glyphicon-map-marker"></i> Sofia</p>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-entry-inner">
-                                        <div class="timeline-icon">
-                                            <i class="entypo-feather"></i>
-                                        </div>
-                                        <div class="timeline-label">
-                                            <h2><a href="#">First place</a> <span>the control camp of the National Campus of Informatics (5th grade)</span></h2>
-                                            <p><i class="glyphicon glyphicon-calendar"></i> 05-11 September 2013</p>
-                                            <p><i class="glyphicon glyphicon-map-marker"></i> Haskovo</p>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-entry-inner">
-                                        <div class="timeline-icon">
-                                            <i class="entypo-feather"></i>
-                                        </div>
-                                        <div class="timeline-label">
-                                            <h2><a href="#">Third place</a> <span>the team competition of the National Campus of Informatics</span></h2>
-                                            <p><i class="glyphicon glyphicon-calendar"></i> 05-11 September 2013</p>
-                                            <p><i class="glyphicon glyphicon-map-marker"></i> Haskovo</p>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-entry-inner">
-                                        <div class="timeline-icon">
-                                            <i class="entypo-feather"></i>
-                                        </div>
-                                        <div class="timeline-label">
-                                            <h2><a href="#">Certificate</a> <span>successful completion of Module 7 of program of Telerik Kids Academy</span></h2>
-                                            <p><i class="glyphicon glyphicon-calendar"></i> 2013</p>
-                                            <p><i class="glyphicon glyphicon-map-marker"></i> Sofia</p>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                            <h3>2012</h3>
-                            <div class="timeline-centered">
-                                <article class="timeline-entry">
-                                    <div class="timeline-entry-inner">
-                                        <div class="timeline-icon">
-                                            <i class="entypo-feather"></i>
-                                        </div>
-                                        <div class="timeline-label">
-                                            <h2><a href="#">Honorary diploma</a> <span>indispensable help during lectures at the Telerik Kids Sofia</span></h2>
-                                            <p><i class="glyphicon glyphicon-calendar"></i> September 2012</p>
-                                            <p><i class="glyphicon glyphicon-map-marker"></i> Sofia</p>
-                                        </div>
-                                    </div>
-                                    <div class="timeline-entry-inner">
-                                        <div class="timeline-icon">
-                                            <i class="entypo-feather"></i>
-                                        </div>
-                                        <div class="timeline-label">
-                                            <h2><a href="#">Gold medal</a> <span>the John Atanasov National Informatics Tournament (group E - 4 and 5 grade)</span></h2>
-                                            <p><i class="glyphicon glyphicon-calendar"></i> 24-25 November 2012</p>
-                                            <p><i class="glyphicon glyphicon-map-marker"></i> Shumen</p>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                        </div>
-                        <!--//content-->
-                    </div>
-                    <!--//section-inner-->
-                </section>
-                <!--//section-->
-
-            </div>
-            <!--//primary-->
-            <div class="secondary col-md-4 col-sm-12 col-xs-12">
-                <aside class="info aside section">
-                    <div class="section-inner">
-                        <h2 class="heading sr-only">Basic Information</h2>
-                        <div class="content">
-                            <ul class="list-unstyled">
-                                <li><i class="fa fa-map-marker"></i><span class="sr-only">Location:</span>Sofia, Bulgaria</li>
-                                <li><i class="fa fa-envelope-o"></i><span class="sr-only">Email:</span><a href="mailto:alex_tsvetanov_2002@abv.bg">alex_tsvetanov_2002@abv.bg</a>
-                                </li>
-                                <li><i class="fa fa-link"></i><span class="sr-only">Website:</span><a href="https://tsalex.tk">https://tsalex.tk</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!--//content-->
-                    </div>
-                    <!--//section-inner-->
-                </aside>
-                <!--//aside-->
-
-                <aside class="skills aside section">
-                    <div class="section-inner">
-                        <h2 class="heading">Skills</h2>
-                        <div class="content">
-                            <p class="intro">
-                                ✔ Team working
-                                <br> ✔ Creative
-                                <br> ✔ Excellent communication skills with teammates
-                                <br> ✔ Ability to meet deadlines
-                                <br>
-                            </p>
-
-                            <div class="skillset">
-
-                                <div class="item">
-                                    <h3 class="level-title">C++<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="You can use the tooltip to add more info...">Expert</span></h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="98%">
-                                        </div>
-                                    </div>
-                                    <!--//level-bar-->
-                                </div>
-                                <!--//item-->
-
-                                <div class="item">
-                                    <h3 class="level-title">FastCGI &amp; C++<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="You can use the tooltip to add more info...">Expert</span></h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="95%">
-                                        </div>
-                                    </div>
-                                    <!--//level-bar-->
-                                </div>
-                                <!--//item-->
-
-                                <div class="item">
-                                    <h3 class="level-title">TypeScript/JavaScript &amp;<br> jQuery<span class="level-label">Senior</span></h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="90%">
-                                        </div>
-                                    </div>
-                                    <!--//level-bar-->
-                                </div>
-                                <!--//item-->
-
-                                <div class="item">
-                                    <h3 class="level-title">Python<span class="level-label">Senior</span></h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="90%">
-                                        </div>
-                                    </div>
-                                    <!--//level-bar-->
-                                </div>
-                                <!--//item-->
-                                <div class="item">
-                                    <h3 class="level-title">Bootstrap, HTML5 &amp;<br> CSS3<span class="level-label">Senior</span></h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="90%">
-                                        </div>
-                                    </div>
-                                    <!--//level-bar-->
-                                </div>
-                                <!--//item-->
-
-                                <div class="item">
-                                    <h3 class="level-title">C#<span class="level-label">Advanced</span></h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="85%">
-                                        </div>
-                                    </div>
-                                    <!--//level-bar-->
-                                </div>
-                                <!--//item-->
-
-                                <div class="item">
-                                    <h3 class="level-title">Nginx<span class="level-label">Advanced</span></h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="84%">
-                                        </div>
-                                    </div>
-                                    <!--//level-bar-->
-                                </div>
-                                <!--//item-->
-
-                                <div class="item">
-                                    <h3 class="level-title">MySQL<span class="level-label">Experienced</span></h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="80%">
-                                        </div>
-                                    </div>
-                                    <!--//level-bar-->
-                                </div>
-                                <!--//item-->
-
-                                <p><a class="more-link" href="https://github.com/Alex-Tsvetanov"><i class="fa fa-external-link"></i> More on GitHub</a>
-                                </p>
-                            </div>
-                        </div>
-                        <!--//content-->
-                    </div>
-                    <!--//section-inner-->
-                </aside>
-                <!--//section-->
-
-                <aside class="testimonials aside section">
-                    <div class="section-inner">
-                        <h2 class="heading">Testimonials</h2>
-                        <div class="content">
-                            <div class="item">
-                                <blockquote class="quote">
-                                    <p>
-                                        <i class="fa fa-quote-left"></i>
-                                        <br> Alex is an excellent software engineer and he is passionate about what he does. You can totally count on him to deliver your projects!
-                                        <br><i class="fa fa-quote-right"></i>
-                                    </p>
-                                </blockquote>
-                                <p class="source"><span class="name">Iavor Nikoforoff</span>
-                                    <br /><span class="title">Trainer at Telerik Academy</span>
-                                </p>
-                            </div>
-                            <!--//item-->
-
-                            <p><a class="more-link" href="https://github.com/Alex-Tsvetanov"><i class="fa fa-external-link"></i> More on GitHub</a>
-                            </p>
-
-                        </div>
-                        <!--//content-->
-                    </div>
-                    <!--//section-inner-->
-                </aside>
-                <!--//section-->
-
-                <aside class="education aside section">
-                    <div class="section-inner">
-                        <h2 class="heading">Education</h2>
-                        <div class="content">
-                            <!--                        <div class="item">                      
-                                <h3 class="title"><i class="fa fa-graduation-cap"></i> MSc Psychology and Computer Science</h3>
-                                <h4 class="university">University College London <span class="year">(2011-2012)</span></h4>
-							</div>-->
-                            <div class="item">
-                                <h3 class="title"><i class="fa fa-graduation-cap"></i> Mathematics &amp; Informatics<br/>
-								<i style="visibility: hidden;" class="fa fa-graduation-cap"></i>(Foreign Language: English)</h3>
-                                <h4 class="university">Sofia High School of Matematics <span class="year">(2013-)</span></h4>
-                            </div>
-                            <!--//item-->
-                        </div>
-                        <!--//content-->
-                    </div>
-                    <!--//section-inner-->
-                </aside>
-                <!--//section-->
-
-                <aside class="languages aside section">
-                    <div class="section-inner">
-                        <h2 class="heading">Languages</h2>
-                        <div class="content">
-                            <ul class="list-unstyled">
-                                <li class="item">
-                                    <span class="title"><strong>English:</strong></span>
-                                    <span class="level"><br class="visible-xs"/><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-half"></i></i> </span>
-                                </li>
-                                <!--//item-->
-                                <li class="item">
-                                    <span class="title"><strong>Bulgarian:</strong></span>
-                                    <span class="level"><br class="visible-sm visible-xs"/><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i></span>
-                                </li>
-                                <!--//item-->
-                            </ul>
-                        </div>
-                        <!--//content-->
-                    </div>
-                    <!--//section-inner-->
-                </aside>
-                <!--//section-->
-                <!-- 
-                <aside class="blog aside section">
-                    <div class="section-inner">
-                        <h2 class="heading">Latest Blog Posts</h2>
-                        <p>You can use Sascha Depold's <a href="https://github.com/sdepold/jquery-rss" target="_blank">jQuery RSS plugin</a> to pull in your blog post feeds.</p>
-                        <div id="rss-feeds" class="content">
-
-                        </div>
-                    </div>
-                </aside>
-				-->
-
-                <aside class="list music aside section" id="music">
-                    <div class="section-inner">
-                        <h2 class="heading">Favourite coding bands</h2>
-                        <div class="content">
-                            <ul class="list-unstyled">
-                                <li><i class="fa fa-headphones"></i> <a href="https://en.wikipedia.org/wiki/Megaherz">Megaherz</a>
-                                </li>
-                                <li><i class="fa fa-headphones"></i> <a href="https://en.wikipedia.org/wiki/Through_Fire">Through fire</a>
-                                </li>
-                                <li><i class="fa fa-headphones"></i> <a href="https://en.wikipedia.org/wiki/Sabaton_(band)">Sabaton</a>
-                                </li>
-                                <li><i class="fa fa-headphones"></i> <a href="https://en.wikipedia.org/wiki/Korpiklaani">Korpiklaani</a>
-                                </li>
-                                <li><i class="fa fa-headphones"></i> <a href="https://en.wikipedia.org/wiki/Amon_Amarth">Amon Amarth</a>
-                                </li>
-                                <li><i class="fa fa-headphones"></i> <a href="https://en.wikipedia.org/wiki/Nightwish">Nightwish</a>
-                                </li>
-                                <li><i class="fa fa-headphones"></i> <a href="https://en.wikipedia.org/wiki/Disturbed_(band)">Disturbed</a>
-                                </li>
-                                <li><i class="fa fa-headphones"></i> <a href="https://en.wikipedia.org/wiki/Linkin_Park">Linkin Park</a>
-                                </li>
-                                <li><i class="fa fa-headphones"></i> <a href="https://bg.wikipedia.org/wiki/Торнадо_(група)">Tornado</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!--//content-->
-                    </div>
-                    <!--//section-inner-->
-                </aside>
-                <!--//section-->
-
-                <aside class="list conferences aside section">
-                    <div class="section-inner">
-                        <h2 class="heading">Conferences</h2>
-                        <div class="content">
-                            <ul class="list-unstyled">
-                                <li><i class="fa fa-calendar"></i> <a href="http://beit.today" target="_blank">Be IT  (Sofia)</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!--//content-->
-                    </div>
-                    <!--//section-inner-->
-                </aside>
-                <!--//section-->
-
-                <!--
-                <aside class="credits aside section">
-                    <div class="section-inner">
-                        <h2 class="heading"></h2>
-                        <div class="content">
-                        </div>
-                    </div>
-                </aside>
-				-->
-
-            </div>
-            <!--//secondary-->
-        </div>
-        <!--//row-->
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center">
+    <div class="container" data-aos="zoom-in" data-aos-delay="100">
+      <h1>Alex Tsvetanov</h1>
+      <p>I'm <span class="typed" data-typed-items="a Developer, an Entrpreneur, an Analyst, a Color caster, Coder of worlds"></span></p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/alex-tsvetanov/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        <a href="https://github.com/alex-tsvetanov/" class="github"><i class="bx bxl-github"></i></a>
+        <a href="https://twitter.com/coder_of_worlds" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="https://www.facebook.com/alex.tsvetanov.2002" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="https://www.instagram.com/coder_of_worlds/" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="https://www.youtube.com/channel/UCNDCjU5ai3Y7RyLb7EUcfLQ" class="youtube"><i class="bx bxl-youtube"></i></a>
+      </div>
     </div>
-    <!--//masonry-->
+  </section><!-- End Hero -->
 
-    <!-- ******FOOTER****** -->
-    <footer class="footer">
-        <div class="container text-center">
-            Copyright <i class="fa fa-copyright"></i> Alex Tsvetanov 2016-2017
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>About</h2>
+          <!--<p></p>-->
         </div>
-        <!--//container-->
-    </footer>
-    <!--//footer-->
 
-    <!-- Javascript -->
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js" integrity="sha256-7LkWEzqTdpEfELxcZZlS6wAx5Ff13zZ83lYO2/ujj7g=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="assets/plugins/jquery-rss/dist/jquery.rss.min.js"></script>
-    <!-- github calendar plugin -->
-    <script type="text/javascript" src="assets/js/min/es6-promise.min.js"></script>
-    <script type="text/javascript" src="assets/js/min/fetch.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/github-calendar/dist/github-calendar.min.js"></script>
-    <!--
-    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>    
-    <script type="text/javascript" src="assets/js/min/mustache.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/github-activity/src/github-activity.js"></script>
-	-->
-    <!-- custom js -->
-    <script type="text/javascript" src="assets/js/main.js"></script>
+        <div class="row">
+          <div class="col-lg-5">
+            <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-7 pt-4 pt-lg-0 content">
+            <h3>Software Engineer.</h3>
+            <p class="fst-italic">
+              I deal with programming since 3rd grade and I am keen on everything related to web development, starting from web application architecture, middleware systems, and databases.
+            </p>
+            <h3>Entrepreneur.</h3>
+            <p class="fst-italic">
+              At age of 16 I started trying to transform my school projects into startups. In 2022 I successfully released my dream and first startup - Headstarter. The company aims to help high school student preparing them for the life after studying. 
+            </p>
+            <h3>eSports.</h3>
+            <p class="fst-italic">
+              Since 2021, I started exploring the opportunities in eSports. I am used to be competitive LoL coach, analyst, and team manager. Recently, I enjoy more being a color caster rather than managing teams.              
+            </p>
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>12 August 2002</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+359 988 329 931</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Sofia, Bulgaria</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>19</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>College</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>alex_tsvetanov_2002@abv.bg</span></li>
+                </ul>
+              </div>
+            </div>
+            <p>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Facts Section ======= -->
+    <section id="facts" class="facts">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Facts</h2>
+          <p>Throughout my high school years I did a lot of school projects in order to self-develop. Some of them were related to IT, some of them developed of my habby - streaming, playing, and analyzing League of legends. Recently, I work with cool eSport organizations and LoL tournaments. I love to cast games, especially when I am a color caster. I've got a lot of awardsfor the past 12 years. Some of them are listed below.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+            <div class="count-box">
+              <i class="bi bi-journal-richtext"></i>
+              <span data-purecounter-start="0" data-purecounter-end="201" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Projects</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class="bi bi-award"></i>
+              <span data-purecounter-start="0" data-purecounter-end="37" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Awards</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Facts Section -->
+
+    <!-- ======= Skills Section ======= -->
+    <section id="skills" class="skills section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Skills</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row skills-content">
+
+          <div class="col-lg-6">
+
+            <div class="progress">
+              <span class="skill">Python <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">JavaScript <i class="val">95%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">TypeScript <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+
+            <div class="progress">
+              <span class="skill">C++ <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Java <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Algorithms <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Skills Section -->
+
+    <!-- ======= Resume Section ======= -->
+    <section id="resume" class="resume">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Resume</h2>
+          <p>I am Alex Tsvetanov and I have graduated from Sofia High School of Mathematics with an excellent grade in 2021. I deal with programming since 3rd grade and I am keen on everything related to web development, starting from web application architecture, middleware systems, and databases.</p>
+          <p>In particular, I enjoy creating back-end functionality that is designed to meet the needs of the ongoing and future goals set by the business.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <h3 class="resume-title">Summary</h3>
+            <div class="resume-item pb-0">
+              <h4>Alex Tsvetanov</h4>
+              <p><em>Innovative and deadline-driven Software Developer with 10+ years of experience developing all types of software.</em></p>
+              <ul>
+                <li>Sofia, Bulgaria</li>
+                <li>(+359) 988-329-931</li>
+                <li>alex_tsvetanov_2002@abv.bg</li>
+              </ul>
+            </div>
+
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>Secondary Education</h4>
+              <h5>2018 - 2021</h5>
+              <p><em>Sofia High School of Mathematics, Bulgaria</em></p>
+              <p></p>
+            </div>
+            <div class="resume-item">
+              <h4>Bachelor of Industrial Engineering</h4>
+              <h5>2021 - Present</h5>
+              <p><em>Technical University, Sofia</em></p>
+              <p>The program includes subjects such as Mathematics, Chemistry, Physics, and Mechanics.</p>
+            </div>
+
+            <h3 class="resume-title">Courses</h3>
+            <div class="resume-item">
+              <h4>C++ & Algorithms</h4>
+              <h5>2014 - 2018</h5>
+              <p><em>Telerik Kids Academy</em></p>
+            </div>
+            <div class="resume-item">
+              <h4>Algorithms & Data Structures</h4>
+              <h5>2012 - 2017</h5>
+              <p><em>Telerik Algo Academy</em></p>
+            </div>
+            <div class="resume-item">
+              <h4>C#.NET</h4>
+              <h5>2016 - 2017</h5>
+              <p><em>Telerik Software Academy</em></p>
+            </div>
+            <div class="resume-item">
+              <h4>Web Development</h4>
+              <h5>2016 - 2017</h5>
+              <p><em>Telerik Software Academy</em></p>
+            </div>
+            <div class="resume-item">
+              <h4>Summer Research School</h4>
+              <h5>2016 - 2018</h5>
+              <p><em>Bulgarian Academy of Sciences</em></p>
+            </div>
+            <div class="resume-item">
+              <h4>Java Web Development</h4>
+              <h5>2017 - 2018</h5>
+              <p><em>Telerik School Academy</em></p>
+            </div>
+            <div class="resume-item">
+              <h4>SAP Geeky Camp 5.0</h4>
+              <h5>2018 - 2018</h5>
+              <p><em>SAP</em></p>
+            </div>
+
+            <h3 class="resume-title">Extra-curricular activities</h3>
+            <div class="resume-item">
+              <h4>Open Doors Day</h4>
+              <h5>2018 - 2020</h5>
+              <p><em>Sofia High School of Mathematics, Bulgaria</em></p>
+              <p>The Open Doors Day was an event where 19 gratuates of Sofia High School of Mathematics spoke about their career development after graduation. I organized the even in 3 editions with the help of the Students' Council. I contacted the lecturers and managed all correspondances with them. Also, I prepared the schedule and set up the servers amd infrastructure for the live stream of the event.</p>
+            </div>
+            <div class="resume-item">
+              <h4>Web Developer</h4>
+              <h5>2016 - 2019</h5>
+              <p><em>Project "Testrain", Bulgaria</em></p>
+              <p>The project is a realization of experimental testing of emotional preferences which is developed as a computer simulation of Silvan Tomkins' psychological theory.</p>
+            </div>
+            <div class="resume-item">
+              <h4>Student Mentor</h4>
+              <h5>2017 - 2018</h5>
+              <p><em>Coder Dojo, Bulgaria</em></p>
+              <p>I helped Ninjas through the basics of coding and to assist them in their learning by creating their own projects.</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <h3 class="resume-title">Professional Experience</h3>
+            <div class="resume-item">
+              <h4>Full Stack Engineer</h4>
+              <h5>2021 - Present</h5>
+              <p><em>VMware, Sofia, Bulgaria</em></p>
+              <ul>
+                <li>Lead development, and implementation of new feature in the pricing department</li>
+                <li>Emergency bug fixes for our customers</li>
+                <li>Lead sub-initiatives within the company</li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <h4>Software Engineer</h4>
+              <h5>2019 - 2020</h5>
+              <p><em>Codix, Sofia, Bulgaria</em></p>
+              <ul>
+                <li>Created and maintained back-end services for 9 international banks</li>
+                <li>Developing the services in C/C++, and PL/SQL</li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <h4>Technical Trainer</h4>
+              <h5>2017 - 2017</h5>
+              <p><em>Software University, Sofia, Bulgaria</em></p>
+              <ul>
+                <li>Python trainer at private university for practical education in Informatics</li>
+              </ul>
+            </div>
+            <h3 class="resume-title">Publications</h3>
+            <div class="resume-item">
+              <h4>An Analytical Outlook towards Digital Training Security Transformations</h4>
+              <h4>Minchev Z., Boyanov L., Georgiev A., Tsvetanov A.</h4>
+              <h5>2016 - 2017</h5>
+              <p><em>In Proceeding of ICAICTSEE-2017</em></p>
+            </div>
+            <h3 class="resume-title">Entrepreneurship</h3>
+            <div class="resume-item">
+              <h4>Web Developer and Co-founder</h4>
+              <h5>2018 - Present</h5>
+              <p><em>Headstarter, Sofia, Bulgaria</em></p>
+              <p>Headstarter is an online platform that connects young people with the business. Everyone can find an internship or job position on the platform that saatisfies their desires and interests. The goals are to help studets choose their professional paths, get acquainted with the workers in their area, and gain experience.</p>
+            </div>
+            <div class="resume-item">
+              <h4>Web developer and Founder</h4>
+              <h5>2016 - 2019</h5>
+              <p><em>TechEdu++, Sofia, Bulgaria</em></p>
+              <p>The core aim of the project is to create an online learning management system that combines the best practices in organizing trainings so that it will be interesting, useful, and much more easier for the students.</p>
+            </div>
+            <h3 class="resume-title">Awards</h3>
+            <div class="resume-item">
+              <h4>Runner-up in President's awards "John Atanasov"</h4>
+              <h5>2019</h5>
+              <p><em>Sofia, Bulgaria</em></p>
+            </div>
+            <div class="resume-item">
+              <h4>Top 10 in International Entrepreneurship Competition with the startup "Headstarter"</h4>
+              <h5>2019</h5>
+              <p><em>Ljubljana, Slovenia</em></p>
+            </div>
+            <div class="resume-item">
+              <h4>1st place in National Entrepreneurship Competition with the startup "Headstarter"</h4>
+              <h5>2019</h5>
+              <p><em>Sofia, Bulgaria</em></p>
+            </div>
+            <div class="resume-item">
+              <h4>Bronze medal in International Competition in Algorithmic Programming "John Atanasov"</h4>
+              <h5>2017</h5>
+              <p><em>Shumen, Bulgaria</em></p>
+            </div>
+            <div class="resume-item">
+              <h4>Bronze medal in International Competition in Algorithmic Programming "John Atanasov"</h4>
+              <h5>2016</h5>
+              <p><em>Shumen, Bulgaria</em></p>
+            </div>
+            <div class="resume-item">
+              <h4>3rd place in The International Round of the MITE International Competition, Category "Mathematics as a Science", Project "Catalan numbers"</h4>
+              <h5>2016</h5>
+              <p><em>Moscow, Russia</em></p>
+            </div>
+            <div class="resume-item">
+              <h4>Grand Prize in The National Round of the MITE International Competition, Category "Mathematics as a Science", Project "Catalan numbers"</h4>
+              <h5>2016</h5>
+              <p><em>Sofia, Bulgaria</em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Resume Section -->
+
+    <!-- ======= Portfolio Section =======
+    <section id="portfolio" class="portfolio section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Portfolio</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">App</li>
+              <li data-filter=".filter-card">Card</li>
+              <li data-filter=".filter-web">Web</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>App 1</h4>
+                <p>App</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>App 2</h4>
+                <p>App</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Card 2</h4>
+                <p>Card</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Web 2</h4>
+                <p>Web</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>App 3</h4>
+                <p>App</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Card 1</h4>
+                <p>Card</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Card 3</h4>
+                <p>Card</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section> End Portfolio Section -->
+
+    <!-- ======= Services Section =======
+    <section id="services" class="services">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Services</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box iconbox-blue">
+              <div class="icon">
+                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,521.0016835830174C376.1290562159157,517.8887921683347,466.0731472004068,529.7835943286574,510.70327084640275,468.03025145048787C554.3714126377745,407.6079735673963,508.03601936045806,328.9844924480964,491.2728898941984,256.3432110539036C474.5976632858925,184.082847569629,479.9380746630129,96.60480741107993,416.23090153303,58.64404602377083C348.86323505073057,18.502131276798302,261.93793281208167,40.57373210992963,193.5410806939664,78.93577620505333C130.42746243093433,114.334589627462,98.30271207620316,179.96522072025542,76.75703585869454,249.04625023123273C51.97151888228291,328.5150500222984,13.704378332031375,421.85034740162234,66.52175969318436,486.19268352777647C119.04800174914682,550.1803526380478,217.28368757567262,524.383925680826,300,521.0016835830174"></path>
+                </svg>
+                <i class="bx bxl-dribbble"></i>
+              </div>
+              <h4><a href="">Lorem Ipsum</a></h4>
+              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+            <div class="icon-box iconbox-orange ">
+              <div class="icon">
+                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,582.0697525312426C382.5290701553225,586.8405444964366,449.9789794690241,525.3245884688669,502.5850820975895,461.55621195738473C556.606425686781,396.0723002908107,615.8543463187945,314.28637112970534,586.6730223649479,234.56875336149918C558.9533121215079,158.8439757836574,454.9685369536778,164.00468322053177,381.49747125262974,130.76875717737553C312.15926192815925,99.40240125094834,248.97055460311594,18.661163978235184,179.8680185752513,50.54337015887873C110.5421016452524,82.52863877960104,119.82277516462835,180.83849132639028,109.12597500060166,256.43424936330496C100.08760227029461,320.3096726198365,92.17705696193138,384.0621239912766,124.79988738764834,439.7174275375508C164.83382741302287,508.01625554203684,220.96474134820875,577.5009287672846,300,582.0697525312426"></path>
+                </svg>
+                <i class="bx bx-file"></i>
+              </div>
+              <h4><a href="">Sed Perspiciatis</a></h4>
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
+            <div class="icon-box iconbox-pink">
+              <div class="icon">
+                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,541.5067337569781C382.14930387511276,545.0595476570109,479.8736841581634,548.3450877840088,526.4010558755058,480.5488172755941C571.5218469581645,414.80211281144784,517.5187510058486,332.0715597781072,496.52539010469104,255.14436215662573C477.37192572678356,184.95920475031193,473.57363656557914,105.61284051026155,413.0603344069578,65.22779650032875C343.27470386102294,18.654635553484475,251.2091493199835,5.337323636656869,175.0934190732945,40.62881213300186C97.87086631185822,76.43348514350839,51.98124368387456,156.15599469081315,36.44837278890362,239.84606092416172C21.716077023791087,319.22268207091537,43.775223500013084,401.1760424656574,96.891909868211,461.97329694683043C147.22146801428983,519.5804099606455,223.5754009179313,538.201503339737,300,541.5067337569781"></path>
+                </svg>
+                <i class="bx bx-tachometer"></i>
+              </div>
+              <h4><a href="">Magni Dolores</a></h4>
+              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box iconbox-yellow">
+              <div class="icon">
+                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,503.46388370962813C374.79870501325706,506.71871716319447,464.8034551963731,527.1746412648533,510.4981551193396,467.86667711651364C555.9287308511215,408.9015244558933,512.6030010748507,327.5744911775523,490.211057578863,256.5855673507754C471.097692560561,195.9906835881958,447.69079081568157,138.11976852964426,395.19560036434837,102.3242989838813C329.3053358748298,57.3949838291264,248.02791733380457,8.279543830951368,175.87071277845988,42.242879143198664C103.41431057327972,76.34704239035025,93.79494320519305,170.9812938413882,81.28167332365135,250.07896920659033C70.17666984294237,320.27484674793965,64.84698225790005,396.69656628748305,111.28512138212992,450.4950937839243C156.20124167950087,502.5303643271138,231.32542653798444,500.4755392045468,300,503.46388370962813"></path>
+                </svg>
+                <i class="bx bx-layer"></i>
+              </div>
+              <h4><a href="">Nemo Enim</a></h4>
+              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="icon-box iconbox-red">
+              <div class="icon">
+                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,532.3542879108572C369.38199826031484,532.3153073249985,429.10787420159085,491.63046689027357,474.5244479745417,439.17860296908856C522.8885846962883,383.3225815378663,569.1668002868075,314.3205725914397,550.7432151929288,242.7694973846089C532.6665558377875,172.5657663291529,456.2379748765914,142.6223662098291,390.3689995646985,112.34683881706744C326.66090330228417,83.06452184765237,258.84405631176094,53.51806209861945,193.32584062364296,78.48882559362697C121.61183558270385,105.82097193414197,62.805066853699245,167.19869350419734,48.57481801355237,242.6138429142374C34.843463184063346,315.3850353017275,76.69343916112496,383.4422959591041,125.22947124332185,439.3748458443577C170.7312796277747,491.8107796887764,230.57421082200815,532.3932930995766,300,532.3542879108572"></path>
+                </svg>
+                <i class="bx bx-slideshow"></i>
+              </div>
+              <h4><a href="">Dele Cardo</a></h4>
+              <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="icon-box iconbox-teal">
+              <div class="icon">
+                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,566.797414625762C385.7384707136149,576.1784315230908,478.7894351017131,552.8928747891023,531.9192734346935,484.94944893311C584.6109503024035,417.5663521118492,582.489472248146,322.67544863468447,553.9536738515405,242.03673114598146C529.1557734026468,171.96086150256528,465.24506316201064,127.66468636344209,395.9583748389544,100.7403814666027C334.2173773831606,76.7482773500951,269.4350130405921,84.62216499799875,207.1952322260088,107.2889140133804C132.92018162631612,134.33871894543012,41.79353780512637,160.00259165414826,22.644507872594943,236.69541883565114C3.319112789854554,314.0945973066697,72.72355303640163,379.243833228382,124.04198916343866,440.3218312028393C172.9286146004772,498.5055451809895,224.45579914871206,558.5317968840102,300,566.797414625762"></path>
+                </svg>
+                <i class="bx bx-arch"></i>
+              </div>
+              <h4><a href="">Divera Don</a></h4>
+              <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section> End Services Section -->
+
+    <!-- ======= Testimonials Section ======= 
+    <section id="testimonials" class="testimonials section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Testimonials</h2>
+        </div>
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>Saul Goodman</h3>
+                <h4>Ceo &amp; Founder</h4>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <h3>Sara Wilsson</h3>
+                <h4>Designer</h4>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <h3>Jena Karlis</h3>
+                <h4>Store Owner</h4>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                <h3>Matt Brandon</h3>
+                <h4>Freelancer</h4>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+                <h4>Entrepreneur</h4>
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+              </div>
+            </div>
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section> End Testimonials Section -->
+
+    <!-- ======= Contact Section =======
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+        </div>
+
+        <div class="row mt-1">
+
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>A108 Adam Street, New York, NY 535022</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>info@example.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+1 5589 55488 55s</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-8 mt-5 mt-lg-0">
+
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section> End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <h3>Alex Tsvetanov</h3>
+      <p>Software Engineer | Entrepreneur | Analyst | LoL Host & Color Caster<br>Coder of worlds</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/alex-tsvetanov/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        <a href="https://github.com/alex-tsvetanov/" class="github"><i class="bx bxl-github"></i></a>
+        <a href="https://twitter.com/coder_of_worlds" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="https://www.facebook.com/alex.tsvetanov.2002" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="https://www.instagram.com/coder_of_worlds/" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="https://www.youtube.com/channel/UCNDCjU5ai3Y7RyLb7EUcfLQ" class="youtube"><i class="bx bxl-youtube"></i></a>
+      </div>
+      <div class="copyright">
+        &copy; Copyright <strong><span>Alex Tsvetanov</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by <a href="https://alex-tsvetanov.github.io/">Alex Tsvetanov</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
 </body>
 
 </html>
