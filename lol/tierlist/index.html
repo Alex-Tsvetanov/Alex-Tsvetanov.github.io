@@ -5,6 +5,14 @@ th { font-size: 100px; }
 img { width: 100px; height: 100px; opacity: 0.25; }
 .verified { opacity: 1;}
 </style>
+<script>
+window.addEventListener('load', function(event) {
+    let url = new URL(window.location.href);
+    if(url.protocol !== 'file:') {
+        document.getElementsByTagName("style")[0].innerHTML += 'img { opacity: 1.0 !important; }';
+    }
+});
+</script>
 <table>
         <tr>
             <th>S+<th>
@@ -39,12 +47,11 @@ img { width: 100px; height: 100px; opacity: 0.25; }
                 <img class="verified" src="./volibearpng.png">
                 <img class="verified" src="./lilliapng.png">
                 <img src="./nocturnepng.png">
-                <img src="./brandpng.png">
                 <img src="./amumupng.png">
                 <img class="verified" src="./gwenpng.png">
                 <img class="verified" src="./kindredpng.png">
                 <img src="./taliyahpng.png">
-                <img src="./jarvan-ivpng.png">
+                <img class="verified" src="./jarvan-ivpng.png">
                 <img class="verified" src="./rengarpng.png">
                 <img class="verified" src="./khazixpng.png">
                 <img class="verified" src="./ekkopng.png">
@@ -56,6 +63,7 @@ img { width: 100px; height: 100px; opacity: 0.25; }
             <th>B<th>
             <td>
                 <img class="verified" src="./elisepng.png">
+                <img class="verified" src="./sylaspng.png">
                 <img src="./fiddlestickspng.png">
                 <img class="verified" src="./qiyanapng.png">
                 <img src="./zacpng.png">
