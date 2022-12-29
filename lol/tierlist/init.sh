@@ -73,6 +73,7 @@ curl https://tiermaker.com/images/chart/chart/all-league-of-legends-champions-up
 
 curl https://tiermaker.com/images/chart/chart/all-league-of-legends-champions-up-to-nilah-15169358/udyrpng.png > udyrpng.png;
 curl https://tiermaker.com/images/chart/chart/all-league-of-legends-champions-up-to-nilah-15169358/shadow-assasin-kaynpng.png > shadow-assasin-kaynpng.png;
+curl https://tiermaker.com/images/chart/chart/all-league-of-legends-champions-up-to-nilah-15169358/sylaspng.png > sylaspng.png;
 
 curl https://tiermaker.com/images/chart/chart/all-league-of-legends-champions-up-to-nilah-15169358/master-yipng.png > master-yipng.png;
 curl https://tiermaker.com/images/chart/chart/all-league-of-legends-champions-up-to-nilah-15169358/reksaipng.png > reksaipng.png;
