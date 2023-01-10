@@ -1,107 +1,157 @@
 
 <style>
-body { color: white; background-color: black; }
-th { font-size: 100px; }
-img { width: 100px; height: 100px; opacity: 0.25; }
-.verified { opacity: 1;}
-</style>
-<script>
-window.addEventListener('load', function(event) {
-    let url = new URL(window.location.href);
-    if(url.protocol !== 'file:') {
-        document.getElementsByTagName("style")[0].innerHTML += 'img { opacity: 1.0 !important; }';
-    }
-});
-</script>
-<table>
-        <tr>
-            <th>S+<th>
-            <td>
-                <img class="verified" src="./dianapng.png">
-                <img class="verified" src="./xin-zhaopng.png">
-                <img class="verified" src="./warwickpng.png">
-                <img class="verified" src="./belvethpng.png">
-                <img class="verified" src="./gwenpng.png">
-                <img class="verified" src="./taricpng.png">
-                <img class="verified" src="./ornnpng.png">
-            </td>
-        </tr>
-    
-        <tr>
-            <th>S<th>
-            <td>
-                <img class="verified" src="./lilliapng.png">
-                <img class="verified" src="./lee-sinpng.png">
-                <img class="verified" src="./viegopng.png">
-                <img src="./sejuanipng.png">
-                <img src="./poppypng.png">
-                <img class="verified" src="./wukongpng.png">
-                <img class="verified" src="./gravespng.png">
-                <img class="verified" src="./hecarimpng.png">
-            </td>
-        </tr>
-    
-        <tr>
-            <th>A<th>
-            <td>
-                <img src="./olafpng.png">
-                <img class="verified" src="./volibearpng.png">
-                <img src="./nocturnepng.png">
-                <img src="./taliyahpng.png">
-                <img class="verified" src="./rengarpng.png">
-                <img class="verified" src="./khazixpng.png">
-                <img class="verified" src="./ekkopng.png">
-                <img src="./evelynnpng.png">
-            </td>
-        </tr>
-    
-        <tr>
-            <th>B<th>
-            <td>
-                <img class="verified" src="./kindredpng.png">
-                <img class="verified" src="./sylaspng.png">
-                <img class="verified" src="./jarvan-ivpng.png">
-                <img class="verified" src="./vipng.png">
-                <img class="verified" src="./mordekaiserpng.png">
-                <img src="./amumupng.png">
-                <img class="verified" src="./elisepng.png">
-                <img src="./fiddlestickspng.png">
-                <img src="./zacpng.png">
-                <img src="./rammuspng.png">
-                <img src="./trundlepng.png">
-                <img src="./talonpng.png">
-            </td>
-        </tr>
-    
-        <tr>
-            <th>C<th>
-            <td>
-                <img src="./karthuspng.png">
-                <img class="verified" src="./qiyanapng.png">
-                <img class="verified" src="./shacopng.png">
-                <img src="./ivernpng.png">
-                <img class="verified" src="./rhaastpng.png">
-                <img src="./gragaspng.png">
-                <img src="./zedpng.png">
-            </td>
-        </tr>
+    body { color: white; background-color: black; }
+    th { font-size: 100px; }
 
-        <tr>
-            <th>D<th>
-            <td>
-                <img class="verified" src="./shadow-assasin-kaynpng.png">
-                <img class="verified" src="./master-yipng.png">
-            </td>
-        </tr>
+    .champion {
+        display: inline-block;
+        width: 120px; 
+        height: 120px;
+    }
+    span { 
+        background-color: rgba(0,0,0,0.5); 
+        min-width: 120px; 
+        height: 120px;
+        min-height: 120px;
+        font-size: 15pt;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        position: relative;
+        top: -2px;
+    }
+    span.bottom { 
+        background-color: rgba(0,0,0,0.75); 
+        min-width: 120px; 
+        height: 25px;
+        min-height: 25px;
+        font-size: 15pt;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        position: relative;
+        top: 95px;
+    }
+    .champion_container {
+        background-size: contain;
+        width: 120px; 
+        height: 120px;
+        opacity: 0.25;
+    }
     
-        <tr>
-            <th>F<th>
-            <td>
-                <img src="./reksaipng.png">
-                <img class="verified" src="./udyrpng.png">
-                <img src="./shyvanapng.png">
-                <img src="./nunu-and-willumppng.png">
-                <img src="./nidaleepng.png">
-            </td>
-        </tr>
-    </table>
+    .verified { opacity: 1;}
+</style>
+<table>
+    <tr>
+        <th>S+<th>
+        <td>
+            <div class="champion" data-name="diana" data-tags="verified"></div>
+            <div class="champion" data-name="xin-zhao" data-tags="verified"></div>
+            <div class="champion" data-name="warwick" data-tags="verified"></div>
+            <div class="champion" data-name="belveth" data-tags="verified"></div>
+            <div class="champion" data-name="gwen" data-tags="verified"></div>
+            <div class="champion" data-name="taric" data-tags="verified"></div>
+            <div class="champion" data-name="ornn" data-tags="verified"></div>
+            <div class="champion" data-name="viego" data-tags="verified not_meta" data-label="Not good now"></div>
+        </td>
+    </tr>
+
+    <tr>
+        <th>S<th>
+        <td>
+            <div class="champion" data-name="lillia" data-tags="verified"></div>
+            <div class="champion" data-name="lee-sin" data-tags="verified"></div>
+            <div class="champion" data-name="sejuani" data-tags=""></div>
+            <div class="champion" data-name="poppy" data-tags=""></div>
+            <div class="champion" data-name="wukong" data-tags="verified"></div>
+            <div class="champion" data-name="graves" data-tags="verified" data-label="Eclipse" data-label_style="bottom"></div>
+            <div class="champion" data-name="hecarim" data-tags="verified" data-label="Divine" data-label_style="bottom"></div>
+        </td>
+    </tr>
+
+    <tr>
+        <th>A<th>
+        <td>
+            <div class="champion" data-name="olaf" data-tags=""></div>
+            <div class="champion" data-name="volibear" data-tags="verified"></div>
+            <div class="champion" data-name="nocturne" data-tags=""></div>
+            <div class="champion" data-name="taliyah" data-tags=""></div>
+            <div class="champion" data-name="rengar" data-tags="verified"></div>
+            <div class="champion" data-name="khazix" data-tags="verified"></div>
+            <div class="champion" data-name="ekko" data-tags="verified"></div>
+            <div class="champion" data-name="evelynn" data-tags=""></div>
+        </td>
+    </tr>
+
+    <tr>
+        <th>B<th>
+        <td>
+            <div class="champion" data-name="kindred" data-tags="verified"></div>
+            <div class="champion" data-name="sylas" data-tags="verified"></div>
+            <div class="champion" data-name="jarvan-iv" data-tags="verified"></div>
+            <div class="champion" data-name="vi" data-tags="verified"></div>
+            <div class="champion" data-name="mordekaiser" data-tags="verified"></div>
+            <div class="champion" data-name="amumu" data-tags=""></div>
+            <div class="champion" data-name="elise" data-tags="verified"></div>
+            <div class="champion" data-name="fiddlesticks" data-tags=""></div>
+            <div class="champion" data-name="zac" data-tags=""></div>
+            <div class="champion" data-name="rammus" data-tags=""></div>
+            <div class="champion" data-name="trundle" data-tags=""></div>
+            <div class="champion" data-name="talon" data-tags=""></div>
+        </td>
+    </tr>
+
+    <tr>
+        <th>C<th>
+        <td>
+            <div class="champion" data-name="karthus" data-tags=""></div>
+            <div class="champion" data-name="qiyana" data-tags="verified"></div></div>
+            <div class="champion" data-name="shaco" data-tags="verified"></div>
+            <div class="champion" data-name="ivern" data-tags=""></div>
+            <div class="champion" data-name="rhaast" data-tags="verified"></div>
+            <div class="champion" data-name="gragas" data-tags=""></div>
+            <div class="champion" data-name="zed" data-tags=""></div>
+        </td>
+    </tr>
+
+    <tr>
+        <th>F<th>
+        <td>
+            <div class="champion" data-name="shadow-assasin-kayn" data-tags="verified"></div>
+            <div class="champion" data-name="master-yi" data-tags="verified"></div>
+            <div class="champion" data-name="reksai" data-tags=""></div>
+            <div class="champion" data-name="udyr" data-tags="verified"></div>
+            <div class="champion" data-name="shyvana" data-tags=""></div>
+            <div class="champion" data-name="nunu-and-willump" data-tags=""></div>
+            <div class="champion" data-name="nidalee" data-tags=""></div>
+        </td>
+    </tr>
+</table>
+
+<script>
+    window.addEventListener('load', function(event) {
+        const url = new URL(window.location.href);
+        if(url.protocol !== 'file:') {
+            document.getElementsByTagName("style")[0].innerHTML += 'img, div { opacity: 1.0 !important; }';
+        }
+        let champions = document.getElementsByClassName("champion");
+        for(let element of champions) {
+            const champion = element.dataset.name;
+            const tags = element.dataset.tags;
+            const label = element.dataset.label;
+
+            console.log(champion, tags, label);
+
+            if('label' in element.dataset && label.length !== 0) {
+                if('label_style' in element.dataset) {
+                    element.innerHTML = `<div class="${tags} champion_container" style="background-image: url(./${champion}png.png);"><span class="${element.dataset.label_style}">${label}</span></div>`;
+                }
+                else {
+                    element.innerHTML = `<div class="${tags} champion_container" style="background-image: url(./${champion}png.png);"><span>${label}</span></div>`;
+                }
+            }
+            else
+                element.innerHTML = `<div class="${tags} champion_container" style="background-image: url(./${champion}png.png);"></div>`;
+        }
+    });
+</script>
