@@ -1,37 +1,49 @@
-
 <style>
     body { color: white; background-color: black; }
-    th { font-size: 100px; }
+    tr { width: 100%; vertical-align: top; }
+    
+    tr:first-of-type th {
+        font-size: 25px; text-align: center; vertical-align: middle;
+    }
+    
+    th { font-size: 80px; text-align: center; vertical-align: middle; }
+    
+    tr:first-child {width: 100px; text-align: right; }
+    td:nth-of-type(2n+1) { width: calc(7.2 * 120px); border-right: 1px solid white; }
+    td:nth-of-type(2n+2) { width: calc(3.2 * 120px); }
 
     .champion {
         display: inline-block;
         width: 120px; 
         height: 120px;
     }
+
     span { 
         background-color: rgba(0,0,0,0.5); 
         min-width: 120px; 
         height: 120px;
         min-height: 120px;
-        font-size: 15pt;
+        font-size: 10pt;
         display: table-cell;
         vertical-align: middle;
         text-align: center;
         position: relative;
         top: -2px;
     }
+
     span.bottom { 
         background-color: rgba(0,0,0,0.75); 
         min-width: 120px; 
         height: 25px;
         min-height: 25px;
-        font-size: 15pt;
+        font-size: 10pt;
         display: table-cell;
         vertical-align: middle;
         text-align: center;
         position: relative;
         top: 95px;
     }
+
     .champion_container {
         background-size: contain;
         width: 120px; 
@@ -40,53 +52,69 @@
     }
     
     .verified { opacity: 1;}
+    
+    table { border-collapse:collapse; }
+    td, th { border-bottom: 1px solid #fff; border-top: 1px solid #fff; }
 </style>
 <table>
     <tr>
-        <th>S+<th>
+        <th></th>
+        <th>Meta</th>
+        <th>Off-meta/pocket/flex</th>
+    </tr>
+    <tr>
+        <th>S+</th>
         <td>
             <div class="champion" data-name="diana" data-tags="verified"></div>
             <div class="champion" data-name="xin-zhao" data-tags="verified"></div>
             <div class="champion" data-name="warwick" data-tags="verified"></div>
             <div class="champion" data-name="belveth" data-tags="verified"></div>
+            <div class="champion" data-name="viego" data-tags="verified"></div>
+        </td>
+        <td>
             <div class="champion" data-name="gwen" data-tags="verified"></div>
             <div class="champion" data-name="taric" data-tags="verified"></div>
             <div class="champion" data-name="ornn" data-tags="verified"></div>
-            <div class="champion" data-name="viego" data-tags="verified not_meta" data-label="Not good now"></div>
         </td>
     </tr>
 
     <tr>
-        <th>S<th>
+        <th>S</th>
         <td>
             <div class="champion" data-name="lillia" data-tags="verified"></div>
             <div class="champion" data-name="lee-sin" data-tags="verified"></div>
             <div class="champion" data-name="sejuani" data-tags=""></div>
             <div class="champion" data-name="poppy" data-tags=""></div>
-            <div class="champion" data-name="wukong" data-tags="verified"></div>
+            <div class="champion" data-name="kindred" data-tags="verified"></div>
             <div class="champion" data-name="graves" data-tags="verified" data-label="Eclipse" data-label_style="bottom"></div>
             <div class="champion" data-name="hecarim" data-tags="verified" data-label="Divine" data-label_style="bottom"></div>
+        </td>
+        <td>
+
         </td>
     </tr>
 
     <tr>
-        <th>A<th>
+        <th>A</th>
         <td>
-            <div class="champion" data-name="olaf" data-tags=""></div>
-            <div class="champion" data-name="volibear" data-tags="verified"></div>
+            <div class="champion" data-name="wukong" data-tags="verified"></div>
             <div class="champion" data-name="nocturne" data-tags=""></div>
-            <div class="champion" data-name="taliyah" data-tags=""></div>
             <div class="champion" data-name="rengar" data-tags="verified"></div>
             <div class="champion" data-name="khazix" data-tags="verified"></div>
             <div class="champion" data-name="ekko" data-tags="verified"></div>
             <div class="champion" data-name="evelynn" data-tags=""></div>
+            <div class="champion" data-name="shaco" data-tags="verified" data-label="AP" data-label_style="bottom"></div>
+        </td>
+        <td>
+            <div class="champion" data-name="olaf" data-tags=""></div>
+            <div class="champion" data-name="taliyah" data-tags=""></div>
+            <div class="champion" data-name="volibear" data-tags="verified"></div>
         </td>
     </tr>
 
     <tr>
-        <th>B<th>
+        <th>B</th>
         <td>
-            <div class="champion" data-name="kindred" data-tags="verified"></div>
             <div class="champion" data-name="sylas" data-tags="verified"></div>
             <div class="champion" data-name="jarvan-iv" data-tags="verified"></div>
             <div class="champion" data-name="vi" data-tags="verified"></div>
@@ -99,23 +127,28 @@
             <div class="champion" data-name="trundle" data-tags=""></div>
             <div class="champion" data-name="talon" data-tags=""></div>
         </td>
+        <td>
+
+        </td>
     </tr>
 
     <tr>
-        <th>C<th>
+        <th>C</th>
         <td>
             <div class="champion" data-name="karthus" data-tags=""></div>
             <div class="champion" data-name="qiyana" data-tags="verified"></div></div>
-            <div class="champion" data-name="shaco" data-tags="verified"></div>
             <div class="champion" data-name="ivern" data-tags=""></div>
             <div class="champion" data-name="rhaast" data-tags="verified"></div>
             <div class="champion" data-name="gragas" data-tags=""></div>
             <div class="champion" data-name="zed" data-tags=""></div>
         </td>
+        <td>
+
+        </td>
     </tr>
 
     <tr>
-        <th>F<th>
+        <th>F</th>
         <td>
             <div class="champion" data-name="shadow-assasin-kayn" data-tags="verified"></div>
             <div class="champion" data-name="master-yi" data-tags="verified"></div>
@@ -124,6 +157,9 @@
             <div class="champion" data-name="shyvana" data-tags=""></div>
             <div class="champion" data-name="nunu-and-willump" data-tags=""></div>
             <div class="champion" data-name="nidalee" data-tags=""></div>
+        </td>
+        <td>
+
         </td>
     </tr>
 </table>
