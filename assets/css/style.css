@@ -428,8 +428,17 @@ section {
 /*--------------------------------------------------------------
 # Akills
 --------------------------------------------------------------*/
+.skills-content h4 {
+  font-family: 'Segoe UI', 'Roboto Slab', 'Merriweather', serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin-top: 2rem;
+  font-size: 1.25rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
 .skills .progress {
-  height: 60px;
+  min-height: 75px;
   display: block;
   background: none;
   border-radius: 0;
@@ -442,6 +451,10 @@ section {
   font-weight: 600;
   font-family: "Poppins", sans-serif;
   color: #000010;
+  font-size: 1.5em;
+}
+.skills .progress .skill i.me-1 {
+  font-size: 1.25em;
 }
 .skills .progress .skill .val {
   float: right;
