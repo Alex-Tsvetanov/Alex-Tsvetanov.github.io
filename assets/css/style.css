@@ -439,6 +439,7 @@ section {
 }
 .skills .progress {
   min-height: 75px;
+  height: auto;
   display: block;
   background: none;
   border-radius: 0;
@@ -456,8 +457,6 @@ section {
 .skills .progress .skill .me-1 {
   font-size: 30px;
   height: 30px;
-}
-.skills .progress .skill  {
 }
 .skills .progress .skill .val {
   float: right;
