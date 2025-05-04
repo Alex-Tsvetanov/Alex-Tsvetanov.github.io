@@ -426,13 +426,13 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Akills
+# Skills
 --------------------------------------------------------------*/
 .skills-content h4 {
   font-family: 'Segoe UI', 'Roboto Slab', 'Merriweather', serif;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-  margin-top: 2rem;
+  margin-top: calc(75px - 2rem);
   font-size: 1.25rem;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -453,8 +453,11 @@ section {
   color: #000010;
   font-size: 1.5em;
 }
-.skills .progress .skill i.me-1 {
-  font-size: 1.25em;
+.skills .progress .skill .me-1 {
+  font-size: 30px;
+  height: 30px;
+}
+.skills .progress .skill  {
 }
 .skills .progress .skill .val {
   float: right;
@@ -1065,4 +1068,15 @@ section {
 }
 #footer .credits {
   font-size: 13px;
+}
+
+/*--------------------------------------------------------------
+# Icons & Logos
+--------------------------------------------------------------*/
+.devicon-python-plain.colored {
+  color: #306998;
+}
+.devicon-javascript-plain.colored {
+  color: #f0db4f;
+  background: black;
 }
