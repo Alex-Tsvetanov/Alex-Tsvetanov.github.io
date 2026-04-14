@@ -7,12 +7,57 @@
 */
 
 /*--------------------------------------------------------------
+# Color Variables - Dark Theme
+--------------------------------------------------------------*/
+:root {
+  /* Surface Colors */
+  --surface-base: #0a0a0c;
+  --surface: #121318;
+  --surface-high: #1e1f25;
+  --surface-bright: #2a2b32;
+
+  /* Text Colors */
+  --text-primary: #e3e1e9;
+  --text-muted: #8e90a2;
+
+  /* Accent Colors */
+  --primary: #2E5BFF;
+  --secondary: #00E639;
+
+  /* Border Colors */
+  --border-dark: #434656;
+
+  /* Semantic Colors */
+  --success: #00E639;
+  --error: #ff6b6b;
+  --warning: #ffd93d;
+
+  /* Service Icon Colors */
+  --icon-blue: #47aeff;
+  --icon-teal: #11dbcf;
+  --icon-orange: #ffa76e;
+  --icon-yellow: #ffbb2c;
+  --icon-red: #ff5828;
+  --icon-pink: #e80368;
+
+  /* Utility Colors */
+  --color-white: #fff;
+  --color-black: #000;
+  --color-light-bg: #f0f0f0;
+  --color-light-code: #f0db4f;
+  --color-python-blue: #306998;
+  --gradient-neural: linear-gradient(135deg, #00E639 0%, #2E5BFF 100%);
+  --gradient-neural-90: linear-gradient(90deg, #00E639 0%, #2E5BFF 100%);
+  --gradient-neural-180: linear-gradient(180deg, #00E639 0%, #2E5BFF 100%);
+}
+
+/*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
-  color: #e3e1e9;
-  background-color: #0a0a0c;
+  color: var(--text-primary);
+  background-color: var(--surface-base);
 }
 
 .inverted {
@@ -51,7 +96,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: linear-gradient(135deg, #00E639 0%, #2E5BFF 100%);
+  background: var(--gradient-neural);
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -188,7 +233,7 @@ h6 {
 .nav-menu a:focus {
   display: flex;
   align-items: center;
-  color: #e3e1e9;
+  color: var(--text-primary);
   padding: 10px 18px;
   margin-bottom: 8px;
   transition: 0.3s;
@@ -209,7 +254,7 @@ h6 {
 .nav-menu a span,
 .nav-menu a:focus span {
   padding: 0 5px 0 7px;
-  color: #e3e1e9;
+  color: var(--text-primary);
 }
 
 @media (min-width: 992px) {
@@ -231,7 +276,7 @@ h6 {
 .nav-menu .active:focus,
 .nav-menu li:hover>a {
   color: #fff;
-  background: linear-gradient(135deg, #00E639 0%, #2E5BFF 100%);
+  background: var(--gradient-neural);
 }
 
 .nav-menu a:hover span,
@@ -272,7 +317,7 @@ h6 {
 }
 
 .mobile-nav-toggle i {
-  color: #e3e1e9;
+  color: var(--text-primary);
 }
 
 .mobile-nav-active {
@@ -326,18 +371,18 @@ h6 {
   font-size: 64px;
   font-weight: 700;
   line-height: 56px;
-  color: #e3e1e9;
+  color: var(--text-primary);
 }
 
 #hero p {
-  color: #e3e1e9;
+  color: var(--text-primary);
   margin: 15px 0 0 0;
   font-size: 26px;
   font-family: "Poppins", sans-serif;
 }
 
 #hero p span {
-  background: linear-gradient(135deg, #00E639 0%, #2E5BFF 100%);
+  background: var(--gradient-neural);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -351,7 +396,7 @@ h6 {
 #hero .social-links a {
   font-size: 24px;
   display: inline-block;
-  color: #e3e1e9;
+  color: var(--text-primary);
   line-height: 1;
   margin-right: 20px;
   transition: 0.3s;
@@ -402,7 +447,7 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  color: #e3e1e9;
+  color: var(--text-primary);
 }
 
 .section-title h2::before {
@@ -437,7 +482,7 @@ section {
 .about .content h3 {
   font-weight: 700;
   font-size: 26px;
-  color: #8e90a2;
+  color: var(--text-muted);
 }
 
 .about .content ul {
@@ -484,7 +529,7 @@ section {
   left: 50%;
   transform: translateX(-50%);
   font-size: 24px;
-  background: linear-gradient(135deg, #00E639 0%, #2E5BFF 100%);
+  background: var(--gradient-neural);
   color: #fff;
   border-radius: 50px;
   display: inline-flex;
@@ -499,7 +544,7 @@ section {
   font-size: 36px;
   display: block;
   font-weight: 600;
-  color: #e3e1e9;
+  color: var(--text-primary);
 }
 
 .facts .count-box p {
@@ -537,7 +582,7 @@ section {
   display: block;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
-  color: #e3e1e9;
+  color: var(--text-primary);
   font-size: 1.5em;
 }
 
@@ -570,7 +615,7 @@ section {
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 20px;
-  color: #e3e1e9;
+  color: var(--text-primary);
 }
 
 .resume .resume-item {
@@ -620,7 +665,7 @@ section {
   border-radius: 50px;
   left: -9px;
   top: 0;
-  background: linear-gradient(135deg, #00E639 0%, #2E5BFF 100%);
+  background: var(--gradient-neural);
   border: 2px solid #00E639;
   box-shadow: 0 0 10px rgba(0, 230, 57, 0.6);
 }
@@ -650,7 +695,7 @@ section {
   font-weight: 600;
   line-height: 1;
   text-transform: uppercase;
-  color: #e3e1e9;
+  color: var(--text-primary);
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
 }
@@ -731,12 +776,12 @@ section {
 
 .portfolio .portfolio-wrap .portfolio-info h4 {
   font-size: 20px;
-  color: #e3e1e9;
+  color: var(--text-primary);
   font-weight: 600;
 }
 
 .portfolio .portfolio-wrap .portfolio-info p {
-  color: #e3e1e9;
+  color: var(--text-primary);
   font-size: 14px;
   text-transform: uppercase;
   padding: 0;
@@ -749,7 +794,7 @@ section {
 }
 
 .portfolio .portfolio-wrap .portfolio-links a {
-  color: #e3e1e9;
+  color: var(--text-primary);
   margin: 0 2px;
   font-size: 28px;
   display: inline-block;
@@ -822,7 +867,7 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid #434656;
-  color: #e3e1e9;
+  color: var(--text-primary);
 }
 
 .portfolio-details .portfolio-info ul {
@@ -843,7 +888,7 @@ section {
   font-size: 26px;
   font-weight: 700;
   margin-bottom: 20px;
-  color: #e3e1e9;
+  color: var(--text-primary);
 }
 
 .portfolio-details .portfolio-description p {
@@ -893,11 +938,11 @@ section {
   font-weight: 600;
   margin: 10px 0 15px 0;
   font-size: 22px;
-  color: #e3e1e9;
+  color: var(--text-primary);
 }
 
 .services .icon-box h4 a {
-  color: #e3e1e9;
+  color: var(--text-primary);
   transition: ease-in-out 0.3s;
 }
 
@@ -961,7 +1006,7 @@ section {
 }
 
 .services .iconbox-red i {
-  color: #ff5828;
+  color: var(--icon-red);
 }
 
 .services .iconbox-red:hover .icon i {
@@ -969,7 +1014,7 @@ section {
 }
 
 .services .iconbox-red:hover .icon path {
-  fill: #ff5828;
+  fill: var(--icon-red);
 }
 
 .services .iconbox-teal i {
@@ -1011,12 +1056,12 @@ section {
   font-size: 20px;
   font-weight: bold;
   margin: 10px 0 5px 0;
-  color: #e3e1e9;
+  color: var(--text-primary);
 }
 
 .testimonials .testimonial-item h4 {
   font-size: 14px;
-  color: #8e90a2;
+  color: var(--text-muted);
   margin: 0 0 15px 0;
 }
 
@@ -1096,14 +1141,14 @@ section {
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 5px;
-  color: #e3e1e9;
+  color: var(--text-primary);
 }
 
 .contact .info p {
   padding: 0 0 0 60px;
   margin-bottom: 0;
   font-size: 14px;
-  color: #8e90a2;
+  color: var(--text-muted);
 }
 
 .contact .info .email,
@@ -1130,7 +1175,7 @@ section {
 .contact .php-email-form .error-message {
   display: none;
   color: #fff;
-  background: #ff6b6b;
+  background: var(--error);
   text-align: left;
   padding: 15px;
   font-weight: 600;
@@ -1176,12 +1221,12 @@ section {
   font-size: 14px;
   background-color: #1e1f25;
   border: 1px solid #434656;
-  color: #e3e1e9;
+  color: var(--text-primary);
 }
 
 .contact .php-email-form input::placeholder,
 .contact .php-email-form textarea::placeholder {
-  color: #8e90a2;
+  color: var(--text-muted);
 }
 
 .contact .php-email-form input {
@@ -1193,7 +1238,7 @@ section {
 }
 
 .contact .php-email-form button[type=submit] {
-  background: linear-gradient(135deg, #00E639 0%, #2E5BFF 100%);
+  background: var(--gradient-neural);
   border: 0;
   padding: 10px 35px;
   color: #fff;
@@ -1231,7 +1276,7 @@ section {
 --------------------------------------------------------------*/
 #footer {
   background: #0a0a0c;
-  color: #e3e1e9;
+  color: var(--text-primary);
   font-size: 14px;
   text-align: center;
   padding: 30px 0;
@@ -1260,7 +1305,7 @@ section {
 #footer .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: linear-gradient(135deg, #00E639 0%, #2E5BFF 100%);
+  background: var(--gradient-neural);
   color: #fff;
   line-height: 1;
   padding: 8px 0;
