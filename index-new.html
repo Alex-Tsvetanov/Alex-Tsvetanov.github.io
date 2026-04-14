@@ -64,6 +64,8 @@
 
     html {
       scroll-behavior: smooth;
+      overflow-x: hidden;
+      width: 100%;
     }
 
     body {
@@ -71,6 +73,8 @@
       background: var(--surface-base);
       color: var(--on-surface);
       overflow-x: hidden;
+      width: 100%;
+      max-width: 100vw;
     }
 
     /* Typography */
@@ -320,6 +324,9 @@
     #scroll-root {
       margin-left: 64px;
       perspective: 1200px;
+      overflow-x: hidden;
+      width: calc(100% - 64px);
+      max-width: 100%;
     }
 
     .scene {
@@ -356,6 +363,7 @@
       padding: 80px 40px;
       max-width: 1400px;
       margin: 0 auto;
+      overflow-x: hidden;
     }
 
     .badge {
@@ -536,6 +544,7 @@
     .about-content {
       max-width: 1400px;
       margin: 0 auto;
+      overflow-x: hidden;
     }
 
     .about-headline {
@@ -647,6 +656,7 @@
       z-index: 10;
       max-width: 1400px;
       margin: 0 auto;
+      overflow-x: hidden;
     }
 
     .lab-headline {
@@ -875,6 +885,7 @@
     .stage-content {
       max-width: 1400px;
       margin: 0 auto;
+      overflow-x: hidden;
     }
 
     .stage-headline {
@@ -1095,6 +1106,7 @@
     .testimonials-content {
       max-width: 1400px;
       margin: 0 auto;
+      overflow-x: hidden;
     }
 
     .testimonials-headline {
@@ -1220,7 +1232,36 @@
     }
 
     /* Responsive */
+    /* Mobile & Tablet Responsiveness */
+    @media (max-width: 1024px) {
+      .badge {
+        font-size: 10px;
+        padding: 6px 12px;
+      }
+
+      .nexus-headline {
+        font-size: clamp(28px, 5vw, 48px);
+      }
+
+      .about-headline {
+        font-size: clamp(24px, 4vw, 48px);
+      }
+
+      .lab-headline,
+      .stage-headline,
+      .testimonials-headline {
+        font-size: clamp(24px, 4vw, 48px);
+      }
+    }
+
     @media (max-width: 768px) {
+      html,
+      body {
+        overflow-x: hidden;
+        width: 100%;
+      }
+
+      /* Navigation */
       #side-nav {
         width: 48px;
       }
@@ -1235,34 +1276,419 @@
 
       #top-nav {
         left: 48px;
-        padding: 0 20px;
-        height: 60px;
+        padding: 0 16px;
+        height: 56px;
+        overflow-x: hidden;
+      }
+
+      .nav-logo-text {
+        display: none;
       }
 
       .nav-links {
         display: none;
       }
 
-      .nexus-grid,
-      .resume-grid,
-      .skills-grid {
+      .nav-cta {
+        font-size: 9px;
+        padding: 8px 16px;
+      }
+
+      /* Hero Section */
+      .nexus-headline {
+        font-size: clamp(24px, 4vw, 36px);
+      }
+
+      .nexus-grid {
         grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .portrait-container {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+      }
+
+      /* Hero text sizing */
+      .nexus-grid p {
+        font-size: 14px !important;
       }
 
       .stats-bar {
         grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+
+      .stat-value {
+        font-size: 20px;
+      }
+
+      .stat-label {
+        font-size: 10px;
+      }
+
+      /* About Section */
+      .about-headline {
+        font-size: clamp(20px, 3.5vw, 36px);
+      }
+
+      .story-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .story-card {
+        padding: 16px;
+      }
+
+      .card-number {
+        font-size: 11px;
+      }
+
+      .card-title {
+        font-size: 16px;
+      }
+
+      .card-text {
+        font-size: 13px;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      .info-item {
+        padding: 10px;
+      }
+
+      .info-label {
+        font-size: 11px;
+      }
+
+      .info-value {
+        font-size: 13px;
+      }
+
+      /* Lab Section */
+      .lab-headline {
+        font-size: clamp(20px, 3.5vw, 36px);
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .skill-category-title {
+        font-size: 13px;
+      }
+
+      .skill-name {
+        font-size: 12px;
+      }
+
+      .publications-title,
+      .projects-title {
+        font-size: 16px;
+      }
+
+      .publication-item {
+        font-size: 12px;
+        padding: 12px 0;
+      }
+
+      .project-card {
+        padding: 16px;
+      }
+
+      .project-name {
+        font-size: 16px;
+      }
+
+      .project-badge {
+        font-size: 9px;
+        padding: 3px 8px;
+      }
+
+      .project-description {
+        font-size: 13px;
+      }
+
+      .project-features li {
+        font-size: 12px;
+      }
+
+      /* Stage Section */
+      .stage-headline {
+        font-size: clamp(20px, 3.5vw, 36px);
+      }
+
+      .resume-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .resume-column h3 {
+        font-size: 16px;
+      }
+
+      .resume-item h4 {
+        font-size: 14px;
+      }
+
+      .resume-item h5 {
+        font-size: 11px;
+      }
+
+      .resume-item p,
+      .resume-item li {
+        font-size: 12px;
+      }
+
+      /* Company/Education Items */
+      .company-item,
+      .education-item,
+      .training-item,
+      .startup-item {
+        grid-template-columns: 36px 1fr;
+        gap: 12px;
+      }
+
+      .company-logo {
+        width: 36px;
+        height: 36px;
+      }
+
+      .school-logo,
+      .training-logo {
+        width: 32px;
+        height: 32px;
+      }
+
+      .startup-logo {
+        width: 36px;
+        height: 36px;
+      }
+
+      .resume-item ul {
+        margin-left: 16px;
+      }
+
+      /* Testimonials */
+      .testimonials-headline {
+        font-size: clamp(20px, 3.5vw, 36px);
       }
 
       .testimonials-grid {
         grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .testimonial-card {
+        padding: 14px;
+      }
+
+      .testimonial-text {
+        font-size: 12px;
+      }
+
+      .testimonial-author {
+        font-size: 12px;
+      }
+
+      .testimonial-title {
+        font-size: 10px;
+      }
+
+      /* Footer */
+      footer {
+        margin-left: 48px;
+        padding: 20px 16px;
+      }
+
+      .footer-brand {
+        font-size: 14px;
+      }
+
+      .footer-tagline {
+        font-size: 12px;
+      }
+
+      .footer-links {
+        gap: 12px;
+      }
+
+      .footer-link {
+        font-size: 12px;
+      }
+
+      .footer-status {
+        font-size: 10px;
+      }
+
+      /* Scroll Root */
+      #scroll-root {
+        margin-left: 48px;
+        overflow-x: hidden;
+        width: calc(100% - 48px);
+        max-width: 100%;
+      }
+
+      /* Layout adjustments */
+      .section {
+        padding: 40px 20px;
+        overflow-x: hidden;
+        width: 100%;
+      }
+
+      .scene {
+        overflow-x: hidden;
+        width: 100%;
+      }
+    }
+
+    /* Extra Small Devices (375px) */
+    @media (max-width: 480px) {
+      html,
+      body {
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100vw;
       }
 
       #scroll-root {
-        margin-left: 48px;
+        overflow-x: hidden;
+        width: calc(100% - 48px);
+        max-width: 100%;
       }
 
-      footer {
-        margin-left: 48px;
+      .scene {
+        overflow-x: hidden;
+        width: 100%;
+      }
+
+      #top-nav {
+        left: 48px;
+        padding: 0 12px;
+        height: 52px;
+        overflow-x: hidden;
+      }
+
+      .nav-cta {
+        font-size: 8px;
+        padding: 6px 12px;
+      }
+
+      .badge {
+        font-size: 9px;
+        padding: 5px 10px;
+      }
+
+      .nexus-headline {
+        font-size: 20px;
+      }
+
+      .about-headline,
+      .lab-headline,
+      .stage-headline,
+      .testimonials-headline {
+        font-size: 18px;
+      }
+
+      .stats-bar {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 12px;
+      }
+
+      .stat-value {
+        font-size: 18px;
+      }
+
+      .stat-label {
+        font-size: 9px;
+      }
+
+      .story-card {
+        padding: 12px;
+      }
+
+      .card-title {
+        font-size: 14px;
+      }
+
+      .card-text {
+        font-size: 12px;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .resume-column h3 {
+        font-size: 14px;
+        margin-top: 24px !important;
+      }
+
+      .resume-item h4 {
+        font-size: 13px;
+      }
+
+      .resume-item p,
+      .resume-item li {
+        font-size: 11px;
+      }
+
+      .company-item,
+      .education-item,
+      .training-item,
+      .startup-item {
+        grid-template-columns: 32px 1fr;
+        gap: 10px;
+      }
+
+      .company-logo {
+        width: 32px;
+        height: 32px;
+      }
+
+      .school-logo,
+      .training-logo {
+        width: 28px;
+        height: 28px;
+      }
+
+      .startup-logo {
+        width: 32px;
+        height: 32px;
+      }
+
+      .project-card {
+        padding: 12px;
+      }
+
+      .project-name {
+        font-size: 14px;
+      }
+
+      .project-description {
+        font-size: 12px;
+      }
+
+      .project-features li {
+        font-size: 11px;
+      }
+
+      .publication-item {
+        font-size: 11px;
+        padding: 10px 0;
+      }
+
+      .section {
+        padding: 30px 12px;
       }
     }
   </style>
@@ -2089,9 +2515,10 @@
       let closestDistance = Infinity;
 
       // Find section closest to viewport center, must be partially visible
-      navItems.forEach(item => {
+      const sections = document.querySelectorAll('.scene');
+      sections.forEach(item => {
         const box = item.getBoundingClientRect();
-        const distance = Math.abs(box.top - window.innerHeight / 2);
+        const distance = Math.abs(box.top + (box.height / 2) - (window.innerHeight / 2));
 
         // Section must be in viewport (partially or fully visible)
         if (box.top < window.innerHeight && box.bottom > 0) {
@@ -2103,8 +2530,8 @@
       });
 
       // If no section found in viewport, use the topmost one
-      if (!current && navItems.length > 0) {
-        current = navItems[0].id;
+      if (!current && sections.length > 0) {
+        current = sections[0].id;
       }
 
       // Update sidebar nav - remove active from all, add to current
@@ -2112,7 +2539,7 @@
         item.classList.remove('active');
       });
       if (current) {
-        document.querySelector(`[data-section="${current}"]`)?.classList.add('active');
+        document.querySelector(`.side-nav-item[data-section="${current}"]`)?.classList.add('active');
       }
 
       // Update top nav - remove active from all, add to current
@@ -2120,7 +2547,7 @@
         link.classList.remove('active');
       });
       if (current) {
-        document.querySelector(`a[href="#${current}"]`)?.classList.add('active');
+        document.querySelector(`.nav-link[data-section="${current}"]`)?.classList.add('active');
       }
 
       console.log('Active section: ' + current);
@@ -2159,23 +2586,33 @@
       const scenes = document.querySelectorAll('.scene');
       const scrollRoot = document.getElementById('scroll-root');
 
-      // Apply perspective only to scroll container
-      if (scrollRoot) {
+      // Apply perspective only to scroll container if not mobile
+      const isMobile = window.innerWidth <= 768;
+      
+      if (scrollRoot && !isMobile) {
         scrollRoot.style.perspective = '800px';
         scrollRoot.style.transformStyle = 'preserve-3d';
       }
 
       scenes.forEach((scene, index) => {
-        scene.style.transformStyle = 'preserve-3d';
+        if (!isMobile) {
+          scene.style.transformStyle = 'preserve-3d';
+        }
         scene.style.willChange = 'opacity, transform';
 
-        // Simple 3D entrance animations
-        const configs = [
-          { rotX: 0, scale: 1, opacity: 1 },     // Nexus - frontal from start
-          { rotX: 20, scale: 0.92, opacity: 0.6 },  // About
-          { rotY: 25, scale: 0.93, opacity: 0.6 },  // Lab
-          { rotX: -15, scale: 0.94, opacity: 0.6 }, // Stage
-          { rotY: -25, scale: 0.91, opacity: 0.6 }  // Testimonials
+        // Simple entrance animations
+        const configs = isMobile ? [
+          { rotX: 0, rotY: 0, y: 0, scale: 1, opacity: 1 },
+          { rotX: 0, rotY: 0, y: 40, scale: 0.98, opacity: 0.2 },
+          { rotX: 0, rotY: 0, y: 40, scale: 0.98, opacity: 0.2 },
+          { rotX: 0, rotY: 0, y: 40, scale: 0.98, opacity: 0.2 },
+          { rotX: 0, rotY: 0, y: 40, scale: 0.98, opacity: 0.2 }
+        ] : [
+          { rotX: 0, rotY: 0, y: 0, scale: 1, opacity: 1 },     // Nexus - frontal from start
+          { rotX: 20, rotY: 0, y: 0, scale: 0.92, opacity: 0.6 },  // About
+          { rotY: 25, rotX: 0, y: 0, scale: 0.93, opacity: 0.6 },  // Lab
+          { rotX: -15, rotY: 0, y: 0, scale: 0.94, opacity: 0.6 }, // Stage
+          { rotY: -25, rotX: 0, y: 0, scale: 0.91, opacity: 0.6 }  // Testimonials
         ];
 
         const config = configs[index] || configs[0];
@@ -2184,7 +2621,8 @@
         gsap.set(scene, {
           opacity: config.opacity,
           rotationX: config.rotX,
-          rotationY: config.rotY || 0,
+          rotationY: config.rotY,
+          y: config.y || 0,
           scale: config.scale,
           transformOrigin: '50% 50% 0'
         });
@@ -2195,13 +2633,14 @@
             opacity: 1,
             rotationX: 0,
             rotationY: 0,
+            y: 0,
             scale: 1,
             duration: 0.8,
             ease: 'power2.out',
             scrollTrigger: {
               trigger: scene,
-              start: 'top 60%',
-              end: 'top 40%',
+              start: isMobile ? 'top 85%' : 'top 60%',
+              end: isMobile ? 'top 60%' : 'top 40%',
               scrub: 1,
               markers: false,
               onEnter: () => {
@@ -2214,7 +2653,7 @@
         // Parallax effect on exit (only for non-first sections)
         if (index !== 0) {
           gsap.to(scene, {
-            y: -30,
+            y: isMobile ? -15 : -30,
             ease: 'none',
             scrollTrigger: {
               trigger: scene,
