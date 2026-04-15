@@ -196,6 +196,43 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+# 3D Scroll Transitions
+--------------------------------------------------------------*/
+/* Perspective is injected by 3d-transitions.js into #_3d-perspective-root
+   so that fixed/sticky elements (nav, sidebar) are NOT pulled into the 3D
+   stacking context. Do not add perspective: to body or #main here. */
+
+#hero,
+#main section {
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  position: relative;
+}
+
+.scene-fog {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 50;
+}
+
+.low-perf [data-scene] {
+  transform: none !important;
+  opacity: 1 !important;
+}
+
+.low-perf .scene-fog {
+  display: none;
+}
+
+/* overflow:hidden on section conflicts with transform-style:preserve-3d
+   and creates a double scrollbar. Override for 3D-animated sections. */
+[data-scene] {
+  overflow: visible;
+}
+
+/*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
 /**

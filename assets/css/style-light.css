@@ -322,10 +322,11 @@
     }
 
     /* Main Content */
+    /* Perspective is injected by 3d-transitions.js into #_3d-perspective-root
+       inside scroll-root so fixed nav/sidebar stay outside the 3D context. */
     #scroll-root {
       margin-left: 64px;
-      perspective: 1200px;
-      overflow-x: clip;
+      overflow-x: hidden;
       width: calc(100% - 64px);
       max-width: 100%;
     }
@@ -339,6 +340,31 @@
       flex-direction: column;
       justify-content: center;
       transform-style: preserve-3d;
+      will-change: transform, opacity;
+      backface-visibility: hidden;
+    }
+
+    .scene-fog {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 50;
+    }
+
+    /* Low-perf fallback: disable 3D transforms */
+    .low-perf [data-scene] {
+      transform: none !important;
+      opacity: 1 !important;
+    }
+
+    .low-perf .scene-fog {
+      display: none;
+    }
+
+    /* overflow:hidden on any ancestor conflicts with transform-style:preserve-3d
+       and causes a double scrollbar. Ensure 3D sections stay overflow:visible. */
+    [data-scene] {
+      overflow: visible;
     }
 
     /* Blueprint Grid Background */
