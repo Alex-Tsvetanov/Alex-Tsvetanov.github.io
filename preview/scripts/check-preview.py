@@ -30,7 +30,9 @@ for file in base.glob('*.html'):
         url = urlsplit(ref)
         if url.scheme or url.netloc:
             continue
-        target = (file.parent / unquote(url.path)).resolve() if url.path else file
+        target = ((base.parent / unquote(url.path).lstrip('/')) if url.path.startswith('/') else (file.parent / unquote(url.path))).resolve() if url.path else file
+        if target.is_dir():
+            target = target / 'index.html'
         assert target.is_file(), f'{file.name}: missing {ref}'
         if url.fragment and target.suffix == '.html':
             assert unquote(url.fragment) in Page(target.read_text()).ids, f'{file.name}: missing anchor {ref}'

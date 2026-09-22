@@ -8,7 +8,7 @@ Both identities are available as complete website variants:
 
 Serve the repository root on loopback, for example `python3 -m http.server 8943 --bind 127.0.0.1`, and open `http://127.0.0.1:8943/preview/brand-review.html`.
 
-Prepared for publishing under `/preview/` by merging `codex/brand-scroll-review` into `master`. The root homepage and CV are unchanged. Preview pages request `noindex` while gathering feedback. The original alternative layouts and `/lol/` pages remain available. `ats.html` is generated from `index.html`, so both retain identical content. Edit `index.html`, then rebuild the brand exports to refresh the Latin page.
+Prepared for publishing under `/preview/` by merging `codex/brand-scroll-review` into `master`. The root homepage and CV are unchanged. Portfolio variants now canonicalize to the main homepage for search discovery. The original alternative layouts and `/lol/` pages remain available. `ats.html` is generated from `index.html`, so both retain identical content. Edit `index.html`, then rebuild the brand exports to refresh the Latin page.
 
 ## Logo use
 
@@ -91,4 +91,4 @@ Merge into `master` to publish these pages through the repository’s GitHub Pag
 - https://alex-tsvetanov.github.io/preview/ats.html
 - https://alex-tsvetanov.github.io/preview/brand-review.html
 
-The original root homepage and CV are byte-identical to the merge base. Shared organization and reference images remain in `/assets/img/`; all redesign-specific assets and the newer CV live in `/preview/`. No checkout or payment functionality is enabled. Preview HTML requests `noindex, follow`. Removing `/preview/` reverses the preview deployment without changing the original site.
+The original root homepage and CV are byte-identical to the merge base. Shared organization and reference images remain in `/assets/img/`; all redesign-specific assets and the newer CV live in `/preview/`. No checkout or payment functionality is enabled. Portfolio HTML allows indexing and canonicalizes to the main homepage; the concept store remains noindex. Removing `/preview/` reverses the preview deployment without changing the original site.
