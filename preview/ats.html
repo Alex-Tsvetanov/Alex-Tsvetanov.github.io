@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en" data-logo="ats">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alex Tsvetanov — Systems engineer, researcher &amp; portfolio</title>
+  <meta name="description" content="Alex Tsvetanov is a systems engineer, researcher, and educator in Sofia. Exploring modern C++, concurrency, and the fundamentals behind reliable software.">
+  <meta name="theme-color" content="#0E0E10">
+  <meta property="og:title" content="Alex Tsvetanov — All the way down.">
+  <meta property="og:description" content="Systems engineering, C++ research, and a belief in understanding things deeply. Master yourself. Master the system.">
+  <meta property="og:image" content="https://alex-tsvetanov.github.io/preview/assets/brand/portrait-tie-leather.webp">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="assets/brand/ats-favicon.svg?v=aligned-cut-5">
+  <link rel="alternate icon" href="assets/brand/ats-favicon.ico?v=aligned-cut-5">
+  <link rel="apple-touch-icon" href="assets/brand/ats-icon-180.png?v=aligned-cut-5">
+  <link rel="stylesheet" href="assets/css/brand.css?v=portfolio-polish-3">
+  <link rel="stylesheet" href="assets/css/brand-motion.css?v=portfolio-polish-2">
+  <script src="assets/js/brand.js?v=portfolio-polish-2" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#work">Skip to portfolio</a>
+  <header class="site-header">
+    <a class="wordmark" href="#hero" aria-label="Alex Tsvetanov, home">
+      <img src="assets/brand/ats-symbol.svg?v=aligned-cut-5" width="46" height="46" alt="">
+      <span>Alex Tsvetanov</span>
+    </a>
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+      <span>Menu</span><span class="menu-lines" aria-hidden="true"></span>
+    </button>
+    <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
+      <a href="#work">Projects</a><a href="#experience">Experience</a><a href="#research">Research</a><a href="CV.pdf?v=2026-08-19" download>CV ↓</a><a class="nav-contact" href="#contact">Let's talk <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-story" id="hero" aria-labelledby="hero-title">
+      <div class="hero-stage">
+        <div class="hero-grain" aria-hidden="true"></div>
+        <div class="hero-topline"><span class="eyebrow">Systems engineer · Researcher · Educator</span><span class="location"><i aria-hidden="true"></i>Sofia, Bulgaria</span></div>
+        <div class="hero-copy">
+          <h1 id="hero-title"><span>Master yourself.</span><span class="accent">Master the system.</span></h1>
+          <p>I’m Alex, a systems engineer, researcher and educator. I’ve been writing C++ since 2012 and building production software since 2019—from rendering and distributed services to disaster recovery.</p>
+          <a class="button button-light" href="#work">Explore my portfolio <span aria-hidden="true">↘</span></a>
+        </div>
+        <div id="brand-scene" aria-hidden="true">
+          <div id="brand-object"><img class="brand-fallback" src="assets/brand/ats-symbol.svg?v=aligned-cut-5" alt="" width="600" height="600"></div>
+        </div>
+        <div class="hero-bottomline">
+          <a class="scroll-cue" href="#work"><span class="scroll-arrow" aria-hidden="true">↓</span>Scroll to go deeper</a>
+          <div class="hero-progress-track" aria-hidden="true"><span id="hero-progress"></span></div>
+        </div>
+      </div>
+    </section>
+
+    <nav class="portfolio-nav" aria-label="Portfolio sections">
+      <span class="eyebrow">Explore the portfolio</span>
+      <div><a href="#work">Projects</a><a href="#experience">Experience</a><a href="#research">Research</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#training">Training</a><a href="#community">Community</a><a href="#awards">Awards</a><a href="#about">About</a><a href="#references">References</a></div>
+    </nav>
+
+    <section class="work-section light-section section-pad" id="work" aria-labelledby="work-title">
+      <div class="section-heading"><span class="eyebrow">01 / Projects &amp; open source</span><span class="eyebrow">Ideas, tested in code</span></div>
+      <h2 class="display-title" id="work-title">Beneath the<br><em>abstraction.</em></h2>
+      <article class="project project-coroute">
+        <div class="project-copy">
+          <span class="project-index">C++ / NETWORKING · 2017–PRESENT</span>
+          <h3>Coroute <span>/ WebFrame++</span></h3>
+          <p>A cross-platform web framework with a coroutine-based I/O scheduler, lock-free queues and a unified asynchronous API over IOCP, io_uring and kqueue. I’ve worked on scheduling and caching to reduce latency jitter, HTTP pipelining and asynchronous file streaming.</p>
+          <details class="project-notes"><summary>Benchmarks &amp; project background</summary><p>My earlier Windows and Linux benchmarks measured 750,000–1.2 million requests per second with wrk and ab. Scheduler and queue changes improved throughput by about 13% in that work. These are historical, workload-dependent results; see the project for benchmark context. The project is part of a patent application.</p></details>
+          <ul class="project-tags" aria-label="Project topics"><li>Coroutines</li><li>Cross-platform I/O</li><li>HTTP &amp; WebSocket</li></ul>
+          <a class="text-link" href="https://github.com/Alex-Tsvetanov/WebFrame">Explore the source <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="project-art io-art" role="img" aria-label="Application, coroutine, and operating-system layers">
+          <div class="art-caption"><span>UNDER THE INTERFACE</span><span>↙</span></div>
+          <div class="io-stack" data-depth>
+            <div class="io-layer"><span>01</span><strong>Application</strong><code class="language-cpp">app.<span class="syntax-function">get</span>(<span class="syntax-string">&quot;/&quot;</span>)</code></div>
+            <div class="io-layer"><span>02</span><strong>Coroutine</strong><code class="language-cpp"><span class="syntax-keyword">co_await</span></code></div>
+            <div class="io-layer"><span>03</span><strong>Operating system</strong><code>IOCP / kqueue / io_uring</code></div>
+          </div>
+          <div class="art-footer"><span>Windows · Linux · macOS</span><span class="signal-dot" aria-hidden="true"></span></div>
+        </div>
+      </article>
+      <article class="project project-protobuf">
+        <div class="project-copy">
+          <span class="project-index">C++ / COMPILE-TIME RESEARCH</span>
+          <h3>Compile-time<br>Protobuf</h3>
+          <p>Exploring schema parsing, static reflection, and serialization in C++. Moving work into the compiler opens a different way to connect a protocol definition to the types that use it.</p>
+          <ul class="project-tags" aria-label="Project topics"><li>Static reflection</li><li>Protocol Buffers</li><li>Type safety</li></ul>
+          <a class="text-link" href="https://github.com/Alex-Tsvetanov/Compile-time-Protobuf">Explore the research <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="project-art schema-art" role="img" aria-label="A protocol schema becomes a C++ type at compile time">
+          <div class="art-caption"><span>SCHEMA → TYPE</span><span>Protocol Buffers → C++</span></div>
+          <div class="schema-code language-protobuf" data-depth><span class="syntax-keyword">message</span> <span class="syntax-type">Person</span> {<br><span class="code-indent"><span class="syntax-type">string</span> name = <span class="syntax-number">1</span>;</span><br><span class="code-indent"><span class="syntax-type">int32</span> id = <span class="syntax-number">2</span>;</span><br>}</div>
+          <div class="compile-line"><span class="compile-arrow" aria-hidden="true">↓</span><span>at compile time</span><strong>Person</strong><span class="type-check" aria-hidden="true">✓</span></div>
+        </div>
+      </article>
+      <article class="project project-orm">
+        <div class="project-copy">
+          <span class="project-index">C++23 / BACHELOR’S THESIS · 2026</span>
+          <h3>Compile-time ORM</h3>
+          <p>My bachelor’s thesis: an ORM that represents queries in the C++ type system and catches structural errors at compile time. Typed fields, joins and parameter binding connect C++ entities to SQL, with SQLite and mock database backends.</p>
+          <ul class="project-tags" aria-label="Project topics"><li>C++23</li><li>Typed queries</li><li>SQLite</li></ul>
+          <a class="text-link" href="https://github.com/cpp-for-everything/ORM">Explore the thesis project <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="project-art schema-art" role="img" aria-label="C++ entity fields become a typed database query">
+          <div class="art-caption"><span>ENTITY → QUERY</span><span>C++23</span></div>
+          <div class="schema-code language-cpp" data-depth><span class="syntax-keyword">constexpr auto</span> q =<br>orm::<span class="syntax-function">select</span>(<br><span class="code-indent">orm::<span class="syntax-function">field</span>&lt;&amp;<span class="syntax-type">User</span>::id&gt;,</span><br><span class="code-indent">orm::<span class="syntax-function">field</span>&lt;&amp;<span class="syntax-type">User</span>::name&gt;</span><br>);</div>
+          <div class="compile-line"><span class="compile-arrow" aria-hidden="true">↓</span><span>checked at compile time</span><strong>SQL</strong></div>
+        </div>
+      </article>
+      <div class="portfolio-grid project-grid">
+        <article class="portfolio-card"><span class="eyebrow">Library author · Chaos Group</span><img class="card-logo" src="../assets/img/companies/chaos.png" alt="" width="72" height="48" loading="lazy"><h3>sketchup-cpp-api</h3><p>A C++ interface for SketchUp’s Ruby API. I moved integration errors into compile-time checks at the V-Ray boundary, removing a class of defects before the software reached customers. Chaos open-sourced the library.</p><a class="text-link" href="https://github.com/ChaosGroup/sketchup-cpp-api">Explore the library <span aria-hidden="true">↗</span></a></article>
+        <article class="portfolio-card"><span class="eyebrow">Upstream contributions</span><h3>ngtcp2 &amp; MariaDB Connector/C</h3><p>Contributions to the QUIC and database-client ecosystems, alongside work on native language bindings and the boundary between network protocols, libraries and operating systems.</p><a class="text-link" href="https://github.com/alex-tsvetanov/">My GitHub profile <span aria-hidden="true">↗</span></a></article>
+        <article class="portfolio-card"><span class="eyebrow">Co-founder &amp; web developer · 2018–2022</span><img class="card-logo" src="../assets/img/projects/headstarter_logo2.png" alt="" width="72" height="48" loading="lazy"><h3>Headstarter</h3><p>A high-school entrepreneurship project in Sofia connecting students with businesses offering internships and jobs. I developed and maintained the platform, supported career guidance and networking, and organized the team’s workload.</p><p>The team won Teenovator’s national competition and reached the international Top 10 at Best Youth Startup in 2019.</p><a class="text-link" href="https://github.com/Headstarter/">Explore Headstarter <span aria-hidden="true">↗</span></a></article>
+        <article class="portfolio-card"><span class="eyebrow">Founder &amp; web developer · 2016–2019</span><img class="card-logo" src="../assets/img/projects/techedu.png" alt="" width="72" height="48" loading="lazy"><h3>TechEdu++</h3><p>A learning management system for high-school informatics. I developed courses and short video lessons covering programming languages and computer-science fundamentals, and integrated the platform into teaching at Sofia High School of Mathematics.</p><a class="text-link" href="https://github.com/TechEducationPlusPlus">Explore TechEdu++ <span aria-hidden="true">↗</span></a></article>
+      </div>
+      <div class="section-endnote"><p>Code is where an idea has to answer to reality.</p><a class="text-link" href="https://github.com/alex-tsvetanov/">More on GitHub <span aria-hidden="true">↗</span></a></div>
+    </section>
+
+    <section class="experience-section section-pad" id="experience" aria-labelledby="experience-title">
+      <div class="section-heading"><span class="eyebrow">02 / Experience</span><span class="eyebrow">Production software, since 2019</span></div>
+      <h2 class="display-title" id="experience-title">The work<br><em>so far.</em></h2>
+      <div class="career-list" id="resume">
+        <article class="career-entry"><div class="career-meta"><span class="eyebrow">July 2025–Present</span><p>Sofia, Bulgaria<br>Full-time · Hybrid</p></div><div class="career-detail"><h3>Senior C++ Engineer</h3><a class="career-company" href="https://www.acronis.com/en/"><img class="organization-logo" src="../assets/img/companies/acronis.png" alt="" width="72" height="48" loading="lazy">Acronis ↗</a><ul><li>Led a cross-functional team of four to take Disaster Recovery for Cyber Frame and VHI to general availability: failover, failback and replicas from the console, across 25 global data centers.</li><li>Built per-tenant usage metering, aggregation and reporting to enable customer invoicing, then fixed faults affecting invoices in four data centers.</li><li>Delivered file-level restore and incremental backup for multi-terabyte Kubernetes clusters, on an agent I rewrote from C++ to Go.</li><li>Built an AI-assisted Jenkins build analyser using the Jenkins, Jira, Bitbucket and Git APIs. Separately integrated the <a href="https://github.com/hyphen-2025/cyber-pilot">Cypilot</a> SDLC kit into the team’s workflow, contributing requirements and alternatives from image-automation work.</li></ul></div></article>
+        <article class="career-entry"><div class="career-meta"><span class="eyebrow">July 2023–July 2025</span><p>Sofia, Bulgaria<br>Full-time · Hybrid</p></div><div class="career-detail"><h3>C++ Engineer</h3><a class="career-company" href="https://www.chaos.com/"><img class="organization-logo" src="../assets/img/companies/chaos.png" alt="" width="72" height="48" loading="lazy">Chaos Group ↗</a><ul><li>Re-engineered point-cloud transformations with <a href="https://github.com/xtensor-stack/xsimd">xsimd</a>, from SSE through AVX-512, making the viewport interactive at five times its previous speed.</li><li>Authored <a href="https://github.com/ChaosGroup/sketchup-cpp-api">sketchup-cpp-api</a> to catch V-Ray/SketchUp Ruby integration errors at compile time. Chaos open-sourced the library.</li><li>Refactored rendering subsystems for thread safety and cache locality, eliminating high-frequency crashes across different hardware and scene scales.</li></ul></div></article>
+        <article class="career-entry"><div class="career-meta"><span class="eyebrow">Sep 2022–July 2023</span><p>Leuven, Belgium<br>Full-time · Remote</p></div><div class="career-detail"><h3>Software Architect</h3><a class="career-company" href="https://www.scia.net/en"><img class="organization-logo" src="../assets/img/companies/scia.png" alt="" width="72" height="48" loading="lazy">SCIA ↗</a><ul><li>Designed the migration of monolithic Visual C++ logic from legacy COM services to a <a href="https://grpc.io/docs/languages/cpp/quickstart/">gRPC</a> and <a href="https://redis.io/">Redis</a> architecture.</li><li>Modernized the global build system with CMake and vcpkg, enabling cross-platform development for structural engineering software.</li><li>Directed the evaluation and adoption of gRPC to replace aging internal protocols and improve interoperability.</li></ul></div></article>
+        <article class="career-entry"><div class="career-meta"><span class="eyebrow">July–Sep 2022</span><p>Sofia, Bulgaria<br>Full-time · Hybrid</p></div><div class="career-detail"><h3>C++ Back-end Developer</h3><a class="career-company" href="https://careers.flutterinternational.com/our-brands/pokerstars/"><img class="organization-logo" src="../assets/img/companies/pokerstars.png" alt="" width="72" height="48" loading="lazy">PokerStars ↗</a><ul><li>Worked on backend C++ for a distributed platform serving 55,000+ concurrent users, including real-time limits and transactional services.</li><li>Built a shared rules engine for jurisdiction-specific legal limits and responsible-gaming requirements, so new markets could be added through configuration.</li><li>Delivered high-availability transactional systems, maintaining database consistency under sustained load.</li></ul></div></article>
+        <article class="career-entry"><div class="career-meta"><span class="eyebrow">June 2021–July 2022</span><p>Sofia, Bulgaria<br>Full-time · Hybrid</p></div><div class="career-detail"><h3>Full-stack Developer</h3><a class="career-company" href="https://www.vmware.com/"><img class="organization-logo" src="../assets/img/companies/vmware.png" alt="" width="72" height="48" loading="lazy">VMware ↗</a><ul><li>Reduced Solution Builder SQL query execution from 30 seconds to 1.5 seconds and resolved systemic deadlocks affecting thousands of users.</li><li>Built Spring Boot and Angular features for enterprise service bundling, role pairing and automated quote generation.</li><li>Served as the team’s main resource for front-end performance and styling, mentoring colleagues on UI practices and modular Angular components.</li></ul></div></article>
+        <article class="career-entry"><div class="career-meta"><span class="eyebrow">May–Sep 2019</span><p>Sofia, Bulgaria<br>Part-time · On-site</p></div><div class="career-detail"><h3>C++ Software Developer</h3><a class="career-company" href="https://www.codix.eu/en"><img class="organization-logo" src="../assets/img/companies/codix.png" alt="" width="72" height="48" loading="lazy">Codix ↗</a><ul><li>Developed lending, factoring and debt-collection modules for nine international Tier-1 banking and financial institutions.</li><li>Maintained and extended C++ night jobs and background services supporting data integrity during financial close.</li><li>Implemented more than 100 feature extensions in a shared codebase, balancing client-specific requirements with a common product architecture.</li></ul></div></article>
+        <article class="career-entry"><div class="career-meta"><span class="eyebrow">May–June 2017</span><p>Sofia, Bulgaria<br>Teaching · Volunteering</p></div><div class="career-detail"><h3>Technical Trainer</h3><a class="career-company" href="https://softuni.bg/trainings/1655/python-basics-may-2017"><img class="organization-logo" src="../assets/img/volunteering/softuni.png" alt="" width="72" height="48" loading="lazy">Software University ↗</a><ul><li>Taught Python programming to learners with different backgrounds, including professionals retraining for software careers.</li><li>Covered syntax, control flow, functions, data structures and object-oriented programming through live coding, practical exercises and homework.</li><li>Adapted teaching to the group’s experience and assessed progress through final exams.</li></ul></div></article>
+      </div>
+    </section>
+
+    <section class="research-section section-pad" id="research" aria-labelledby="research-title">
+      <div class="section-heading"><span class="eyebrow">03 / Research &amp; standards</span><span class="eyebrow">Ask. Build. Explain.</span></div>
+      <div class="research-intro">
+        <h2 class="display-title" id="research-title">Go deep.<br><em>Pass it on.</em></h2>
+        <p class="section-lead">Understanding a system is one part of the work. Making that understanding useful to someone else is another.</p>
+      </div>
+          <figure class="speaking-figure">
+            <div class="photo-frame"><img src="assets/brand/openfest-2025-1600.webp" srcset="assets/brand/openfest-2025-960.webp 960w, assets/brand/openfest-2025-1600.webp 1600w" sizes="90vw" alt="Alex presenting at OpenFest 2025, with the stage and audience in the foreground" width="1600" height="900" loading="lazy" decoding="async"></div>
+            <figcaption><a href="https://youtu.be/iMLiv5GwQsk?t=30100">OpenFest 2025 · C++ talks to the Kernel · Watch the recording</a><span aria-hidden="true">↗</span></figcaption>
+          </figure>
+      <div class="research-layout">
+        <div class="research-media">
+
+          <div class="talk-list" id="talks" aria-labelledby="talks-title">
+            <div class="subsection-heading"><h3 id="talks-title">Talk recordings</h3></div>
+            <p class="talk-description"><strong>OpenFest 2025</strong><br><a class="text-link" href="https://youtu.be/iMLiv5GwQsk?t=30091">C++ talks to the Kernel: Coroutines over Unified I/O Queues <span aria-hidden="true">↗</span></a></p>
+            <p class="talk-description"><strong>OpenFest 2024</strong><br><a class="text-link" href="https://youtu.be/EjGf3FXAsNA?t=23703">sketchup-cpp-api <span aria-hidden="true">↗</span></a></p>
+            <p class="talk-description"><strong>OpenFest 2024</strong><br><a class="text-link" href="https://youtu.be/EjGf3FXAsNA?t=23437">WebFrame++ <span aria-hidden="true">↗</span></a></p>
+          </div>
+        </div>
+        <div class="publication-list">
+          <div class="subsection-heading"><h3>Publications</h3></div>
+          <a class="publication" href="https://doi.org/10.1109/TELECOM66943.2025.11304088"><img class="publication-logo" src="../assets/img/publications/ieee.svg" alt="IEEE" width="64" height="32" loading="lazy"><span class="publication-meta">Nov 2025 / TELECOM · Sofia, Bulgaria</span><h3>Optimizing Asynchronous Event Dispatch in Modern C++ Publish/Subscribe Systems</h3><p class="publication-authors">Alex Tsvetanov</p><span class="publication-arrow" aria-hidden="true">↗</span></a>
+          <a class="publication" href="https://doi.org/10.1109/ICEST66328.2025.11098436"><img class="publication-logo" src="../assets/img/publications/ieee.svg" alt="IEEE" width="64" height="32" loading="lazy"><span class="publication-meta">June 2025 / ICEST · Ohrid, North Macedonia</span><h3>Modern C++ Publish/Subscribe Pattern: Design, Challenges, and Implementation</h3><p class="publication-authors">Alex Tsvetanov · Assoc. Prof. Ivan Stankov, Ph.D.</p><span class="publication-arrow" aria-hidden="true">↗</span></a>
+          <a class="publication" href="https://doi.org/10.1109/TELECOM63374.2024.10812214"><img class="publication-logo" src="../assets/img/publications/ieee.svg" alt="IEEE" width="64" height="32" loading="lazy"><span class="publication-meta">Nov 2024 / TELECOM · Sofia, Bulgaria</span><h3>Matching Text from Start to Finish Against Multiple Regular Expressions</h3><p class="publication-authors">Alex Tsvetanov · Assoc. Prof. Ivan Stankov, Ph.D.</p><span class="publication-arrow" aria-hidden="true">↗</span></a>
+          <a class="publication" href="https://doi.org/10.13140/RG.2.2.20333.28645"><img class="publication-logo" src="../assets/img/publications/researchgate.svg" alt="ResearchGate" width="64" height="32" loading="lazy"><span class="publication-meta">Nov 2017 / ICAICTSEE · Sofia, Bulgaria</span><h3>An Analytical Outlook towards Digital Training Security Transformations</h3><p class="publication-authors">Assoc. Prof. Zlatogor Minchev · Luben Boyanov, Ph.D. · Antoan Georgiev · Alex Tsvetanov</p><span class="publication-arrow" aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="standards-note"><span class="eyebrow">C++ standards</span><div><h3>ISO/IEC JTC 1/SC 22/WG 21</h3><p>Member of the C++ standards committee via BDS Technical Committee 57, representing the Technical University of Sofia.</p></div></div>
+    </section>
+
+    <section class="skills-section light-section section-pad" id="skills" aria-labelledby="skills-title">
+      <div class="section-heading"><span class="eyebrow">04 / Skills</span><span class="eyebrow">From the language to the machine</span></div>
+      <h2 class="display-title" id="skills-title">What I<br><em>work with.</em></h2>
+      <div class="portfolio-grid skills-grid">
+        <article class="portfolio-card"><h3>Languages</h3><ul class="skill-list"><li><img src="assets/img/tech/cplusplus.svg" alt="" width="24" height="24" loading="lazy"><span>C++11–26</span></li><li><img src="assets/img/tech/c.svg" alt="" width="24" height="24" loading="lazy"><span>C</span></li><li><img src="assets/img/tech/python.svg" alt="" width="24" height="24" loading="lazy"><span>Python</span></li><li><img src="assets/img/tech/java.svg" alt="" width="24" height="24" loading="lazy"><span>Java</span></li><li><img src="assets/img/tech/csharp.svg" alt="" width="24" height="24" loading="lazy"><span>C#</span></li><li><img src="assets/img/tech/dotnetcore.svg" alt="" width="24" height="24" loading="lazy"><span>.NET</span></li><li><img src="assets/img/tech/javascript.svg" alt="" width="24" height="24" loading="lazy"><span>JavaScript</span></li><li><img src="assets/img/tech/typescript.svg" alt="" width="24" height="24" loading="lazy"><span>TypeScript</span></li><li><img src="assets/img/tech/go.svg" alt="" width="24" height="24" loading="lazy"><span>Go</span></li></ul></article>
+        <article class="portfolio-card"><h3>Systems &amp; architecture</h3><ul class="skill-list"><li>Algorithms &amp; data structures</li><li>Concurrency &amp; synchronization</li><li>Multithreading</li><li>Distributed systems</li><li>SIMD / xsimd</li><li>Native language bindings</li><li>IOCP / io_uring / kqueue</li><li>QUIC / TLS / HTTP / gRPC</li></ul></article>
+        <article class="portfolio-card"><h3>Frameworks &amp; ecosystems</h3><ul class="skill-list"><li><img src="assets/img/tech/dotnetcore.svg" alt="" width="24" height="24" loading="lazy"><span>ASP.NET</span></li><li><img src="assets/img/tech/dotnetcore.svg" alt="" width="24" height="24" loading="lazy"><span>WPF</span></li><li><img src="assets/img/tech/dotnetcore.svg" alt="" width="24" height="24" loading="lazy"><span>MAUI</span></li><li><img src="assets/img/tech/spring.svg" alt="" width="24" height="24" loading="lazy"><span>Spring / Spring Boot</span></li><li><img src="assets/img/tech/flask.svg" alt="" width="24" height="24" loading="lazy"><span>Flask</span></li><li><img src="assets/img/tech/nodejs.svg" alt="" width="24" height="24" loading="lazy"><span>Node.js</span></li><li><img src="assets/img/tech/angular.svg" alt="" width="24" height="24" loading="lazy"><span>Angular</span></li><li><img src="assets/img/tech/azuresqldatabase.svg" alt="" width="24" height="24" loading="lazy"><span>SQL</span></li><li><img src="assets/img/tech/redis.svg" alt="" width="24" height="24" loading="lazy"><span>Redis</span></li></ul></article>
+        <article class="portfolio-card"><h3>Platforms &amp; tools</h3><ul class="skill-list"><li><img src="assets/img/tech/linux.svg" alt="" width="24" height="24" loading="lazy"><span>Linux</span></li><li><img src="assets/img/tech/windows11.svg" alt="" width="24" height="24" loading="lazy"><span>Windows</span></li><li><img src="assets/img/tech/apple.svg" alt="" width="24" height="24" loading="lazy"><span>macOS</span></li><li><img src="assets/img/tech/kubernetes.svg" alt="" width="24" height="24" loading="lazy"><span>Kubernetes</span></li><li><img src="assets/img/tech/docker.svg" alt="" width="24" height="24" loading="lazy"><span>Docker</span></li><li><img src="assets/img/tech/cmake.svg" alt="" width="24" height="24" loading="lazy"><span>CMake / vcpkg</span></li><li><img src="assets/img/tech/git.svg" alt="" width="24" height="24" loading="lazy"><span>Git / CI/CD</span></li><li><img src="assets/img/tech/jenkins.svg" alt="" width="24" height="24" loading="lazy"><span>Jenkins</span></li><li><img src="assets/img/tech/jira.svg" alt="" width="24" height="24" loading="lazy"><span>Jira</span></li><li><img src="assets/img/tech/bitbucket.svg" alt="" width="24" height="24" loading="lazy"><span>Bitbucket</span></li><li><img src="assets/img/tech/sonarqube.svg" alt="" width="24" height="24" loading="lazy"><span>SonarQube</span></li><li>strace / wrk / ab</li></ul></article>
+      </div>
+    </section>
+
+    <section class="education-section section-pad" id="education" aria-labelledby="education-title">
+      <div class="section-heading"><span class="eyebrow">05 / Education &amp; training</span><span class="eyebrow">Sofia · Leuven</span></div>
+      <h2 class="display-title" id="education-title">The<br><em>foundations.</em></h2>
+      <div class="career-list education-list">
+        <article class="career-entry"><div class="career-meta"><span class="eyebrow">Sep 2023–June 2026</span><p>Full-time · Bulgaria<br>Grade: Excellent · 240 ECTS</p></div><div class="career-detail"><h3>B.Eng. Computer and Software Engineering</h3><a class="career-company" href="https://tu-sofia.bg/faculties/read/27?lang=en"><img class="organization-logo" src="../assets/img/education/Tu-sofia-logo.png" alt="" width="72" height="48" loading="lazy">Technical University of Sofia ↗</a><p><strong>Thesis:</strong> “Design and Development of a Compile-time ORM library in C++”.</p><p>Coursework in C, Python, Java, C++ and C#; algorithms and data structures; operating systems and computer architecture; databases and database projects; networking and mobile development; cryptography, expert systems, logic design and high-performance computing; mathematics, physics and materials science.</p></div></article>
+        <article class="career-entry"><div class="career-meta"><span class="eyebrow">Sep 2022–June 2023</span><p>Full-time · Belgium<br>Programme discontinued</p></div><div class="career-detail"><h3>Engineering Technology studies</h3><a class="career-company" href="https://www.kuleuven.be/programmes/bachelor-engineering-technology"><img class="organization-logo" src="../assets/img/education/KU-logo.png" alt="" width="72" height="48" loading="lazy">KU Leuven ↗</a><p>Studied in English, with applied mathematics, physics, graphic techniques, management and engineering projects. Coursework combined group projects with practical laboratory work.</p></div></article>
+        <article class="career-entry"><div class="career-meta"><span class="eyebrow">Sep 2021–June 2022</span><p>Full-time · Bulgaria<br>Transferred abroad</p></div><div class="career-detail"><h3>Industrial Engineering studies</h3><a class="career-company" href="https://tu-sofia.bg/specialties/preview/666?lang=en"><img class="organization-logo" src="../assets/img/education/Tu-sofia-logo.png" alt="" width="72" height="48" loading="lazy">Technical University of Sofia ↗</a><p>Programme taught in English, covering engineering mathematics, physics, mechanics, materials, electrical engineering and manufacturing processes.</p></div></article>
+        <article class="career-entry"><div class="career-meta"><span class="eyebrow">Sep 2013–June 2021</span><p>Full-time · Bulgaria<br>Grade: Excellent</p></div><div class="career-detail"><h3>Mathematics &amp; Informatics</h3><a class="career-company" href="https://smg.bg/"><img class="organization-logo" src="../assets/img/education/SMG-logo.png" alt="" width="72" height="48" loading="lazy">Sofia High School of Mathematics ↗</a><p>Secondary education focused on advanced mathematics, algorithmic and competitive programming, and applied computer science.</p></div></article>
+      </div>
+      <div class="subsection-heading" id="training"><h3>Courses &amp; research schools</h3><p>Additional training alongside school and university.</p></div>
+      <div class="training-grid">
+        <article class="training-entry"><span class="eyebrow">June 2016–Sep 2019</span><h4>Summer Research School</h4><p class="training-provider"><img class="organization-logo" src="../assets/img/trainings/bas-logo.png" alt="" width="72" height="48" loading="lazy">Bulgarian Academy of Sciences · Blagoevgrad</p><p>Cybersecurity, AI and systems modelling projects with academic mentors.</p></article>
+        <article class="training-entry"><span class="eyebrow">Aug–Sep 2018</span><h4>SAP Geeky Camp 5.0</h4><p class="training-provider"><img class="organization-logo" src="../assets/img/trainings/SAP.png" alt="" width="72" height="48" loading="lazy">SAP Bulgaria · Sofia</p><p>Algorithms, data structures and practical software problems solved in teams.</p></article>
+        <article class="training-entry"><span class="eyebrow">Sep 2017–June 2018</span><h4>Java Web Development</h4><p class="training-provider"><img class="organization-logo" src="../assets/img/trainings/telerik.png" alt="" width="72" height="48" loading="lazy">Telerik School Academy · Sofia</p><p>Java and Spring applications, MVC, dependency injection and database connectivity.</p></article>
+        <article class="training-entry"><span class="eyebrow">Sep 2016–June 2017</span><h4>C# .NET</h4><p class="training-provider"><img class="organization-logo" src="../assets/img/trainings/telerik-progress.png" alt="" width="72" height="48" loading="lazy">Telerik Software Academy by Progress · Sofia</p><p>ASP.NET, server-side logic, MVC architecture and RESTful services.</p></article>
+        <article class="training-entry"><span class="eyebrow">Sep 2016–June 2017</span><h4>Web Development</h4><p class="training-provider"><img class="organization-logo" src="../assets/img/trainings/telerik-progress.png" alt="" width="72" height="48" loading="lazy">Telerik Software Academy by Progress · Sofia</p><p>Node.js, HTML, CSS and JavaScript; full-stack development and client–server interactions.</p></article>
+        <article class="training-entry"><span class="eyebrow">Oct 2014–June 2017</span><h4>Algorithms &amp; Data Structures</h4><p class="training-provider"><img class="organization-logo" src="../assets/img/trainings/telerik.png" alt="" width="72" height="48" loading="lazy">Telerik Algo Academy · Sofia</p><p>Recursion, dynamic programming, graphs, greedy algorithms and competition problem solving.</p></article>
+        <article class="training-entry"><span class="eyebrow">Sep 2014–June 2018</span><h4>C++ &amp; Algorithms</h4><p class="training-provider"><img class="organization-logo" src="../assets/img/trainings/telerik.png" alt="" width="72" height="48" loading="lazy">Telerik Kids Academy · Sofia</p><p>C++ fundamentals, programming logic and algorithmic problem solving.</p></article>
+      </div>
+    </section>
+
+    <section class="community-section light-section section-pad" id="community" aria-labelledby="community-title">
+      <div class="section-heading"><span class="eyebrow">06 / Teaching &amp; community</span><span class="eyebrow">Learning, shared</span></div>
+      <h2 class="display-title" id="community-title">Beyond<br><em>my own work.</em></h2>
+      <div class="portfolio-grid community-grid">
+        <article class="portfolio-card"><span class="eyebrow">Speaker · 2024 &amp; 2025</span><img class="card-logo" src="../assets/img/volunteering/openfest.png" alt="" width="72" height="48" loading="lazy"><h3>OpenFest</h3><p>Talks on sketchup-cpp-api, WebFrame++, and C++ coroutines over unified kernel I/O queues. The five-minute talk in Sofia at OpenFest 2025 covers submission and completion, a coroutine-friendly API, and a thread-pool executor.</p><a class="text-link" href="#talks">Watch all three talks <span aria-hidden="true">↑</span></a></article>
+        <article class="portfolio-card"><span class="eyebrow">Author &amp; co-organizer · Apr 2018–Apr 2020</span><img class="card-logo" src="../assets/img/education/SMG-logo.png" alt="" width="72" height="48" loading="lazy"><h3>Open Doors Day</h3><p>Organized three annual editions at Sofia High School of Mathematics, with 19 alumni sharing their career journeys. I coordinated speakers, schedules and logistics, and set up the server infrastructure for livestreaming and online attendance.</p><a class="text-link" href="https://youtube.com/playlist?list=PLeH4dQCXauyJWcP6b1-d9E4oo5-82umZ2">Watch the alumni talks <span aria-hidden="true">↗</span></a></article>
+        <article class="portfolio-card"><span class="eyebrow">Student mentor · Sep 2017–June 2018</span><img class="card-logo" src="../assets/img/volunteering/coderdojo.png" alt="" width="72" height="48" loading="lazy"><h3>CoderDojo @ Telerik Academy</h3><p>Volunteered in Sofia to help young learners understand programming, build small personal projects and explore ideas through hands-on coding sessions.</p></article>
+        <article class="portfolio-card"><span class="eyebrow">Technical trainer · May–June 2017</span><img class="card-logo" src="../assets/img/volunteering/softuni.png" alt="" width="72" height="48" loading="lazy"><h3>Python at Software University</h3><p>Taught a mixed-experience group through live coding, exercises and assessment, including working professionals starting a new career in software.</p><a class="text-link" href="https://softuni.bg/trainings/1655/python-basics-may-2017">View the course <span aria-hidden="true">↗</span></a></article>
+        <article class="portfolio-card"><span class="eyebrow">Web developer · Sep 2016–June 2017</span><img class="card-logo" src="../assets/img/volunteering/testrain.png" alt="" width="72" height="48" loading="lazy"><h3>Testrain</h3><p>Developed the web interface, visualization and interaction layer for an academic experimental platform based on Silvan Tomkins’ Affect and Script Theory. The platform supported research into simulating emotional responses.</p><a class="text-link" href="https://www.researchgate.net/publication/329013929_KOMPUTRNA_SIMULACIA_VIRTUALNA_PROVERKA_NA_TEORIATA_ZA_AFEKTITE_I_SCENARIITE_SZDADENA_OT_SILVAN_TOMKINS_A_COMPUTER_SIMULATION_VIRTUAL_TEST_OF_SILVAN_TOMKINS&#x27;_AFFECT_AND_SCRIPT_THEORY">Read the related paper <span aria-hidden="true">↗</span></a></article>
+        <article class="portfolio-card"><span class="eyebrow">Competitor · Dec 2012–June 2021</span><img class="card-logo" src="../assets/img/volunteering/sofia.png" alt="" width="100" height="64" loading="lazy"><h3>Sofia city programming team</h3><p>Competed in national and international algorithmic programming contests, solving problems under time pressure with algorithms and data structures. My first olympiad was in winter 2012; my first gold medal followed in September 2013.</p><a class="text-link" href="#awards">Competition results <span aria-hidden="true">↓</span></a></article>
+      </div>
+    </section>
+
+    <section class="awards-section section-pad" id="awards" aria-labelledby="awards-title">
+      <div class="section-heading"><span class="eyebrow">07 / Awards &amp; achievements</span><span class="eyebrow">Engineering · Entrepreneurship · Algorithms</span></div>
+      <h2 class="display-title" id="awards-title">Milestones<br><em>along the way.</em></h2>
+      <ol class="award-list">
+        <li><span class="eyebrow">Oct 2025</span><div><h3>1st among university teams</h3><p><a href="https://www.linkedin.com/posts/%D0%B3%D0%BE%D0%BB%D1%8F%D0%BC%D0%BE%D1%82%D0%BE-schwarz-%D0%BC%D0%B5%D0%B6%D0%B4%D1%83%D1%87%D0%B0%D1%81%D0%B8%D0%B5_theultimatecyberchallenge-hackathon-cybersecurity-activity-7384961855401791488-4wZI">Big SCHWARZ Interlude cybersecurity hackathon ↗</a> · Sofia, Bulgaria</p></div></li>
+        <li><span class="eyebrow">Oct 2019</span><div><h3>President’s “John Atanasoff” awards</h3><p>Runner-up · Sofia, Bulgaria</p></div></li>
+        <li><span class="eyebrow">Sep 2019</span><div><h3>Top 10 · Best Youth Startup 2019</h3><p>Headstarter · Youth Entrepreneurship Accelerator Ustvarjalnik · Ljubljana, Slovenia</p></div></li>
+        <li><span class="eyebrow">May 2019</span><div><h3>1st · Teenovator national competition</h3><p><a href="https://teenovator.bg/%d0%bd%d0%b8%d0%b5-%d1%81%d0%bc%d0%b5-headstarter-teenovator/">Headstarter ↗</a> · Sofia, Bulgaria</p></div></li>
+        <li><span class="eyebrow">Mar 2019</span><div><h3>Gold · Sofia Open</h3><p><a href="https://smg.bg/systezania-olimpiadai-domakin-novini/2019/03/27/2043/%d0%be%d1%82%d0%ba%d1%80%d0%b8%d1%82%d0%be%d1%82%d0%be-%d0%bf%d1%8a%d1%80%d0%b2%d0%b5%d0%bd%d1%81%d1%82%d0%b2%d0%be-%d0%bd%d0%b0-%d1%81%d0%be%d1%84%d0%b8%d1%8f-%d0%bf%d0%be-%d0%b8%d0%bd%d1%84%d0%be/">Sofia Open Algorithmic Programming Competition ↗</a> · Sofia, Bulgaria</p></div></li>
+        <li><span class="eyebrow">2017</span><div><h3>Bronze · International “John Atanasoff”</h3><p><a href="https://infos.infosbg.com/contests/IATI/2017">International algorithmic programming competition ↗</a> · Shumen, Bulgaria</p></div></li>
+        <li><span class="eyebrow">2017–2018</span><div><h3>Bronze &amp; U16 silver · Softuniada</h3><p><a href="https://softuniada.softuni.bg/softuniada-2018/">Algorithmic programming competition ↗</a> · Sofia, Bulgaria</p></div></li>
+      </ol>
+    </section>
+
+    <section class="about-section light-section section-pad" id="about" aria-labelledby="about-title">
+      <div class="section-heading"><span class="eyebrow">08 / The person behind the work</span><span class="eyebrow">Alex Tsvetanov / Алекс Цветанов</span></div>
+      <div class="about-layout">
+        <figure class="portrait-figure"><div class="portrait-frame"><img src="assets/brand/portrait-tie-leather.webp" srcset="assets/brand/portrait-tie-leather-640.webp 640w, assets/brand/portrait-tie-leather.webp 960w" sizes="(max-width: 520px) 100vw, 45vw" alt="Alex Tsvetanov wearing a leather jacket and gold tie" width="960" height="1200" loading="lazy" decoding="async"></div><figcaption><span>Sofia, Bulgaria</span><span>Always a student.</span></figcaption></figure>
+        <div class="about-copy">
+          <h2 class="display-title" id="about-title">Same rigor.<br><em>In code.<br>In life.</em></h2>
+          <p class="about-lead">I’ve been writing C++ since December 2012. I’m still asking what happens underneath.</p>
+          <p>That question has taken me through competitive programming, systems engineering, research, and teaching. I’m drawn to the places where abstractions meet the real machine: concurrency, networking, memory, and performance.</p>
+          <p>Outside software, I’m interested in neuroscience and brain health, and in the habits that support learning and focus. I train at the gym, play football and table tennis, and listen to rock and metal.</p>
+          <p>I’ve also been involved in League of Legends eSports since 2021 as a coach, analyst and team manager, and more recently as a color commentator. Teaching, teamwork and understanding performance matter there too.</p>
+          <p><strong>Languages:</strong> Bulgarian (native) and English (C1, TOEFL score: 95).</p>
+          <div class="about-links"><a class="text-link" href="CV.pdf?v=2026-08-19" download>Download CV <span aria-hidden="true">↓</span></a><a class="text-link" href="https://www.linkedin.com/in/alex-tsvetanov/">LinkedIn <span aria-hidden="true">↗</span></a></div>
+        </div>
+      </div>
+    </section>
+
+<section class="references-section light-section section-pad" id="references" aria-labelledby="references-title">
+  <div class="section-heading"><span class="eyebrow">09 / References</span></div>
+  <h2 class="display-title" id="references-title">People I’ve worked with.</h2>
+  <div class="reference-grid">
+    <figure class="reference-quote">
+      <blockquote>While in high school, Alex&#x27;s interests focused on AI and Society 5.0. His innovative thinking led us to include him in a specialized young researchers&#x27; team for our studies on &quot;Society 5.0 towards 2030&quot;. His AI results were further extended for a virtual teacher, providing a visionary outlook for the future of smart education. Alex is a fast-progressing and highly innovative researcher.</blockquote>
+      <figcaption>
+        <img src="../assets/img/testimonials/zlatogor.minchev.jpg" width="56" height="56" loading="lazy" alt="">
+        <div>
+          <strong><a href="https://www.linkedin.com/in/zlatogor-minchev-632134a">Assoc. Prof. Zlatogor Minchev</a></strong>
+          <span>JTSAC Director · IICT-BAS</span>
+          <time datetime="2026-03">March 2026</time>
+        </div>
+      </figcaption>
+    </figure>
+    <figure class="reference-quote">
+      <blockquote>Alex consistently demonstrates outstanding technical skills and a fearless approach to complex challenges. During our time together, he was instrumental in implementing key features and driving significant infrastructure improvements, directly contributing to the success and stability of our projects.</blockquote>
+      <figcaption>
+        <img src="../assets/img/testimonials/noel.warren.jpg" width="56" height="56" loading="lazy" alt="">
+        <div>
+          <strong><a href="https://www.linkedin.com/in/noel-warren-350994216">Noel Warren</a></strong>
+          <span>Senior Software Developer · Chaos</span>
+          <time datetime="2025-06">June 2025</time>
+        </div>
+      </figcaption>
+    </figure>
+    <figure class="reference-quote">
+      <blockquote>As part of the Architecture team, whose main responsibility was to prototype and introduce innovations, Alex Tsvetanov excelled as a fast learner. No matter which technology we picked (gRPC, Redis, vcpkg), he was always able to quickly learn it and directly build a fully functional prototype. And that was never easy, as he often needed to combine code that was tens of years old with recent technology that was not even suitable for our target platform.</blockquote>
+      <figcaption>
+        <img src="../assets/img/testimonials/jan.jpeg" width="56" height="56" loading="lazy" alt="">
+        <div>
+          <strong><a href="https://www.linkedin.com/in/jan-st%C5%99%C3%ADtesk%C3%BD-429b5769">Jan Stříteský</a></strong>
+          <span>Lead Software Architect · SCIA</span>
+          <time datetime="2023-04">April 2023</time>
+        </div>
+      </figcaption>
+    </figure>
+    <figure class="reference-quote">
+      <blockquote>Alex is not only an excellent programmer, but a sociable and motivated colleague with whom it is pleasant to communicate. He is extremely organized and can be relied upon to learn quickly and clearly, as well as to perform complex tasks independently. I am impressed with his attitude towards the work and the quality results he has achieved.</blockquote>
+      <figcaption>
+        <img src="../assets/img/testimonials/irina.drencheva.jpeg" width="56" height="56" loading="lazy" alt="">
+        <div>
+          <strong><a href="https://www.linkedin.com/in/irina-drencheva-36406745">Irina Drencheva</a></strong>
+          <span>Software Dev Manager · Codix</span>
+          <time datetime="2019-10">October 2019</time>
+        </div>
+      </figcaption>
+    </figure>
+    <figure class="reference-quote">
+      <blockquote>Alex and I met during the &quot;Softuniada&quot; coding contest where he demonstrated his technical skills in software development, high energy and keen attitude. Later, I hired him to teach a Python course to my students. I believe that Alex is a dedicated and strong developer with deep technical expertise and a serious attitude. He would be an asset to any tech team.</blockquote>
+      <figcaption>
+        <img src="../assets/img/testimonials/nakov.jpg" width="56" height="56" loading="lazy" alt="">
+        <div>
+          <strong>Svetlin Nakov</strong>
+          <span>Co-Founder &amp; Innovation and Inspiration Manager at SoftUni</span>
+        </div>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+    <section class="contact-section section-pad" id="contact" aria-labelledby="contact-title">
+      <div class="section-heading"><span class="eyebrow">10 / Start a conversation</span><span class="eyebrow">Good questions welcome</span></div>
+      <div class="contact-layout"><h2 id="contact-title">Let’s go<br>deeper</h2><div><p>Working on a difficult systems problem? Planning a technical talk? Or just curious about the work?</p><a class="contact-email" href="mailto:alex_tsvetanov_2002@abv.bg">Say hello <span aria-hidden="true">↗</span></a><a class="contact-address" href="mailto:alex_tsvetanov_2002@abv.bg">alex_tsvetanov_2002@abv.bg</a></div></div>
+      <div class="contact-socials"><a href="https://www.linkedin.com/in/alex-tsvetanov/">LinkedIn ↗</a><a href="https://github.com/alex-tsvetanov/">GitHub ↗</a><a href="https://www.instagram.com/tsvetanov__alex/">Instagram ↗</a><a href="https://www.facebook.com/alex.tsvetanov.2002">Facebook ↗</a><a href="https://twitter.com/coder_of_worlds">X ↗</a></div>
+    </section>
+  </main>
+  <footer class="site-footer"><a class="footer-mark" href="#hero" aria-label="Back to top"><img src="assets/brand/descent-symbol.svg?v=straight-1" alt="" width="58" height="58"></a><p>All the way down.</p><span>© Alex Tsvetanov</span><a href="#hero">Back to top <span aria-hidden="true">↑</span></a></footer>
+</body>
+</html>
