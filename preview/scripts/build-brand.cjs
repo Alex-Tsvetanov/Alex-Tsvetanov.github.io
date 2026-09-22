@@ -37,6 +37,9 @@ async function main() {
   fs.mkdirSync(out,{recursive:true});
   assert(GlobalFonts.registerFromPath(font,'IBM Plex Sans'));
   save('symbol.svg',svg(mark('#F4F4F2','#1FE07A')));
+  save('symbol-light.svg',svg(mark('#0E0E10','#08763F')));
+  save('ats-symbol-light.svg',svg(latinMark('#0E0E10','#08763F'),160,160,'ATs'));
+  save('descent-symbol-light.svg',svg(descent.parts.map(d=>`<path fill="#08763F" d="${d}"/>`).join(''),160,160,'All the way down'));
   for (const [name,color] of Object.entries({black:'#0E0E10',white:'#F4F4F2',green:'#1FE07A'})) {
     save(`symbol-${name}.svg`,svg(mark(color,color)));
     await png(`symbol-${name}.svg`,1024);
@@ -82,7 +85,7 @@ async function main() {
   // Both review pages share one layout source. Only their identity assets differ.
   const homepage=fs.readFileSync(path.resolve(__dirname,'../index.html'),'utf8');
   const latinPage=homepage.replace('data-logo="ac"','data-logo="ats"').replaceAll('assets/brand/symbol.svg','assets/brand/ats-symbol.svg')
-  .replaceAll('assets/brand/symbol-black.svg','assets/brand/ats-symbol-black.svg').replaceAll('assets/brand/favicon.','assets/brand/ats-favicon.').replaceAll('assets/brand/icon-180.png','assets/brand/ats-icon-180.png').replace('<span>АЦ</span>','<span>ATs</span>');
+  .replaceAll('assets/brand/symbol-light.svg','assets/brand/ats-symbol-light.svg').replaceAll('assets/brand/favicon.','assets/brand/ats-favicon.').replaceAll('assets/brand/icon-180.png','assets/brand/ats-icon-180.png').replace('<span>АЦ</span>','<span>ATs</span>');
   fs.writeFileSync(path.resolve(__dirname,'../ats.html'),latinPage);
   for (const file of fs.readdirSync(out).filter(f=>f.endsWith('.svg'))) {
     const text=fs.readFileSync(path.join(out,file),'utf8');
