@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alex-tsvetanov.github.io/sitemap.xml
