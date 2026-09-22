@@ -81,7 +81,8 @@ async function main() {
   save('ats-geometry.json',JSON.stringify({viewBox:'0 0 160 160',parts:[A,T+S],assembly:[leftA,rightA,T+S],descent}));
   // Both review pages share one layout source. Only their identity assets differ.
   const homepage=fs.readFileSync(path.resolve(__dirname,'../index.html'),'utf8');
-  const latinPage=homepage.replace('data-logo="ac"','data-logo="ats"').replaceAll('assets/brand/symbol.svg','assets/brand/ats-symbol.svg').replaceAll('assets/brand/favicon.','assets/brand/ats-favicon.').replaceAll('assets/brand/icon-180.png','assets/brand/ats-icon-180.png').replace('<span>АЦ</span>','<span>ATs</span>');
+  const latinPage=homepage.replace('data-logo="ac"','data-logo="ats"').replaceAll('assets/brand/symbol.svg','assets/brand/ats-symbol.svg')
+  .replaceAll('assets/brand/symbol-black.svg','assets/brand/ats-symbol-black.svg').replaceAll('assets/brand/favicon.','assets/brand/ats-favicon.').replaceAll('assets/brand/icon-180.png','assets/brand/ats-icon-180.png').replace('<span>АЦ</span>','<span>ATs</span>');
   fs.writeFileSync(path.resolve(__dirname,'../ats.html'),latinPage);
   for (const file of fs.readdirSync(out).filter(f=>f.endsWith('.svg'))) {
     const text=fs.readFileSync(path.join(out,file),'utf8');

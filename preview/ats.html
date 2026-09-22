@@ -12,7 +12,7 @@
   <link rel="apple-touch-icon" href="assets/brand/ats-icon-180.png?v=aligned-cut-5">
   <link rel="stylesheet" href="assets/css/brand.css?v=research-logos-1">
   <link rel="stylesheet" href="assets/css/brand-motion.css?v=portfolio-polish-2">
-  <script src="assets/js/brand.js?v=portfolio-polish-2" defer></script>
+  <script src="assets/js/brand.js?v=themes-1" defer></script>
   <title>Alex Tsvetanov | C++ Systems Engineer &amp; Researcher</title>
   <meta name="description" content="Alex Tsvetanov is a C++ systems engineer in Sofia, Bulgaria. Explore his work on Coroute, compile-time Protobuf, ORM, research, and technical talks.">
   <meta name="robots" content="index, follow, max-image-preview:large">
@@ -36,14 +36,17 @@
   <link rel="stylesheet" href="/assets/css/site-discovery.css?v=1">
   <script src="/assets/js/analytics-config.js?v=1" defer></script>
   <script src="/assets/js/site-analytics.js?v=1" defer></script>
+  <link rel="stylesheet" href="assets/css/theme.css?v=1">
+  <script src="assets/js/theme.js?v=1"></script>
 </head>
-<body>
+<body class="portfolio-page">
   <a class="skip-link" href="#work">Skip to portfolio</a>
   <header class="site-header">
     <a class="wordmark" href="#hero" aria-label="Alex Tsvetanov, home">
-      <img src="assets/brand/ats-symbol.svg?v=aligned-cut-5" width="46" height="46" alt="" loading="lazy" decoding="async">
+      <img data-theme-light="assets/brand/ats-symbol-black.svg" data-theme-dark="assets/brand/ats-symbol.svg?v=aligned-cut-5" src="assets/brand/ats-symbol.svg?v=aligned-cut-5" width="46" height="46" alt="" loading="lazy" decoding="async">
       <span>Alex Tsvetanov</span>
     </a>
+    <button class="theme-toggle" type="button" data-theme-toggle hidden aria-label="Switch theme"></button>
     <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
       <span>Menu</span><span class="menu-lines" aria-hidden="true"></span>
     </button>
@@ -63,7 +66,7 @@
           <a class="button button-light" href="#work">Explore my portfolio <span aria-hidden="true">↘</span></a>
         </div>
         <div id="brand-scene" aria-hidden="true">
-          <div id="brand-object"><img class="brand-fallback" src="assets/brand/ats-symbol.svg?v=aligned-cut-5" alt="" width="600" height="600" loading="lazy" decoding="async"></div>
+          <div id="brand-object"><img class="brand-fallback" data-theme-light="assets/brand/ats-symbol-black.svg" data-theme-dark="assets/brand/ats-symbol.svg?v=aligned-cut-5" src="assets/brand/ats-symbol.svg?v=aligned-cut-5" alt="" width="600" height="600" loading="lazy" decoding="async"></div>
         </div>
         <div class="hero-bottomline">
           <a class="scroll-cue" href="#work"><span class="scroll-arrow" aria-hidden="true">↓</span>Scroll to go deeper</a>
@@ -335,6 +338,6 @@
       <p class="profile-utility"><a href="/preview/">Explore the redesigned portfolio</a> · <a href="/privacy.html">Privacy &amp; analytics</a> · <button type="button" data-analytics-settings hidden>Analytics preferences</button></p>
     </section>
   </main>
-  <footer class="site-footer"><a class="footer-mark" href="#hero" aria-label="Back to top"><img src="assets/brand/descent-symbol.svg?v=straight-1" alt="" width="58" height="58" loading="lazy" decoding="async"></a><p>All the way down.</p><span>© Alex Tsvetanov</span><a href="#hero">Back to top <span aria-hidden="true">↑</span></a></footer>
+  <footer class="site-footer"><a class="footer-mark" href="#hero" aria-label="Back to top"><img data-theme-light="assets/brand/descent-symbol-black.svg" data-theme-dark="assets/brand/descent-symbol.svg?v=straight-1" src="assets/brand/descent-symbol.svg?v=straight-1" alt="" width="58" height="58" loading="lazy" decoding="async"></a><p>All the way down.</p><span>© Alex Tsvetanov</span><a href="#hero">Back to top <span aria-hidden="true">↑</span></a></footer>
 </body>
 </html>

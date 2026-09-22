@@ -92,3 +92,6 @@ Merge into `master` to publish these pages through the repository’s GitHub Pag
 - https://alex-tsvetanov.github.io/preview/brand-review.html
 
 The original root homepage and CV are byte-identical to the merge base. Shared organization and reference images remain in `/assets/img/`; all redesign-specific assets and the newer CV live in `/preview/`. No checkout or payment functionality is enabled. Portfolio HTML allows indexing and canonicalizes to the main homepage; the concept store remains noindex. Removing `/preview/` reverses the preview deployment without changing the original site.
+
+## Appearance
+All three preview pages share a light/dark header switch. They use the system preference until a visitor chooses a theme, then remember that choice across pages and tabs. Garment colors and logo ink options stay independent of page appearance. Run `node preview/scripts/check-theme.cjs` from the repository root to verify preference behavior.
