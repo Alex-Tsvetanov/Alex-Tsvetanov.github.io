@@ -18,6 +18,11 @@
   .portfolio-page .button-light:hover { background:var(--accent); }
   .portfolio-page .profile-facts :is(a,button) { color:var(--accent); }
   .portfolio-page .contact-section { color:#0e0e10; background:#1fe07a; }
+  [data-theme="light"] .portfolio-page .contact-section { background:var(--accent); color:#fff; }
+  [data-theme="light"] .portfolio-page .contact-section .section-heading .eyebrow:last-child { color:#fff; }
+  [data-theme="light"] .portfolio-page .contact-email { border-color:#ffffff70; }
+  [data-theme="light"] .portfolio-page .contact-socials a:hover { border-color:#fff; }
+  [data-theme="light"] .portfolio-page .contact-section a:focus-visible { outline-color:#fff; }
   .portfolio-page .project-art { --ink:#0e0e10; --paper:#f4f4f2; --green:#1fe07a; --muted:#a5a5aa; --line:#ffffff29; color:#0e0e10; }
   .portfolio-page .schema-art { color:#f4f4f2; }
   [data-theme="dark"] .portfolio-page :is(.card-logo,.skill-list img) { background:#fff; border-radius:3px; }
