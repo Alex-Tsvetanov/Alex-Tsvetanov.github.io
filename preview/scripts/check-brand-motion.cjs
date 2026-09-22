@@ -104,7 +104,7 @@ function checkSolidPieces(active, logo) {
         const shape = layer.children[0];
         assert.equal(shape.tagName, 'path');
         assert.equal(shape.getAttribute('d').replace(/\s/g, ''), expected.replace(/\s/g, ''), 'Face retains its exported shape');
-        assert.match(shape.getAttribute('fill'), /^(#[\da-f]{6}|hsl\([\d. ]+% [\d.]+%\))$/i, 'Solid opaque paint');
+        assert.match(shape.getAttribute('fill').replace('var(--logo-face, #f4f4f2)', '#f4f4f2').replace('var(--accent, #1fe07a)', '#1fe07a'), /^(#[\da-f]{6}|hsl\([\d. ]+% [\d.]+%\))$/i, 'Solid opaque paint');
       });
     });
   });

@@ -4,19 +4,22 @@
   <meta charset="utf-8">
   <meta name="robots" content="noindex, follow">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#f4f4f2">
   <meta name="description" content="The Alex Tsvetanov collection. Leather jackets, hoodies, and everyday tees with АЦ, ATs, and All the way down signatures. Explore the collection preview.">
   <title>The collection — Alex Tsvetanov</title>
   <link rel="icon" href="assets/brand/favicon.svg?v=aligned-cut-5" type="image/svg+xml">
   <link rel="stylesheet" href="assets/css/merch.css?v=store-2">
   <script src="assets/js/merch.js?v=store-1" defer></script>
+  <link rel="stylesheet" href="assets/css/theme.css?v=2">
+  <script src="assets/js/theme.js?v=1"></script>
 </head>
-<body>
+<body class="store-page">
   <a class="skip-link" href="#collection">Skip to collection</a>
   <div class="announcement"><span>Collection preview · Orders are not open yet</span><a href="index.html">Back to the portfolio <span aria-hidden="true">↗</span></a></div>
   <header class="store-header">
-    <a class="brand" href="#top" aria-label="Alex Tsvetanov collection home"><img src="assets/brand/logo-light.svg?v=aligned-cut-5" width="212" height="56" alt="Alex Tsvetanov"></a>
+    <a class="brand" href="#top" aria-label="Alex Tsvetanov collection home"><img data-theme-light="assets/brand/logo-light.svg?v=aligned-cut-5" data-theme-dark="assets/brand/logo-dark.svg?v=aligned-cut-5" src="assets/brand/logo-light.svg?v=aligned-cut-5" width="212" height="56" alt="Alex Tsvetanov"></a>
     <nav aria-label="Store navigation"><a href="#collection">Collection</a><a href="#signatures">The signatures</a></nav>
+    <button class="theme-toggle" type="button" data-theme-toggle hidden aria-label="Switch theme"></button>
     <button class="bag-button" id="open-bag" type="button" disabled>Saved bag <span id="bag-count">0</span></button>
   </header>
   <main id="top">
@@ -97,7 +100,7 @@
     </section>
     <section class="closing section-wrap"><p class="eyebrow">From the screen to the everyday.</p><h2>Same principles.<br><span>Different layers.</span></h2><a href="#collection" class="text-link">Find your signature <span aria-hidden="true">↗</span></a></section>
   </main>
-  <footer class="store-footer section-wrap"><div><img src="assets/brand/logo-light.svg?v=aligned-cut-5" width="212" height="56" alt="Alex Tsvetanov"><p>Systems. Research. Building.</p></div><div class="footer-links"><a href="index.html">АЦ portfolio ↗</a><a href="ats.html">ATs portfolio ↗</a><a href="assets/brand/alex-tsvetanov-brand-draft.zip?v=aligned-cut-5" download>Download the brand kit ↓</a></div><p class="footer-note">Collection preview. AI-generated garment mockups with the current vector artwork. Final materials, sizing, and branding placement are subject to sampling. No orders or payments are collected.</p></footer>
+  <footer class="store-footer section-wrap"><div><img data-theme-light="assets/brand/logo-light.svg?v=aligned-cut-5" data-theme-dark="assets/brand/logo-dark.svg?v=aligned-cut-5" src="assets/brand/logo-light.svg?v=aligned-cut-5" width="212" height="56" alt="Alex Tsvetanov"><p>Systems. Research. Building.</p></div><div class="footer-links"><a href="index.html">АЦ portfolio ↗</a><a href="ats.html">ATs portfolio ↗</a><a href="assets/brand/alex-tsvetanov-brand-draft.zip?v=aligned-cut-5" download>Download the brand kit ↓</a></div><p class="footer-note">Collection preview. AI-generated garment mockups with the current vector artwork. Final materials, sizing, and branding placement are subject to sampling. No orders or payments are collected.</p></footer>
   <p id="store-status" class="store-status" role="status" aria-live="polite"></p>
   <dialog id="product-dialog" class="product-dialog" aria-labelledby="product-title">
     <button class="close-dialog" type="button" aria-label="Close product preview">×</button>

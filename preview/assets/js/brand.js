@@ -123,7 +123,7 @@
           const slice = svgElement('svg', {viewBox, 'aria-hidden':'true'});
           slice.classList.add('monogram-slice'); slice.style.transform = `translateZ(${(layer - 8) * 1.4}px)`;
           slice.append(svgElement('path', {d: shape,
-            fill:front ? (green ? '#1fe07a' : '#f4f4f2') : (green ? `hsl(147 72% ${16 + layer * 1.8}%)` : `hsl(190 7% ${29 + layer * 2.7}%)`)}));
+            fill:front ? (green ? 'var(--accent, #1fe07a)' : 'var(--logo-face, #f4f4f2)') : (green ? `hsl(147 72% ${16 + layer * 1.8}%)` : `hsl(190 7% ${29 + layer * 2.7}%)`)}));
           face.append(slice);
         }
         turn.append(face);

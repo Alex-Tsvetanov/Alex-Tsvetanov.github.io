@@ -1,0 +1,59 @@
+/* Shared page colors; artwork and garment colorways retain their own palettes. */
+.theme-toggle { display:inline-grid; place-items:center; flex-shrink:0; width:44px; height:44px; padding:0; border:1px solid currentColor; border-radius:50%; background:transparent; color:inherit; font:24px/1 Arial,sans-serif; cursor:pointer; }
+.theme-toggle[hidden] { display:none; }
+.site-header .theme-toggle { order:3; margin-left:24px; }
+.site-header .wordmark { margin-right:auto; }
+.store-header .theme-toggle { margin-left:auto; }
+@media screen {
+  :root[data-theme="dark"] { color-scheme:dark; --surface:#0e0e10; --text:#f4f4f2; --secondary:#bababf; --border:#ffffff29; --accent:#1fe07a; --logo-face:#f4f4f2; }
+  :root[data-theme="light"] { color-scheme:light; --surface:#f4f4f2; --text:#0e0e10; --secondary:#58585d; --border:#0e0e1030; --accent:#08763f; --logo-face:#0e0e10; }
+  html[data-theme], .portfolio-page, .store-page { background:var(--surface); color:var(--text); }
+  .portfolio-page :is(.site-header,.portfolio-nav,.light-section,.profile-facts) { background:var(--surface); color:var(--text); color-scheme:inherit; }
+  .portfolio-page { --muted:var(--secondary); --line:var(--border); --green:var(--accent); }
+  .portfolio-page :is(.hero-copy > p,.section-lead,.speaking-figure figcaption,.portrait-figure figcaption,.publication-label,.publication-arrow,.publication-authors,.career-meta p,.career-detail ul,.career-detail > p,.standards-note p,.training-entry p,.award-list p,.subsection-heading > p,.project-copy > p,.project-index,.section-endnote p,.portfolio-card > .eyebrow,.portfolio-card p,.project-notes,.about-copy > p,.reference-quote figcaption span,.reference-quote time,.display-title em,.light-section .section-heading .eyebrow:last-child) { color:var(--secondary); }
+  .portfolio-page :is(.about-copy > .about-lead,.project-notes summary,.career-detail li a,.career-detail p a,.training-entry .training-provider,.scroll-cue,.menu-toggle,.award-list a:hover) { color:var(--text); }
+  .portfolio-page :is(.project,.project-tags > li,.portfolio-card,.skill-list li,.reference-quote,.references-section,.profile-facts) { border-color:var(--border); }
+  .portfolio-page .research-intro .display-title em { color:var(--accent); }
+  .portfolio-page .button-light { background:var(--text); color:var(--surface); }
+  .portfolio-page .button-light:hover { background:var(--accent); }
+  .portfolio-page .profile-facts :is(a,button) { color:var(--accent); }
+  .portfolio-page .contact-section { color:#0e0e10; background:#1fe07a; }
+  [data-theme="light"] .portfolio-page .contact-section { background:var(--accent); color:#fff; }
+  [data-theme="light"] .portfolio-page .contact-section .section-heading .eyebrow:last-child { color:#fff; }
+  [data-theme="light"] .portfolio-page .contact-email { border-color:#ffffff70; }
+  [data-theme="light"] .portfolio-page .contact-socials a:hover { border-color:#fff; }
+  [data-theme="light"] .portfolio-page .contact-section a:focus-visible { outline-color:#fff; }
+  .portfolio-page .project-art { --ink:#0e0e10; --paper:#f4f4f2; --green:#1fe07a; --muted:#a5a5aa; --line:#ffffff29; color:#0e0e10; }
+  .portfolio-page .schema-art { color:#f4f4f2; }
+  [data-theme="dark"] .portfolio-page :is(.card-logo,.skill-list img) { background:#fff; border-radius:3px; }
+  [data-theme="light"] .portfolio-page .hero-progress-track { background:#c5c5c8; }
+  .store-page { --paper:var(--surface); --ink:var(--text); --muted:var(--secondary); --line:var(--border); }
+  .store-page :is(.announcement,.signature-section) { background:#151616; color:#f4f4f0; }
+  .store-page .collection-strip { color:#151616; }
+  .store-page :is(.hero h1 em,.green-dot) { color:var(--accent); }
+  .store-page .green-dot { background:var(--accent); }
+  .store-page :is(.button-dark:hover,.image-action:hover) { color:#151616; background:#1fe07a; }
+  .store-page .round-button:hover { color:var(--surface); }
+  .store-page .size-row select { color:var(--text); }
+  .store-page .preview-panel > p { color:#58585d; }
+  .store-page .mark-options label { background:#f4f4f0; color:#151616; }
+  .store-page :is(.mark-options,.ink-options) label:has(input:checked) { background:#ccebd8; color:#151616; border-color:var(--accent); }
+  .store-page :is(button,a,select):focus-visible { outline-color:var(--accent); }
+}
+@media(max-width:768px) {
+  .site-header .theme-toggle { order:0; margin-left:10px; width:40px; height:40px; }
+  .site-header .primary-nav { order:3; }
+}
+@media(max-width:700px) {
+  .store-header { gap:8px; flex-wrap:nowrap; }
+  .store-header .brand img { width:clamp(110px,32vw,157px); }
+  .store-header .theme-toggle { width:40px; height:40px; }
+  .store-header .bag-button { gap:5px; }
+}
+@media(max-width:370px) {
+  .site-header { column-gap:5px; }
+  .site-header .wordmark { font-size:14px; gap:7px; }
+  .site-header .menu-toggle { padding-left:7px; gap:6px; }
+  .site-header .theme-toggle { margin-left:0; }
+}
+@media print { .theme-toggle { display:none; } }
