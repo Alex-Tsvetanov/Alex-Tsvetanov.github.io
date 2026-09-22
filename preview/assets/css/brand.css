@@ -415,3 +415,6 @@ ul { padding-left: 1.2em; }
 .project-orm .schema-code { font-size:clamp(15px,1.7vw,24px); }
 
 .publication-logo { width:64px; height:32px; object-fit:contain; padding:4px; background:white; border-radius:3px; margin-bottom:14px; }
+
+.standards-identity { display:flex; flex-direction:column; align-items:flex-start; color:var(--green); }
+.standards-identity .publication-logo { height:64px; }
