@@ -1,0 +1,43 @@
+/* Descent signature → separated letter pieces → the complete monogram. */
+#brand-scene { perspective: 1100px; }
+#brand-object { transform-style: preserve-3d; }
+.monogram-solid, .monogram-fragment, .monogram-turn, .monogram-face { position:absolute; inset:0; transform-style:preserve-3d; }
+.monogram-solid { display:none; }
+.letter-face { transform:rotateY(180deg); }
+@media screen {
+  .motion-ready .hero-story { height:260svh; }
+}
+.motion-ready .monogram-solid { display:block; }
+.motion-ready #brand-object > img { visibility:hidden; }
+/* Use the unsplit master once aligned to avoid an antialiased seam at the A apex. */
+.motion-ready #brand-object.assembled > img { visibility:visible; filter:none; }
+.motion-ready #brand-object.assembled .monogram-solid { visibility:hidden; }
+.monogram-slice { position:absolute; inset:0; width:100%; height:100%; overflow:visible; backface-visibility:hidden; }
+@media (prefers-reduced-motion:reduce) {
+  .monogram-solid { display:none!important; }
+  #brand-object > img { visibility:visible!important; }
+  [data-depth] { transform:none!important; }
+}
+@media screen and (max-width:768px) {
+  .motion-ready .hero-story { height:240svh; }
+}
+@media(max-width:520px) {
+  .hero-progress-track { display:none; }
+}
+@media(max-width:520px) and (max-height:740px) {
+  .hero-stage, .motion-ready .hero-stage { padding-top:112px; }
+  .hero-copy { margin-top:24px; }
+  #brand-scene { width:60%; right:20%; bottom:76px; }
+  .hero-bottomline { gap:10px; }
+  .scroll-cue { gap:7px; font-size:8px; }
+  .hero-progress-track { width:30px; }
+}
+
+/* Keep the mobile scene in normal flow, below the portfolio button. */
+@media screen and (max-width:768px) {
+  .hero-stage, .motion-ready .hero-stage { height:auto; min-height:100svh; padding-top:112px; padding-bottom:24px; gap:16px; }
+  .hero-copy { margin:8px 0 0; flex-shrink:0; }
+  .hero-copy > p { margin:16px 0; font-size:14px; line-height:1.5; }
+  #brand-scene { position:relative; top:auto; right:auto; bottom:auto; width:min(58vw,240px); max-height:none; min-height:0; transform:none; margin:24px auto; flex-shrink:0; }
+  .hero-bottomline { margin-top:auto; }
+}
